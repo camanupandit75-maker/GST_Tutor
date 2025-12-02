@@ -37,7 +37,7 @@ export default function QuizPage() {
   }, [quizState, timeLeft]);
 
   const startQuiz = () => {
-    const quizQuestions = generateMixedQuiz(currentQuizSettings.questionCount);
+    const quizQuestions = generateMixedQuiz(currentQuizSettings.questionCount, currentQuizSettings.difficulty);
     setQuestions(quizQuestions);
     setAnswers({});
     setCurrentIndex(0);

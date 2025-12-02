@@ -341,8 +341,121 @@ function searchCurriculum(query: string): { section: any; chapter: any; module: 
 }
 
 function getAIResponse(question: string): string {
-  const q = question.toLowerCase().trim();
+  let q = question.toLowerCase().trim();
   
+  // Expand common GST abbreviations to full terms for better matching
+  const abbreviations: Record<string, string> = {
+    'tds': 'tax deducted at source',
+    'tcs': 'tax collected at source',
+    'itc': 'input tax credit',
+    'gst': 'goods and services tax',
+    'cgst': 'central goods and services tax',
+    'sgst': 'state goods and services tax',
+    'igst': 'integrated goods and services tax',
+    'utgst': 'union territory goods and services tax',
+    'gstr': 'gst return',
+    'eway': 'e-way bill',
+    'eway bill': 'e-way bill',
+    'pos': 'place of supply',
+    'rcm': 'reverse charge mechanism',
+    'lut': 'letter of undertaking',
+    'scn': 'show cause notice',
+    'oidar': 'online information and database access or retrieval',
+  };
+  
+  // Replace abbreviations with full terms
+  for (const [abbr, fullTerm] of Object.entries(abbreviations)) {
+    // Match whole word abbreviations (tds, not "tds" inside another word)
+    const abbrRegex = new RegExp(`\\b${abbr}\\b`, 'gi');
+    if (abbrRegex.test(q)) {
+      q = q.replace(abbrRegex, fullTerm);
+    }
+  }
+  
+  // Handle queries asking for list of exempt services/goods FIRST (before curriculum search)
+  if ((q.includes('which services') || q.includes('what services') || q.includes('list of services')) && 
+      (q.includes('exempt') || q.includes('exemption'))) {
+    return `**Exempt Services under GST:**
+
+**Common Exempt Services (Notification 12/2017-CT(Rate) and subsequent amendments):**
+
+**1. Educational Services:**
+- Services by educational institutions (schools, colleges, universities)
+- Services provided to educational institutions
+- Online/distance learning courses (some conditions apply)
+
+**2. Healthcare Services:**
+- Services by clinical establishments (hospitals, nursing homes, clinics)
+- Services provided to clinical establishments
+- Medical services by doctors, dentists, paramedics
+
+**3. Transportation:**
+- Transportation of passengers (except air travel, first class rail)
+- Transportation of goods by road, rail, inland waterways
+- Metro, monorail, tramway services
+
+**4. Financial Services:**
+- Services by way of extending deposits, loans, advances
+- Services by way of renting residential dwelling for use as residence
+
+**5. Religious & Charitable:**
+- Services by religious institutions
+- Charitable activities (some conditions)
+
+**6. Government Services:**
+- Services provided by government/local authorities (except specified services)
+- Services by Reserve Bank of India
+
+**7. Other Exempt Services:**
+- Services by way of admission to entertainment events (if provided by specified persons)
+- Services by way of renting of residential dwelling
+- Services by way of job work for processing of goods
+
+**Note:** Exempt services are notified by the government. The complete list is in GST notifications. Exempt services do not attract GST, but ITC on inputs used for exempt services is not available.
+
+*Reference: Section 11 of CGST Act - Power to grant exemption*`;
+  }
+  
+  if ((q.includes('which goods') || q.includes('what goods') || q.includes('list of goods')) && 
+      (q.includes('exempt') || q.includes('exemption'))) {
+    return `**Exempt Goods under GST:**
+
+**Common Exempt Goods (Notification 2/2017-CT(Rate) and subsequent amendments):**
+
+**1. Unprocessed Food Items:**
+- Fresh fruits and vegetables
+- Unprocessed cereals, pulses, grains
+- Fresh milk, curd, buttermilk
+- Fresh meat, fish, poultry (unprocessed)
+- Eggs
+
+**2. Basic Necessities:**
+- Unprocessed salt
+- Jaggery (gur)
+- Unbranded atta, maida, besan
+- Unbranded paneer
+
+**3. Live Animals & Birds:**
+- Live animals (except horses)
+- Live birds, fish, insects
+
+**4. Printed Materials:**
+- Books, newspapers, journals
+- Maps, charts, globes
+- Printed educational materials
+
+**5. Specific Items:**
+- Human blood and blood plasma
+- Contraceptives
+- Hearing aids
+- Handloom fabrics (some conditions)
+
+**Note:** Exempt goods are notified by the government. The complete list is in GST notifications. Exempt goods do not attract GST, but ITC on inputs used for exempt goods is not available.
+
+*Reference: Section 11 of CGST Act - Power to grant exemption*`;
+  }
+  
+  // Use the expanded query (q) for all subsequent processing
   // Check if this is a comparison query
   const isComparison = q.includes(' vs ') || q.includes(' versus ') || q.includes(' vs. ') || 
                        q.includes('difference between') || q.includes('compare') || 
@@ -381,46 +494,117 @@ function getAIResponse(question: string): string {
     topic1 = cleanTopic(topic1);
     topic2 = cleanTopic(topic2);
     
+    // Expand abbreviations in topics before searching
+    let expandedTopic1 = topic1;
+    let expandedTopic2 = topic2;
+    for (const [abbr, fullTerm] of Object.entries(abbreviations)) {
+      const abbrRegex = new RegExp(`\\b${abbr}\\b`, 'gi');
+      if (abbrRegex.test(expandedTopic1)) expandedTopic1 = expandedTopic1.replace(abbrRegex, fullTerm);
+      if (abbrRegex.test(expandedTopic2)) expandedTopic2 = expandedTopic2.replace(abbrRegex, fullTerm);
+    }
+    
     // Search for both topics
-    const results1 = topic1 ? searchCurriculum(topic1) : [];
-    const results2 = topic2 ? searchCurriculum(topic2) : [];
+    const results1 = expandedTopic1 ? searchCurriculum(expandedTopic1) : [];
+    const results2 = expandedTopic2 ? searchCurriculum(expandedTopic2) : [];
+    
+    // Check if both results point to the same section (prevent duplicates)
+    const isSameSection = results1.length > 0 && results2.length > 0 && 
+                         results1[0].section.id === results2[0].section.id;
     
     // Build comparison response
     let response = `**Comparison: ${topic1 || 'Topic 1'} vs ${topic2 || 'Topic 2'}**\n\n`;
     
-    if (results1.length > 0 && results1[0].score >= 30) {
-      const best1 = results1[0];
-      response += `**${best1.section.title}**\n`;
-      response += `${best1.section.description}\n\n`;
-      if (best1.section.keyPoints && best1.section.keyPoints.length > 0) {
-        response += `**Key Points:**\n`;
-        best1.section.keyPoints.slice(0, 5).forEach((point: string) => {
-          response += `- ${point}\n`;
-        });
-      }
-      const moduleUrl1 = `/modules/${best1.module.id}`;
-      const chapterUrl1 = `/modules/${best1.module.id}/${best1.chapter.slug}`;
-      response += `\n*Reference: [${best1.module.name}](${moduleUrl1}) - [${best1.chapter.title}](${chapterUrl1}) (Section ${best1.section.number})*\n\n`;
-      response += `---\n\n`;
-    }
+    // Handle specific comparisons that don't have separate sections
+    const topic1Lower = topic1.toLowerCase();
+    const topic2Lower = topic2.toLowerCase();
+    const isInvoiceVsBill = (topic1Lower.includes('tax invoice') || topic1Lower.includes('invoice')) && 
+                           (topic2Lower.includes('bill of supply') || topic2Lower.includes('bill supply'));
+    const isBillVsInvoice = (topic1Lower.includes('bill of supply') || topic1Lower.includes('bill supply')) && 
+                           (topic2Lower.includes('tax invoice') || topic2Lower.includes('invoice'));
     
-    if (results2.length > 0 && results2[0].score >= 30) {
-      const best2 = results2[0];
-      response += `**${best2.section.title}**\n`;
-      response += `${best2.section.description}\n\n`;
-      if (best2.section.keyPoints && best2.section.keyPoints.length > 0) {
+    if (isInvoiceVsBill || isBillVsInvoice) {
+      // Special handling for tax invoice vs bill of supply
+      const invoiceResult = results1.find(r => r.section.title.toLowerCase().includes('tax invoice')) || 
+                           results2.find(r => r.section.title.toLowerCase().includes('tax invoice')) ||
+                           results1[0] || results2[0];
+      
+      // Check if query is specific about services or goods
+      const isForServices = q.includes('for services') || q.includes('service');
+      const isForGoods = q.includes('for goods') || (q.includes('good') && !q.includes('service'));
+      
+      if (invoiceResult) {
+        response += `**Tax Invoice${isForServices ? ' for Services' : isForGoods ? ' for Goods' : ''}**\n`;
+        response += `When and how to issue tax invoice${isForServices ? ' for services' : isForGoods ? ' for goods' : ''}\n\n`;
         response += `**Key Points:**\n`;
-        best2.section.keyPoints.slice(0, 5).forEach((point: string) => {
-          response += `- ${point}\n`;
-        });
+        response += `- Issued for taxable supplies\n`;
+        if (isForServices) {
+          response += `- For services: Before or after provision of service (within 30 days)\n`;
+          response += `- Invoice can be issued before service completion if advance received\n`;
+        } else if (isForGoods) {
+          response += `- For goods: Before or at time of removal/delivery of goods\n`;
+          response += `- Must be issued at the time of supply or removal\n`;
+        } else {
+          response += `- Before or at time of removal/delivery of goods\n`;
+          response += `- Before or after provision of service (within 30 days)\n`;
+        }
+        response += `- Must show tax amount separately (CGST, SGST/IGST)\n`;
+        response += `- Required for ITC claim by recipient\n`;
+        const moduleUrl1 = `/modules/${invoiceResult.module.id}`;
+        const chapterUrl1 = `/modules/${invoiceResult.module.id}/${invoiceResult.chapter.slug}`;
+        response += `\n*Reference: [${invoiceResult.module.name}](${moduleUrl1}) - [${invoiceResult.chapter.title}](${chapterUrl1}) (Section ${invoiceResult.section.number})*\n\n`;
+        response += `---\n\n`;
+        
+        response += `**Bill of Supply${isForServices ? ' for Services' : isForGoods ? ' for Goods' : ''}**\n`;
+        response += `When to issue bill of supply instead of tax invoice${isForServices ? ' for services' : isForGoods ? ' for goods' : ''}\n\n`;
+        response += `**Key Points:**\n`;
+        response += `- Issued for exempt supplies (no tax applicable)\n`;
+        response += `- Issued by composition dealers (cannot collect tax)\n`;
+        if (isForServices) {
+          response += `- For exempt services: Before or after provision (within 30 days)\n`;
+        } else if (isForGoods) {
+          response += `- For exempt goods: Before or at time of delivery\n`;
+        }
+        response += `- Does NOT show tax amount (since no tax)\n`;
+        response += `- Recipient cannot claim ITC (no tax paid)\n`;
+        response += `- Same time limits as tax invoice\n`;
+        response += `\n*Reference: [${invoiceResult.module.name}](${moduleUrl1}) - [${invoiceResult.chapter.title}](${chapterUrl1}) (Section ${invoiceResult.section.number})*\n\n`;
       }
-      const moduleUrl2 = `/modules/${best2.module.id}`;
-      const chapterUrl2 = `/modules/${best2.module.id}/${best2.chapter.slug}`;
-      response += `\n*Reference: [${best2.module.name}](${moduleUrl2}) - [${best2.chapter.title}](${chapterUrl2}) (Section ${best2.section.number})*\n\n`;
+    } else {
+      // Regular comparison logic
+      if (results1.length > 0 && results1[0].score >= 30 && !isSameSection) {
+        const best1 = results1[0];
+        response += `**${best1.section.title}**\n`;
+        response += `${best1.section.description}\n\n`;
+        if (best1.section.keyPoints && best1.section.keyPoints.length > 0) {
+          response += `**Key Points:**\n`;
+          best1.section.keyPoints.slice(0, 5).forEach((point: string) => {
+            response += `- ${point}\n`;
+          });
+        }
+        const moduleUrl1 = `/modules/${best1.module.id}`;
+        const chapterUrl1 = `/modules/${best1.module.id}/${best1.chapter.slug}`;
+        response += `\n*Reference: [${best1.module.name}](${moduleUrl1}) - [${best1.chapter.title}](${chapterUrl1}) (Section ${best1.section.number})*\n\n`;
+        response += `---\n\n`;
+      }
+      
+      if (results2.length > 0 && results2[0].score >= 30 && !isSameSection) {
+        const best2 = results2[0];
+        response += `**${best2.section.title}**\n`;
+        response += `${best2.section.description}\n\n`;
+        if (best2.section.keyPoints && best2.section.keyPoints.length > 0) {
+          response += `**Key Points:**\n`;
+          best2.section.keyPoints.slice(0, 5).forEach((point: string) => {
+            response += `- ${point}\n`;
+          });
+        }
+        const moduleUrl2 = `/modules/${best2.module.id}`;
+        const chapterUrl2 = `/modules/${best2.module.id}/${best2.chapter.slug}`;
+        response += `\n*Reference: [${best2.module.name}](${moduleUrl2}) - [${best2.chapter.title}](${chapterUrl2}) (Section ${best2.section.number})*\n\n`;
+      }
     }
     
     // Add key differences summary
-    if (results1.length > 0 && results2.length > 0) {
+    if (results1.length > 0 && results2.length > 0 && !isSameSection) {
       response += `**Key Differences:**\n\n`;
       const best1 = results1[0];
       const best2 = results2[0];
@@ -431,7 +615,22 @@ function getAIResponse(question: string): string {
       const title1Lower = best1.section.title.toLowerCase();
       const title2Lower = best2.section.title.toLowerCase();
       
-      if ((title1Lower.includes('zero') || topic1Lower.includes('zero')) && 
+      if (isInvoiceVsBill || isBillVsInvoice) {
+        response += `**Tax Invoice:**\n`;
+        response += `- For taxable supplies\n`;
+        response += `- Shows tax amount (CGST, SGST/IGST)\n`;
+        response += `- Recipient can claim ITC\n`;
+        response += `- Issued by regular registered persons\n\n`;
+        
+        response += `**Bill of Supply:**\n`;
+        response += `- For exempt supplies or composition dealers\n`;
+        response += `- Does NOT show tax amount\n`;
+        response += `- Recipient cannot claim ITC\n`;
+        response += `- Issued when no tax is collected\n\n`;
+        
+        response += `**Main Difference:**\n`;
+        response += `Tax invoice is for taxable supplies where tax is collected and shown, while bill of supply is for exempt supplies or composition dealers where no tax is collected.`;
+      } else if ((title1Lower.includes('zero') || topic1Lower.includes('zero')) && 
           (title2Lower.includes('exempt') || topic2Lower.includes('exempt'))) {
         response += `**Zero-Rated Supply:**\n`;
         response += `- Tax rate: 0%\n`;
@@ -472,7 +671,8 @@ function getAIResponse(question: string): string {
                         q.includes('all types') || q.includes('each type') || q.includes('different types');
   
   // ALWAYS search curriculum first - it's the comprehensive knowledge base
-  const results = searchCurriculum(question);
+  // Use expanded query (q) which has abbreviations replaced
+  const results = searchCurriculum(q);
   
   // Boost scores for exact keyword matches (e.g., "services" should prioritize service sections)
   const hasServices = q.includes('service');
