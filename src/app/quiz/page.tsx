@@ -74,10 +74,10 @@ export default function QuizPage() {
         <div className="card p-6 space-y-6">
           <div>
             <label className="block text-sm font-medium mb-2">Number of Questions</label>
-            <div className="flex gap-2">
-              {[5, 10, 15, 20].map(n => (
+            <div className="flex gap-2 flex-wrap">
+              {[5, 10, 15, 20, 25, 30, 35, 40].map(n => (
                 <button key={n} onClick={() => setQuizSettings({ questionCount: n })}
-                  className={cn("flex-1 py-2 rounded-lg font-medium", currentQuizSettings.questionCount === n ? "bg-primary-600 text-white" : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200")}>
+                  className={cn("flex-1 min-w-[60px] py-2 rounded-lg font-medium", currentQuizSettings.questionCount === n ? "bg-primary-600 text-white" : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200")}>
                   {n}
                 </button>
               ))}
