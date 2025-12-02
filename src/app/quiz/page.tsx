@@ -19,6 +19,7 @@ export default function QuizPage() {
   const [showHint, setShowHint] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [customQuestionCount, setCustomQuestionCount] = useState<string>('');
 
   const currentQuestion = questions[currentIndex];
   const totalPoints = questions.reduce((acc, q) => acc + q.points, 0);
@@ -37,11 +38,16 @@ export default function QuizPage() {
   }, [quizState, timeLeft]);
 
   const startQuiz = () => {
-    const quizQuestions = generateMixedQuiz(currentQuizSettings.questionCount, currentQuizSettings.difficulty);
+    // Use custom input if provided and valid, otherwise use selected button value
+    const questionCount = customQuestionCount 
+      ? Math.min(Math.max(1, parseInt(customQuestionCount) || currentQuizSettings.questionCount), GST_QUESTIONS.length)
+      : currentQuizSettings.questionCount;
+    
+    const quizQuestions = generateMixedQuiz(questionCount, currentQuizSettings.difficulty);
     setQuestions(quizQuestions);
     setAnswers({});
     setCurrentIndex(0);
-    setTimeLeft(currentQuizSettings.questionCount * 60);
+    setTimeLeft(questionCount * 60);
     setQuizState('active');
     setShowHint(false);
   };
@@ -74,14 +80,44 @@ export default function QuizPage() {
         <div className="card p-6 space-y-6">
           <div>
             <label className="block text-sm font-medium mb-2">Number of Questions</label>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-wrap mb-3">
               {[5, 10, 15, 20, 25, 30, 35, 40].map(n => (
-                <button key={n} onClick={() => setQuizSettings({ questionCount: n })}
-                  className={cn("flex-1 min-w-[60px] py-2 rounded-lg font-medium", currentQuizSettings.questionCount === n ? "bg-primary-600 text-white" : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200")}>
+                <button key={n} onClick={() => {
+                  setQuizSettings({ questionCount: n });
+                  setCustomQuestionCount(''); // Clear custom input when selecting preset
+                }}
+                  className={cn("flex-1 min-w-[60px] py-2 rounded-lg font-medium", 
+                    !customQuestionCount && currentQuizSettings.questionCount === n 
+                      ? "bg-primary-600 text-white" 
+                      : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700")}>
                   {n}
                 </button>
               ))}
             </div>
+            <div className="flex gap-2 items-center">
+              <label className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Custom:</label>
+              <input
+                type="number"
+                min="1"
+                max={GST_QUESTIONS.length}
+                value={customQuestionCount}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setCustomQuestionCount(value);
+                  if (value && !isNaN(parseInt(value))) {
+                    const num = Math.min(Math.max(1, parseInt(value)), GST_QUESTIONS.length);
+                    setQuizSettings({ questionCount: num });
+                  }
+                }}
+                placeholder={`Enter number (1-${GST_QUESTIONS.length})`}
+                className="flex-1 input py-2"
+              />
+            </div>
+            {customQuestionCount && (
+              <p className="text-xs text-gray-500 mt-1">
+                Will use: {Math.min(Math.max(1, parseInt(customQuestionCount) || 0), GST_QUESTIONS.length)} questions
+              </p>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">Difficulty</label>
