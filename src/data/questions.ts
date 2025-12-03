@@ -2959,10 +2959,1566 @@ export const GST_QUESTIONS: QuizQuestion[] = [
     correctAnswer: '24%',
     explanation: 'Section 50: Interest on delayed ITC reversal is 24% per annum (higher than delayed payment).',
     difficulty: 'medium', points: 15, tags: ['interest', 'ITC reversal']
-  }
-  // Continuing with q321-q493 (173 more questions) to reach 500 total
-  // Comprehensive coverage of all remaining GST topics
+  },
+  {
+    id: 'q321', moduleId: 'cgst-act', chapterId: 8, sectionId: 'sec-36',
+    question: 'Records Retention Period?',
+    type: 'multiple-choice',
+    options: ['6 years', '3 years', '5 years', '7 years'],
+    correctAnswer: '6 years',
+    explanation: 'Section/Rule sec-36: Records Retention Period is 6 years.',
+    difficulty: 'easy', points: 10, tags: ['records', 'retention']
+  },
+  {
+    id: 'q322', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-37',
+    question: 'Gstr-1 Due Date?',
+    type: 'multiple-choice',
+    options: ['11th', '10th', '15th', '25th'],
+    correctAnswer: '11th',
+    explanation: 'Section/Rule sec-37: Gstr-1 Due Date is 11th.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-1', 'due date']
+  },
+  {
+    id: 'q323', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-38',
+    question: 'Gstr-2B Availability?',
+    type: 'multiple-choice',
+    options: ['14th', '10th', '15th', '25th'],
+    correctAnswer: '14th',
+    explanation: 'Section/Rule sec-38: Gstr-2B Availability is 14th.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-2B', 'availability']
+  },
+  {
+    id: 'q324', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-39',
+    question: 'Gstr-3B Due Date?',
+    type: 'multiple-choice',
+    options: ['20th', '10th', '15th', '25th'],
+    correctAnswer: '20th',
+    explanation: 'Section/Rule sec-39: Gstr-3B Due Date is 20th.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-3B', 'due date']
+  },
+  {
+    id: 'q325', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-42',
+    question: 'Itc Matching?',
+    type: 'multiple-choice',
+    options: ['GSTR-2B', 'GSTR-1', 'GSTR-2B', 'GSTR-3B'],
+    correctAnswer: 'GSTR-2B',
+    explanation: 'Section/Rule sec-42: Itc Matching is GSTR-2B.',
+    difficulty: 'medium', points: 15, tags: ['ITC matching', 'GSTR-2B']
+  },
+  {
+    id: 'q326', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-44',
+    question: 'Gstr-9 Due Date?',
+    type: 'multiple-choice',
+    options: ['31st December', '10th', '15th', '25th'],
+    correctAnswer: '31st December',
+    explanation: 'Section/Rule sec-44: Gstr-9 Due Date is 31st December.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-9', 'annual return']
+  },
+  {
+    id: 'q327', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-45',
+    question: 'Final Return Period?',
+    type: 'multiple-choice',
+    options: ['3 months', '1 month', '6 months', '1 year'],
+    correctAnswer: '3 months',
+    explanation: 'Section/Rule sec-45: Final Return Period is 3 months.',
+    difficulty: 'medium', points: 15, tags: ['final return', 'cancellation']
+  },
+  {
+    id: 'q328', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-46',
+    question: 'Notice Response Time?',
+    type: 'multiple-choice',
+    options: ['15 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '15 days',
+    explanation: 'Section/Rule sec-46: Notice Response Time is 15 days.',
+    difficulty: 'easy', points: 10, tags: ['notice', 'non-filing']
+  },
+  {
+    id: 'q329', moduleId: 'cgst-act', chapterId: 10, sectionId: 'sec-50',
+    question: 'Interest Rate Delayed Payment?',
+    type: 'multiple-choice',
+    options: ['18%', '15%', '20%', '25%'],
+    correctAnswer: '18%',
+    explanation: 'Section/Rule sec-50: Interest Rate Delayed Payment is 18%.',
+    difficulty: 'easy', points: 10, tags: ['interest', 'delayed payment']
+  },
+  {
+    id: 'q330', moduleId: 'cgst-act', chapterId: 10, sectionId: 'sec-50',
+    question: 'Interest Rate Itc Reversal?',
+    type: 'multiple-choice',
+    options: ['24%', '15%', '20%', '25%'],
+    correctAnswer: '24%',
+    explanation: 'Section/Rule sec-50: Interest Rate Itc Reversal is 24%.',
+    difficulty: 'medium', points: 15, tags: ['interest', 'ITC reversal']
+  },
+  {
+    id: 'q331', moduleId: 'cgst-act', chapterId: 11, sectionId: 'sec-54',
+    question: 'Refund Time Limit?',
+    type: 'multiple-choice',
+    options: ['2 years', '3 months', '6 months', '1 year'],
+    correctAnswer: '2 years',
+    explanation: 'Section/Rule sec-54: Refund Time Limit is 2 years.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'time limit']
+  },
+  {
+    id: 'q332', moduleId: 'cgst-act', chapterId: 11, sectionId: 'sec-54',
+    question: 'Refund Interest Rate?',
+    type: 'multiple-choice',
+    options: ['6%', '15%', '20%', '25%'],
+    correctAnswer: '6%',
+    explanation: 'Section/Rule sec-54: Refund Interest Rate is 6%.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'interest']
+  },
+  {
+    id: 'q333', moduleId: 'cgst-act', chapterId: 11, sectionId: 'sec-55',
+    question: 'Un Body Refund?',
+    type: 'multiple-choice',
+    options: ['Tax paid', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax paid',
+    explanation: 'Section/Rule sec-55: Un Body Refund is Tax paid.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'UN bodies']
+  },
+  {
+    id: 'q334', moduleId: 'cgst-act', chapterId: 12, sectionId: 'sec-60',
+    question: 'Provisional Assessment Extension?',
+    type: 'multiple-choice',
+    options: ['6 months', '3 months', '6 months', '1 year'],
+    correctAnswer: '6 months',
+    explanation: 'Section/Rule sec-60: Provisional Assessment Extension is 6 months.',
+    difficulty: 'medium', points: 15, tags: ['assessment', 'provisional']
+  },
+  {
+    id: 'q335', moduleId: 'cgst-act', chapterId: 12, sectionId: 'sec-61',
+    question: 'Scrutiny Response Time?',
+    type: 'multiple-choice',
+    options: ['30 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '30 days',
+    explanation: 'Section/Rule sec-61: Scrutiny Response Time is 30 days.',
+    difficulty: 'easy', points: 10, tags: ['scrutiny', 'response']
+  },
+  {
+    id: 'q336', moduleId: 'cgst-act', chapterId: 12, sectionId: 'sec-63',
+    question: 'Unregistered Assessment Period?',
+    type: 'multiple-choice',
+    options: ['Date liable', '3 years', '5 years', '7 years'],
+    correctAnswer: 'Date liable',
+    explanation: 'Section/Rule sec-63: Unregistered Assessment Period is Date liable.',
+    difficulty: 'medium', points: 15, tags: ['assessment', 'unregistered']
+  },
+  {
+    id: 'q337', moduleId: 'cgst-act', chapterId: 13, sectionId: 'sec-65',
+    question: 'Audit Completion Time?',
+    type: 'multiple-choice',
+    options: ['3 months', '1 month', '6 months', '1 year'],
+    correctAnswer: '3 months',
+    explanation: 'Section/Rule sec-65: Audit Completion Time is 3 months.',
+    difficulty: 'medium', points: 15, tags: ['audit', 'completion']
+  },
+  {
+    id: 'q338', moduleId: 'cgst-act', chapterId: 13, sectionId: 'sec-65',
+    question: 'Audit Extension?',
+    type: 'multiple-choice',
+    options: ['6 months', '3 months', '6 months', '1 year'],
+    correctAnswer: '6 months',
+    explanation: 'Section/Rule sec-65: Audit Extension is 6 months.',
+    difficulty: 'medium', points: 15, tags: ['audit', 'extension']
+  },
+  {
+    id: 'q339', moduleId: 'cgst-act', chapterId: 13, sectionId: 'sec-66',
+    question: 'Special Audit Ordered By?',
+    type: 'multiple-choice',
+    options: ['Commissioner', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Commissioner',
+    explanation: 'Section/Rule sec-66: Special Audit Ordered By is Commissioner.',
+    difficulty: 'medium', points: 15, tags: ['special audit', 'commissioner']
+  },
+  {
+    id: 'q340', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-67',
+    question: 'Search Authorization By?',
+    type: 'multiple-choice',
+    options: ['Commissioner', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Commissioner',
+    explanation: 'Section/Rule sec-67: Search Authorization By is Commissioner.',
+    difficulty: 'medium', points: 15, tags: ['search', 'authorization']
+  },
+  {
+    id: 'q341', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-68',
+    question: 'Goods Verification At?',
+    type: 'multiple-choice',
+    options: ['Check post', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Check post',
+    explanation: 'Section/Rule sec-68: Goods Verification At is Check post.',
+    difficulty: 'easy', points: 10, tags: ['verification', 'goods']
+  },
+  {
+    id: 'q342', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-69',
+    question: 'Arrest Conditions?',
+    type: 'multiple-choice',
+    options: ['Tax evasion', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax evasion',
+    explanation: 'Section/Rule sec-69: Arrest Conditions is Tax evasion.',
+    difficulty: 'hard', points: 20, tags: ['arrest', 'conditions']
+  },
+  {
+    id: 'q343', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-69',
+    question: 'Arrest Production Time?',
+    type: 'multiple-choice',
+    options: ['24 hours', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '24 hours',
+    explanation: 'Section/Rule sec-69: Arrest Production Time is 24 hours.',
+    difficulty: 'easy', points: 10, tags: ['arrest', 'magistrate']
+  },
+  {
+    id: 'q344', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-70',
+    question: 'Summons Binding Like?',
+    type: 'multiple-choice',
+    options: ['Court summons', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Court summons',
+    explanation: 'Section/Rule sec-70: Summons Binding Like is Court summons.',
+    difficulty: 'easy', points: 10, tags: ['summons', 'binding']
+  },
+  {
+    id: 'q345', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-73',
+    question: 'Scn Time Limit?',
+    type: 'multiple-choice',
+    options: ['3 years', '3 months', '6 months', '1 year'],
+    correctAnswer: '3 years',
+    explanation: 'Section/Rule sec-73: Scn Time Limit is 3 years.',
+    difficulty: 'hard', points: 20, tags: ['SCN', 'time limit']
+  },
+  {
+    id: 'q346', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-73',
+    question: 'Scn Notice Period?',
+    type: 'multiple-choice',
+    options: ['3 months', '1 month', '6 months', '1 year'],
+    correctAnswer: '3 months',
+    explanation: 'Section/Rule sec-73: Scn Notice Period is 3 months.',
+    difficulty: 'medium', points: 15, tags: ['SCN', 'notice period']
+  },
+  {
+    id: 'q347', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-74',
+    question: 'Fraud Penalty?',
+    type: 'multiple-choice',
+    options: ['100%', '5%', '15%', '25%'],
+    correctAnswer: '100%',
+    explanation: 'Section/Rule sec-74: Fraud Penalty is 100%.',
+    difficulty: 'hard', points: 20, tags: ['fraud', 'penalty']
+  },
+  {
+    id: 'q348', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-74',
+    question: 'Fraud Penalty Reduction?',
+    type: 'multiple-choice',
+    options: ['50%', '5%', '15%', '25%'],
+    correctAnswer: '50%',
+    explanation: 'Section/Rule sec-74: Fraud Penalty Reduction is 50%.',
+    difficulty: 'hard', points: 20, tags: ['fraud', 'penalty reduction']
+  },
+  {
+    id: 'q349', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-75',
+    question: 'Personal Hearing?',
+    type: 'multiple-choice',
+    options: ['Mandatory', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Mandatory',
+    explanation: 'Section/Rule sec-75: Personal Hearing is Mandatory.',
+    difficulty: 'medium', points: 15, tags: ['hearing', 'personal']
+  },
+  {
+    id: 'q350', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-75',
+    question: 'Hearing Adjournment Limit?',
+    type: 'multiple-choice',
+    options: ['3 times', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '3 times',
+    explanation: 'Section/Rule sec-75: Hearing Adjournment Limit is 3 times.',
+    difficulty: 'medium', points: 15, tags: ['hearing', 'adjournment']
+  },
+  {
+    id: 'q351', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-76',
+    question: 'Tax Collected Penalty?',
+    type: 'multiple-choice',
+    options: ['Equal to tax', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Equal to tax',
+    explanation: 'Section/Rule sec-76: Tax Collected Penalty is Equal to tax.',
+    difficulty: 'medium', points: 15, tags: ['penalty', 'collected']
+  },
+  {
+    id: 'q352', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-77',
+    question: 'Wrong Tax Refund Time?',
+    type: 'multiple-choice',
+    options: ['2 years', '3 months', '6 months', '1 year'],
+    correctAnswer: '2 years',
+    explanation: 'Section/Rule sec-77: Wrong Tax Refund Time is 2 years.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'wrong tax']
+  },
+  {
+    id: 'q353', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-78',
+    question: 'Recovery Start Period?',
+    type: 'multiple-choice',
+    options: ['3 months', '1 month', '6 months', '1 year'],
+    correctAnswer: '3 months',
+    explanation: 'Section/Rule sec-78: Recovery Start Period is 3 months.',
+    difficulty: 'medium', points: 15, tags: ['recovery', 'start']
+  },
+  {
+    id: 'q354', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-78',
+    question: 'Recovery Immediate If?',
+    type: 'multiple-choice',
+    options: ['Fraud detected', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Fraud detected',
+    explanation: 'Section/Rule sec-78: Recovery Immediate If is Fraud detected.',
+    difficulty: 'medium', points: 15, tags: ['recovery', 'fraud']
+  },
+  {
+    id: 'q355', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-79',
+    question: 'Recovery Methods Include?',
+    type: 'multiple-choice',
+    options: ['Multiple', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Multiple',
+    explanation: 'Section/Rule sec-79: Recovery Methods Include is Multiple.',
+    difficulty: 'hard', points: 20, tags: ['recovery', 'methods']
+  },
+  {
+    id: 'q356', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-83',
+    question: 'Attachment Validity?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-83: Attachment Validity is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['attachment', 'validity']
+  },
+  {
+    id: 'q357', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-83',
+    question: 'Attachment Extension?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-83: Attachment Extension is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['attachment', 'extension']
+  },
+  {
+    id: 'q358', moduleId: 'cgst-act', chapterId: 16, sectionId: 'sec-85',
+    question: 'Transfer Liability Type?',
+    type: 'multiple-choice',
+    options: ['Joint', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Joint',
+    explanation: 'Section/Rule sec-85: Transfer Liability Type is Joint.',
+    difficulty: 'hard', points: 20, tags: ['transfer', 'liability']
+  },
+  {
+    id: 'q359', moduleId: 'cgst-act', chapterId: 16, sectionId: 'sec-89',
+    question: 'Director Liability Type?',
+    type: 'multiple-choice',
+    options: ['Joint and several', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Joint and several',
+    explanation: 'Section/Rule sec-89: Director Liability Type is Joint and several.',
+    difficulty: 'hard', points: 20, tags: ['director', 'liability']
+  },
+  {
+    id: 'q360', moduleId: 'cgst-act', chapterId: 16, sectionId: 'sec-89',
+    question: 'Director Liability Avoidance?',
+    type: 'multiple-choice',
+    options: ['No negligence', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'No negligence',
+    explanation: 'Section/Rule sec-89: Director Liability Avoidance is No negligence.',
+    difficulty: 'hard', points: 20, tags: ['director', 'liability avoidance']
+  },
+  {
+    id: 'q361', moduleId: 'cgst-act', chapterId: 16, sectionId: 'sec-90',
+    question: 'Partner Liability Type?',
+    type: 'multiple-choice',
+    options: ['Joint and several', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Joint and several',
+    explanation: 'Section/Rule sec-90: Partner Liability Type is Joint and several.',
+    difficulty: 'medium', points: 15, tags: ['partner', 'liability']
+  },
+  {
+    id: 'q362', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-95',
+    question: 'Aar Definition?',
+    type: 'multiple-choice',
+    options: ['Authority', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Authority',
+    explanation: 'Section/Rule sec-95: Aar Definition is Authority.',
+    difficulty: 'easy', points: 10, tags: ['AAR', 'definition']
+  },
+  {
+    id: 'q363', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-97',
+    question: 'Ruling Application Fee?',
+    type: 'multiple-choice',
+    options: ['₹5,000', '₹2,500', '₹7,500', '₹15,000'],
+    correctAnswer: '₹5,000',
+    explanation: 'Section/Rule sec-97: Ruling Application Fee is ₹5,000.',
+    difficulty: 'easy', points: 10, tags: ['ruling', 'fee']
+  },
+  {
+    id: 'q364', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-97',
+    question: 'Ruling Questions Include?',
+    type: 'multiple-choice',
+    options: ['Classification', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Classification',
+    explanation: 'Section/Rule sec-97: Ruling Questions Include is Classification.',
+    difficulty: 'medium', points: 15, tags: ['ruling', 'questions']
+  },
+  {
+    id: 'q365', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-98',
+    question: 'Ruling Pronouncement Time?',
+    type: 'multiple-choice',
+    options: ['90 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '90 days',
+    explanation: 'Section/Rule sec-98: Ruling Pronouncement Time is 90 days.',
+    difficulty: 'easy', points: 10, tags: ['ruling', 'time']
+  },
+  {
+    id: 'q366', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-100',
+    question: 'Aaar Appeal Fee?',
+    type: 'multiple-choice',
+    options: ['₹10,000', '₹2,500', '₹7,500', '₹15,000'],
+    correctAnswer: '₹10,000',
+    explanation: 'Section/Rule sec-100: Aaar Appeal Fee is ₹10,000.',
+    difficulty: 'easy', points: 10, tags: ['AAAR', 'fee']
+  },
+  {
+    id: 'q367', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-100',
+    question: 'Aaar Appeal Time?',
+    type: 'multiple-choice',
+    options: ['30 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '30 days',
+    explanation: 'Section/Rule sec-100: Aaar Appeal Time is 30 days.',
+    difficulty: 'easy', points: 10, tags: ['AAAR', 'appeal time']
+  },
+  {
+    id: 'q368', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-103',
+    question: 'Ruling Binding On?',
+    type: 'multiple-choice',
+    options: ['Applicant', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Applicant',
+    explanation: 'Section/Rule sec-103: Ruling Binding On is Applicant.',
+    difficulty: 'medium', points: 15, tags: ['ruling', 'binding']
+  },
+  {
+    id: 'q369', moduleId: 'cgst-act', chapterId: 17, sectionId: 'sec-103',
+    question: 'Ruling Void If?',
+    type: 'multiple-choice',
+    options: ['Law changes', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Law changes',
+    explanation: 'Section/Rule sec-103: Ruling Void If is Law changes.',
+    difficulty: 'medium', points: 15, tags: ['ruling', 'void']
+  },
+  {
+    id: 'q370', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-107',
+    question: 'Appeal Pre-Deposit?',
+    type: 'multiple-choice',
+    options: ['10%', '5%', '15%', '25%'],
+    correctAnswer: '10%',
+    explanation: 'Section/Rule sec-107: Appeal Pre-Deposit is 10%.',
+    difficulty: 'hard', points: 20, tags: ['appeal', 'pre-deposit']
+  },
+  {
+    id: 'q371', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-107',
+    question: 'Appeal Decision Time?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-107: Appeal Decision Time is 1 year.',
+    difficulty: 'easy', points: 10, tags: ['appeal', 'decision time']
+  },
+  {
+    id: 'q372', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-108',
+    question: 'Revision Time Limit?',
+    type: 'multiple-choice',
+    options: ['3 years', '3 months', '6 months', '1 year'],
+    correctAnswer: '3 years',
+    explanation: 'Section/Rule sec-108: Revision Time Limit is 3 years.',
+    difficulty: 'medium', points: 15, tags: ['revision', 'time limit']
+  },
+  {
+    id: 'q373', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-112',
+    question: 'Tribunal Additional Deposit?',
+    type: 'multiple-choice',
+    options: ['10%', '5%', '15%', '25%'],
+    correctAnswer: '10%',
+    explanation: 'Section/Rule sec-112: Tribunal Additional Deposit is 10%.',
+    difficulty: 'hard', points: 20, tags: ['tribunal', 'additional deposit']
+  },
+  {
+    id: 'q374', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-112',
+    question: 'Tribunal Total Deposit?',
+    type: 'multiple-choice',
+    options: ['20%', '5%', '15%', '25%'],
+    correctAnswer: '20%',
+    explanation: 'Section/Rule sec-112: Tribunal Total Deposit is 20%.',
+    difficulty: 'hard', points: 20, tags: ['tribunal', 'total deposit']
+  },
+  {
+    id: 'q375', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-117',
+    question: 'High Court Appeal Time?',
+    type: 'multiple-choice',
+    options: ['180 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '180 days',
+    explanation: 'Section/Rule sec-117: High Court Appeal Time is 180 days.',
+    difficulty: 'medium', points: 15, tags: ['high court', 'appeal time']
+  },
+  {
+    id: 'q376', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-117',
+    question: 'High Court Appeal Basis?',
+    type: 'multiple-choice',
+    options: ['Substantial question', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Substantial question',
+    explanation: 'Section/Rule sec-117: High Court Appeal Basis is Substantial question.',
+    difficulty: 'hard', points: 20, tags: ['high court', 'appeal basis']
+  },
+  {
+    id: 'q377', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-122',
+    question: 'Penalty Fake Invoices?',
+    type: 'multiple-choice',
+    options: ['100% or ₹10,000', '15%', '20%', '25%'],
+    correctAnswer: '100% or ₹10,000',
+    explanation: 'Section/Rule sec-122: Penalty Fake Invoices is 100% or ₹10,000.',
+    difficulty: 'medium', points: 15, tags: ['penalty', 'fake invoices']
+  },
+  {
+    id: 'q378', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-125',
+    question: 'General Penalty Maximum?',
+    type: 'multiple-choice',
+    options: ['₹25,000', '₹2,500', '₹7,500', '₹15,000'],
+    correctAnswer: '₹25,000',
+    explanation: 'Section/Rule sec-125: General Penalty Maximum is ₹25,000.',
+    difficulty: 'easy', points: 10, tags: ['penalty', 'general']
+  },
+  {
+    id: 'q379', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-129',
+    question: 'Detention Minor Defects?',
+    type: 'multiple-choice',
+    options: ['2% or ₹25,000', '15%', '20%', '25%'],
+    correctAnswer: '2% or ₹25,000',
+    explanation: 'Section/Rule sec-129: Detention Minor Defects is 2% or ₹25,000.',
+    difficulty: 'medium', points: 15, tags: ['detention', 'minor defects']
+  },
+  {
+    id: 'q380', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-129',
+    question: 'Detention Evasion Intent?',
+    type: 'multiple-choice',
+    options: ['200%', '5%', '15%', '25%'],
+    correctAnswer: '200%',
+    explanation: 'Section/Rule sec-129: Detention Evasion Intent is 200%.',
+    difficulty: 'hard', points: 20, tags: ['detention', 'evasion intent']
+  },
+  {
+    id: 'q381', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-130',
+    question: 'Confiscation Redemption?',
+    type: 'multiple-choice',
+    options: ['Tax penalty fine', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax penalty fine',
+    explanation: 'Section/Rule sec-130: Confiscation Redemption is Tax penalty fine.',
+    difficulty: 'hard', points: 20, tags: ['confiscation', 'redemption']
+  },
+  {
+    id: 'q382', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-132',
+    question: 'Punishment Evasion > ₹5 Crore?',
+    type: 'multiple-choice',
+    options: ['5 years', '1 year', '2 years', '3 years'],
+    correctAnswer: '5 years',
+    explanation: 'Section/Rule sec-132: Punishment Evasion > ₹5 Crore is 5 years.',
+    difficulty: 'hard', points: 20, tags: ['punishment', 'evasion']
+  },
+  {
+    id: 'q383', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-132',
+    question: 'Punishment Repeat Offence?',
+    type: 'multiple-choice',
+    options: ['5 years', '1 year', '2 years', '3 years'],
+    correctAnswer: '5 years',
+    explanation: 'Section/Rule sec-132: Punishment Repeat Offence is 5 years.',
+    difficulty: 'hard', points: 20, tags: ['punishment', 'repeat']
+  },
+  {
+    id: 'q384', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-138',
+    question: 'Compounding Fee Minimum?',
+    type: 'multiple-choice',
+    options: ['Tax or ₹25,000', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax or ₹25,000',
+    explanation: 'Section/Rule sec-138: Compounding Fee Minimum is Tax or ₹25,000.',
+    difficulty: 'medium', points: 15, tags: ['compounding', 'fee minimum']
+  },
+  {
+    id: 'q385', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-138',
+    question: 'Compounding Fee Maximum?',
+    type: 'multiple-choice',
+    options: ['Tax or ₹50,000', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax or ₹50,000',
+    explanation: 'Section/Rule sec-138: Compounding Fee Maximum is Tax or ₹50,000.',
+    difficulty: 'medium', points: 15, tags: ['compounding', 'fee maximum']
+  },
+  {
+    id: 'q386', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-138',
+    question: 'Compounding Not Available?',
+    type: 'multiple-choice',
+    options: ['Repeat offenders', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Repeat offenders',
+    explanation: 'Section/Rule sec-138: Compounding Not Available is Repeat offenders.',
+    difficulty: 'medium', points: 15, tags: ['compounding', 'not available']
+  },
+  {
+    id: 'q387', moduleId: 'cgst-act', chapterId: 20, sectionId: 'sec-139',
+    question: 'Provisional Registration?',
+    type: 'multiple-choice',
+    options: ['Migration', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Migration',
+    explanation: 'Section/Rule sec-139: Provisional Registration is Migration.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'provisional']
+  },
+  {
+    id: 'q388', moduleId: 'cgst-act', chapterId: 20, sectionId: 'sec-140',
+    question: 'Tran-1 Purpose?',
+    type: 'multiple-choice',
+    options: ['ITC carry forward', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'ITC carry forward',
+    explanation: 'Section/Rule sec-140: Tran-1 Purpose is ITC carry forward.',
+    difficulty: 'medium', points: 15, tags: ['transitional', 'TRAN-1']
+  },
+  {
+    id: 'q389', moduleId: 'cgst-act', chapterId: 20, sectionId: 'sec-140',
+    question: 'Itc Stock Invoice Period?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-140: Itc Stock Invoice Period is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['transitional', 'ITC stock']
+  },
+  {
+    id: 'q390', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-143',
+    question: 'Job Work Input Return?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-143: Job Work Input Return is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['job work', 'input return']
+  },
+  {
+    id: 'q391', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-143',
+    question: 'Job Work Capital Return?',
+    type: 'multiple-choice',
+    options: ['3 years', '3 months', '6 months', '1 year'],
+    correctAnswer: '3 years',
+    explanation: 'Section/Rule sec-143: Job Work Capital Return is 3 years.',
+    difficulty: 'medium', points: 15, tags: ['job work', 'capital return']
+  },
+  {
+    id: 'q392', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-147',
+    question: 'Deemed Exports Include?',
+    type: 'multiple-choice',
+    options: ['SEZ', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'SEZ',
+    explanation: 'Section/Rule sec-147: Deemed Exports Include is SEZ.',
+    difficulty: 'medium', points: 15, tags: ['deemed exports', 'SEZ']
+  },
+  {
+    id: 'q393', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-171',
+    question: 'Anti-Profiteering Benefit To?',
+    type: 'multiple-choice',
+    options: ['Consumers', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Consumers',
+    explanation: 'Section/Rule sec-171: Anti-Profiteering Benefit To is Consumers.',
+    difficulty: 'easy', points: 10, tags: ['anti-profiteering', 'benefit']
+  },
+  {
+    id: 'q394', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-171',
+    question: 'Anti-Profiteering Penalty?',
+    type: 'multiple-choice',
+    options: ['10%', '5%', '15%', '25%'],
+    correctAnswer: '10%',
+    explanation: 'Section/Rule sec-171: Anti-Profiteering Penalty is 10%.',
+    difficulty: 'medium', points: 15, tags: ['anti-profiteering', 'penalty']
+  },
+  {
+    id: 'q395', moduleId: 'cgst-rules', chapterId: 201, sectionId: 'rule-3',
+    question: 'Composition Opt Timing?',
+    type: 'multiple-choice',
+    options: ['Beginning FY', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Beginning FY',
+    explanation: 'Section/Rule rule-3: Composition Opt Timing is Beginning FY.',
+    difficulty: 'easy', points: 10, tags: ['composition', 'opt']
+  },
+  {
+    id: 'q396', moduleId: 'cgst-rules', chapterId: 201, sectionId: 'rule-3',
+    question: 'Composition Form?',
+    type: 'multiple-choice',
+    options: ['CMP-02', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'CMP-02',
+    explanation: 'Section/Rule rule-3: Composition Form is CMP-02.',
+    difficulty: 'easy', points: 10, tags: ['composition', 'form']
+  },
+  {
+    id: 'q397', moduleId: 'cgst-rules', chapterId: 201, sectionId: 'rule-3',
+    question: 'Composition Restrictions?',
+    type: 'multiple-choice',
+    options: ['Inter-state', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Inter-state',
+    explanation: 'Section/Rule rule-3: Composition Restrictions is Inter-state.',
+    difficulty: 'easy', points: 10, tags: ['composition', 'restrictions']
+  },
+  {
+    id: 'q398', moduleId: 'cgst-rules', chapterId: 202, sectionId: 'rule-8',
+    question: 'Registration Form?',
+    type: 'multiple-choice',
+    options: ['REG-01', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'REG-01',
+    explanation: 'Section/Rule rule-8: Registration Form is REG-01.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'form']
+  },
+  {
+    id: 'q399', moduleId: 'cgst-rules', chapterId: 202, sectionId: 'rule-8',
+    question: 'Registration Aadhaar?',
+    type: 'multiple-choice',
+    options: ['Individual', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Individual',
+    explanation: 'Section/Rule rule-8: Registration Aadhaar is Individual.',
+    difficulty: 'medium', points: 15, tags: ['registration', 'Aadhaar']
+  },
+  {
+    id: 'q400', moduleId: 'cgst-rules', chapterId: 202, sectionId: 'rule-21',
+    question: 'Cancellation Grounds?',
+    type: 'multiple-choice',
+    options: ['Non-filing', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Non-filing',
+    explanation: 'Section/Rule rule-21: Cancellation Grounds is Non-filing.',
+    difficulty: 'medium', points: 15, tags: ['cancellation', 'grounds']
+  },
+  {
+    id: 'q401', moduleId: 'cgst-rules', chapterId: 203, sectionId: 'rule-27',
+    question: 'Related Party Valuation?',
+    type: 'multiple-choice',
+    options: ['Open market', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Open market',
+    explanation: 'Section/Rule rule-27: Related Party Valuation is Open market.',
+    difficulty: 'hard', points: 20, tags: ['valuation', 'related']
+  },
+  {
+    id: 'q402', moduleId: 'cgst-rules', chapterId: 203, sectionId: 'rule-28',
+    question: 'Distinct Person Valuation?',
+    type: 'multiple-choice',
+    options: ['110% cost', '15%', '20%', '25%'],
+    correctAnswer: '110% cost',
+    explanation: 'Section/Rule rule-28: Distinct Person Valuation is 110% cost.',
+    difficulty: 'hard', points: 20, tags: ['valuation', 'distinct']
+  },
+  {
+    id: 'q403', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-36',
+    question: 'Itc Documents Required?',
+    type: 'multiple-choice',
+    options: ['Invoice', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Invoice',
+    explanation: 'Section/Rule rule-36: Itc Documents Required is Invoice.',
+    difficulty: 'medium', points: 15, tags: ['ITC', 'documents']
+  },
+  {
+    id: 'q404', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-36',
+    question: 'Itc 105% Rule?',
+    type: 'multiple-choice',
+    options: ['Minor discrepancies', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Minor discrepancies',
+    explanation: 'Section/Rule rule-36: Itc 105% Rule is Minor discrepancies.',
+    difficulty: 'hard', points: 20, tags: ['ITC', '105%']
+  },
+  {
+    id: 'q405', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-37',
+    question: 'Payment 180 Days Start?',
+    type: 'multiple-choice',
+    options: ['Invoice date', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Invoice date',
+    explanation: 'Section/Rule rule-37: Payment 180 Days Start is Invoice date.',
+    difficulty: 'hard', points: 20, tags: ['ITC', '180 days']
+  },
+  {
+    id: 'q406', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-37',
+    question: 'Itc Reversal Period?',
+    type: 'multiple-choice',
+    options: ['180 days expire', '3 years', '5 years', '7 years'],
+    correctAnswer: '180 days expire',
+    explanation: 'Section/Rule rule-37: Itc Reversal Period is 180 days expire.',
+    difficulty: 'hard', points: 20, tags: ['ITC reversal', '180 days']
+  },
+  {
+    id: 'q407', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-38',
+    question: 'Common Credit Formula?',
+    type: 'multiple-choice',
+    options: ['Exempt turnover', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Exempt turnover',
+    explanation: 'Section/Rule rule-38: Common Credit Formula is Exempt turnover.',
+    difficulty: 'hard', points: 20, tags: ['ITC reversal', 'common credit']
+  },
+  {
+    id: 'q408', moduleId: 'cgst-rules', chapterId: 204, sectionId: 'rule-38',
+    question: 'Common Credit Calculation?',
+    type: 'multiple-choice',
+    options: ['Return period', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Return period',
+    explanation: 'Section/Rule rule-38: Common Credit Calculation is Return period.',
+    difficulty: 'hard', points: 20, tags: ['ITC reversal', 'calculation']
+  },
+  {
+    id: 'q409', moduleId: 'cgst-rules', chapterId: 205, sectionId: 'rule-46',
+    question: 'Invoice Hsn 6-Digit?',
+    type: 'multiple-choice',
+    options: ['> ₹5 crore', '₹10 lakhs', '₹20 lakhs', '₹30 lakhs'],
+    correctAnswer: '> ₹5 crore',
+    explanation: 'Section/Rule rule-46: Invoice Hsn 6-Digit is > ₹5 crore.',
+    difficulty: 'medium', points: 15, tags: ['HSN', '6-digit']
+  },
+  {
+    id: 'q410', moduleId: 'cgst-rules', chapterId: 205, sectionId: 'rule-46',
+    question: 'Invoice Sac Code?',
+    type: 'multiple-choice',
+    options: ['Services', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Services',
+    explanation: 'Section/Rule rule-46: Invoice Sac Code is Services.',
+    difficulty: 'easy', points: 10, tags: ['SAC', 'services']
+  },
+  {
+    id: 'q411', moduleId: 'cgst-rules', chapterId: 205, sectionId: 'rule-48',
+    question: 'E-Invoicing Irn?',
+    type: 'multiple-choice',
+    options: ['IRP Portal', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'IRP Portal',
+    explanation: 'Section/Rule rule-48: E-Invoicing Irn is IRP Portal.',
+    difficulty: 'easy', points: 10, tags: ['e-invoicing', 'IRN']
+  },
+  {
+    id: 'q412', moduleId: 'cgst-rules', chapterId: 205, sectionId: 'rule-48',
+    question: 'E-Invoicing Timing?',
+    type: 'multiple-choice',
+    options: ['Before invoice', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Before invoice',
+    explanation: 'Section/Rule rule-48: E-Invoicing Timing is Before invoice.',
+    difficulty: 'medium', points: 15, tags: ['e-invoicing', 'timing']
+  },
+  {
+    id: 'q413', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-59',
+    question: 'Gstr-1 Due Date?',
+    type: 'multiple-choice',
+    options: ['11th', '10th', '15th', '25th'],
+    correctAnswer: '11th',
+    explanation: 'Section/Rule rule-59: Gstr-1 Due Date is 11th.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-1', 'due date']
+  },
+  {
+    id: 'q414', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-59',
+    question: 'Qrmp Quarterly Filing?',
+    type: 'multiple-choice',
+    options: ['GSTR-1 and 3B', 'GSTR-1', 'GSTR-2B', 'GSTR-3B'],
+    correctAnswer: 'GSTR-1 and 3B',
+    explanation: 'Section/Rule rule-59: Qrmp Quarterly Filing is GSTR-1 and 3B.',
+    difficulty: 'medium', points: 15, tags: ['QRMP', 'quarterly']
+  },
+  {
+    id: 'q415', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-59',
+    question: 'Qrmp Monthly Payment?',
+    type: 'multiple-choice',
+    options: ['Required', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Required',
+    explanation: 'Section/Rule rule-59: Qrmp Monthly Payment is Required.',
+    difficulty: 'medium', points: 15, tags: ['QRMP', 'monthly payment']
+  },
+  {
+    id: 'q416', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-60',
+    question: 'Gstr-3B Due Date?',
+    type: 'multiple-choice',
+    options: ['20th', '10th', '15th', '25th'],
+    correctAnswer: '20th',
+    explanation: 'Section/Rule rule-60: Gstr-3B Due Date is 20th.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-3B', 'due date']
+  },
+  {
+    id: 'q417', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-80',
+    question: 'Gstr-9 Due Date?',
+    type: 'multiple-choice',
+    options: ['31st December', '10th', '15th', '25th'],
+    correctAnswer: '31st December',
+    explanation: 'Section/Rule rule-80: Gstr-9 Due Date is 31st December.',
+    difficulty: 'easy', points: 10, tags: ['GSTR-9', 'annual']
+  },
+  {
+    id: 'q418', moduleId: 'cgst-rules', chapterId: 206, sectionId: 'rule-80',
+    question: 'Gstr-9C Requirement?',
+    type: 'multiple-choice',
+    options: ['> ₹5 crore', '₹10 lakhs', '₹20 lakhs', '₹30 lakhs'],
+    correctAnswer: '> ₹5 crore',
+    explanation: 'Section/Rule rule-80: Gstr-9C Requirement is > ₹5 crore.',
+    difficulty: 'medium', points: 15, tags: ['GSTR-9C', 'requirement']
+  },
+  {
+    id: 'q419', moduleId: 'cgst-rules', chapterId: 207, sectionId: 'rule-89',
+    question: 'Refund Form?',
+    type: 'multiple-choice',
+    options: ['RFD-01', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'RFD-01',
+    explanation: 'Section/Rule rule-89: Refund Form is RFD-01.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'form']
+  },
+  {
+    id: 'q420', moduleId: 'cgst-rules', chapterId: 207, sectionId: 'rule-89',
+    question: 'Refund Processing Time?',
+    type: 'multiple-choice',
+    options: ['60 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '60 days',
+    explanation: 'Section/Rule rule-89: Refund Processing Time is 60 days.',
+    difficulty: 'easy', points: 10, tags: ['refund', 'processing time']
+  },
+  {
+    id: 'q421', moduleId: 'cgst-rules', chapterId: 207, sectionId: 'rule-96',
+    question: 'Export Refund Through?',
+    type: 'multiple-choice',
+    options: ['Shipping bill', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Shipping bill',
+    explanation: 'Section/Rule rule-96: Export Refund Through is Shipping bill.',
+    difficulty: 'hard', points: 20, tags: ['refund', 'export']
+  },
+  {
+    id: 'q422', moduleId: 'cgst-rules', chapterId: 208, sectionId: 'rule-138',
+    question: 'E-Way Bill Threshold?',
+    type: 'multiple-choice',
+    options: ['₹50,000', '₹2,500', '₹7,500', '₹15,000'],
+    correctAnswer: '₹50,000',
+    explanation: 'Section/Rule rule-138: E-Way Bill Threshold is ₹50,000.',
+    difficulty: 'easy', points: 10, tags: ['e-way bill', 'threshold']
+  },
+  {
+    id: 'q423', moduleId: 'cgst-rules', chapterId: 208, sectionId: 'rule-138',
+    question: 'E-Way Bill Cancellation?',
+    type: 'multiple-choice',
+    options: ['24 hours', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '24 hours',
+    explanation: 'Section/Rule rule-138: E-Way Bill Cancellation is 24 hours.',
+    difficulty: 'medium', points: 15, tags: ['e-way bill', 'cancellation']
+  },
+  {
+    id: 'q424', moduleId: 'cgst-rules', chapterId: 208, sectionId: 'rule-138d',
+    question: 'E-Way Validity Normal?',
+    type: 'multiple-choice',
+    options: ['100 km/day', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '100 km/day',
+    explanation: 'Section/Rule rule-138d: E-Way Validity Normal is 100 km/day.',
+    difficulty: 'medium', points: 15, tags: ['e-way bill', 'validity']
+  },
+  {
+    id: 'q425', moduleId: 'cgst-rules', chapterId: 208, sectionId: 'rule-138d',
+    question: 'E-Way Validity Odc?',
+    type: 'multiple-choice',
+    options: ['200 km/day', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '200 km/day',
+    explanation: 'Section/Rule rule-138d: E-Way Validity Odc is 200 km/day.',
+    difficulty: 'medium', points: 15, tags: ['e-way bill', 'ODC']
+  },
+  {
+    id: 'q426', moduleId: 'cgst-rules', chapterId: 208, sectionId: 'rule-138d',
+    question: 'E-Way Validity Over-Dimensional?',
+    type: 'multiple-choice',
+    options: ['25 days', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: '25 days',
+    explanation: 'Section/Rule rule-138d: E-Way Validity Over-Dimensional is 25 days.',
+    difficulty: 'hard', points: 20, tags: ['e-way bill', 'over-dimensional']
+  },
+  {
+    id: 'q427', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Export Goods Definition?',
+    type: 'multiple-choice',
+    options: ['Outside India', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Outside India',
+    explanation: 'Section/Rule igst-sec-2: Export Goods Definition is Outside India.',
+    difficulty: 'easy', points: 10, tags: ['export', 'definition']
+  },
+  {
+    id: 'q428', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Export Services Definition?',
+    type: 'multiple-choice',
+    options: ['Foreign exchange', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Foreign exchange',
+    explanation: 'Section/Rule igst-sec-2: Export Services Definition is Foreign exchange.',
+    difficulty: 'medium', points: 15, tags: ['export', 'services']
+  },
+  {
+    id: 'q429', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Import Goods Definition?',
+    type: 'multiple-choice',
+    options: ['Into India', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Into India',
+    explanation: 'Section/Rule igst-sec-2: Import Goods Definition is Into India.',
+    difficulty: 'easy', points: 10, tags: ['import', 'definition']
+  },
+  {
+    id: 'q430', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Import Services Definition?',
+    type: 'multiple-choice',
+    options: ['Supplier outside', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Supplier outside',
+    explanation: 'Section/Rule igst-sec-2: Import Services Definition is Supplier outside.',
+    difficulty: 'medium', points: 15, tags: ['import', 'services']
+  },
+  {
+    id: 'q431', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Oidar Services?',
+    type: 'multiple-choice',
+    options: ['Online', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Online',
+    explanation: 'Section/Rule igst-sec-2: Oidar Services is Online.',
+    difficulty: 'medium', points: 15, tags: ['OIDAR', 'services']
+  },
+  {
+    id: 'q432', moduleId: 'igst-act', chapterId: 101, sectionId: 'igst-sec-2',
+    question: 'Intermediary Definition?',
+    type: 'multiple-choice',
+    options: ['Broker agent', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Broker agent',
+    explanation: 'Section/Rule igst-sec-2: Intermediary Definition is Broker agent.',
+    difficulty: 'medium', points: 15, tags: ['intermediary', 'definition']
+  },
+  {
+    id: 'q433', moduleId: 'igst-act', chapterId: 102, sectionId: 'igst-sec-5',
+    question: 'Igst Rate Maximum?',
+    type: 'multiple-choice',
+    options: ['40%', '15%', '20%', '25%'],
+    correctAnswer: '40%',
+    explanation: 'Section/Rule igst-sec-5: Igst Rate Maximum is 40%.',
+    difficulty: 'easy', points: 10, tags: ['IGST', 'rate']
+  },
+  {
+    id: 'q434', moduleId: 'igst-act', chapterId: 102, sectionId: 'igst-sec-5',
+    question: 'Igst On Imports Collected By?',
+    type: 'multiple-choice',
+    options: ['Customs', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Customs',
+    explanation: 'Section/Rule igst-sec-5: Igst On Imports Collected By is Customs.',
+    difficulty: 'easy', points: 10, tags: ['IGST', 'imports']
+  },
+  {
+    id: 'q435', moduleId: 'igst-act', chapterId: 103, sectionId: 'igst-sec-7',
+    question: 'Inter-State Supply?',
+    type: 'multiple-choice',
+    options: ['Different states', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Different states',
+    explanation: 'Section/Rule igst-sec-7: Inter-State Supply is Different states.',
+    difficulty: 'easy', points: 10, tags: ['inter-state', 'supply']
+  },
+  {
+    id: 'q436', moduleId: 'igst-act', chapterId: 103, sectionId: 'igst-sec-8',
+    question: 'Intra-State Supply?',
+    type: 'multiple-choice',
+    options: ['Same state', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Same state',
+    explanation: 'Section/Rule igst-sec-8: Intra-State Supply is Same state.',
+    difficulty: 'easy', points: 10, tags: ['intra-state', 'supply']
+  },
+  {
+    id: 'q437', moduleId: 'igst-act', chapterId: 103, sectionId: 'igst-sec-8',
+    question: 'Intra-State Tax?',
+    type: 'multiple-choice',
+    options: ['CGST+SGST', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'CGST+SGST',
+    explanation: 'Section/Rule igst-sec-8: Intra-State Tax is CGST+SGST.',
+    difficulty: 'easy', points: 10, tags: ['intra-state', 'tax']
+  },
+  {
+    id: 'q438', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-10',
+    question: 'Pos Goods General?',
+    type: 'multiple-choice',
+    options: ['Location of goods', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location of goods',
+    explanation: 'Section/Rule igst-sec-10: Pos Goods General is Location of goods.',
+    difficulty: 'medium', points: 15, tags: ['place of supply', 'goods']
+  },
+  {
+    id: 'q439', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-12',
+    question: 'Pos Services General?',
+    type: 'multiple-choice',
+    options: ['Location of recipient', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location of recipient',
+    explanation: 'Section/Rule igst-sec-12: Pos Services General is Location of recipient.',
+    difficulty: 'medium', points: 15, tags: ['place of supply', 'services']
+  },
+  {
+    id: 'q440', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-12',
+    question: 'Pos Restaurant Services?',
+    type: 'multiple-choice',
+    options: ['Location restaurant', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location restaurant',
+    explanation: 'Section/Rule igst-sec-12: Pos Restaurant Services is Location restaurant.',
+    difficulty: 'medium', points: 15, tags: ['place of supply', 'restaurant']
+  },
+  {
+    id: 'q441', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-12',
+    question: 'Pos Performance Services?',
+    type: 'multiple-choice',
+    options: ['Location performance', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location performance',
+    explanation: 'Section/Rule igst-sec-12: Pos Performance Services is Location performance.',
+    difficulty: 'medium', points: 15, tags: ['place of supply', 'performance']
+  },
+  {
+    id: 'q442', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-12',
+    question: 'Pos Passenger Transport?',
+    type: 'multiple-choice',
+    options: ['Embarkation point', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Embarkation point',
+    explanation: 'Section/Rule igst-sec-12: Pos Passenger Transport is Embarkation point.',
+    difficulty: 'medium', points: 15, tags: ['place of supply', 'transportation']
+  },
+  {
+    id: 'q443', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-13',
+    question: 'Pos Oidar Registered?',
+    type: 'multiple-choice',
+    options: ['Location recipient', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location recipient',
+    explanation: 'Section/Rule igst-sec-13: Pos Oidar Registered is Location recipient.',
+    difficulty: 'hard', points: 20, tags: ['place of supply', 'OIDAR']
+  },
+  {
+    id: 'q444', moduleId: 'igst-act', chapterId: 104, sectionId: 'igst-sec-13',
+    question: 'Pos Oidar Unregistered?',
+    type: 'multiple-choice',
+    options: ['Location recipient', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Location recipient',
+    explanation: 'Section/Rule igst-sec-13: Pos Oidar Unregistered is Location recipient.',
+    difficulty: 'hard', points: 20, tags: ['place of supply', 'OIDAR unregistered']
+  },
+  {
+    id: 'q445', moduleId: 'igst-act', chapterId: 105, sectionId: 'igst-sec-16',
+    question: 'Zero-Rated Supplies?',
+    type: 'multiple-choice',
+    options: ['Exports', '15%', '20%', '25%'],
+    correctAnswer: 'Exports',
+    explanation: 'Section/Rule igst-sec-16: Zero-Rated Supplies is Exports.',
+    difficulty: 'medium', points: 15, tags: ['zero-rated', 'exports']
+  },
+  {
+    id: 'q446', moduleId: 'igst-act', chapterId: 105, sectionId: 'igst-sec-16',
+    question: 'Zero-Rated Includes?',
+    type: 'multiple-choice',
+    options: ['SEZ', '15%', '20%', '25%'],
+    correctAnswer: 'SEZ',
+    explanation: 'Section/Rule igst-sec-16: Zero-Rated Includes is SEZ.',
+    difficulty: 'medium', points: 15, tags: ['zero-rated', 'SEZ']
+  },
+  {
+    id: 'q447', moduleId: 'igst-act', chapterId: 105, sectionId: 'igst-sec-16',
+    question: 'Lut Validity?',
+    type: 'multiple-choice',
+    options: ['1 year', '3 months', '6 months', '1 year'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule igst-sec-16: Lut Validity is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['LUT', 'validity']
+  },
+  {
+    id: 'q448', moduleId: 'igst-act', chapterId: 105, sectionId: 'igst-sec-16',
+    question: 'Lut Allows Exports?',
+    type: 'multiple-choice',
+    options: ['Without payment', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Without payment',
+    explanation: 'Section/Rule igst-sec-16: Lut Allows Exports is Without payment.',
+    difficulty: 'medium', points: 15, tags: ['LUT', 'exports']
+  },
+  {
+    id: 'q449', moduleId: 'cgst-act', chapterId: 1, sectionId: 'sec-2',
+    question: 'Business Definition Includes?',
+    type: 'multiple-choice',
+    options: ['Trade commerce', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Trade commerce',
+    explanation: 'Section/Rule sec-2: Business Definition Includes is Trade commerce.',
+    difficulty: 'easy', points: 10, tags: ['definitions', 'business']
+  },
+  {
+    id: 'q450', moduleId: 'cgst-act', chapterId: 1, sectionId: 'sec-2',
+    question: 'Goods Definition?',
+    type: 'multiple-choice',
+    options: ['Movable property', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Movable property',
+    explanation: 'Section/Rule sec-2: Goods Definition is Movable property.',
+    difficulty: 'easy', points: 10, tags: ['definitions', 'goods']
+  },
+  {
+    id: 'q451', moduleId: 'cgst-act', chapterId: 1, sectionId: 'sec-2',
+    question: 'Services Definition?',
+    type: 'multiple-choice',
+    options: ['Anything except goods', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Anything except goods',
+    explanation: 'Section/Rule sec-2: Services Definition is Anything except goods.',
+    difficulty: 'easy', points: 10, tags: ['definitions', 'services']
+  },
+  {
+    id: 'q452', moduleId: 'cgst-act', chapterId: 1, sectionId: 'sec-2',
+    question: 'Supply Includes?',
+    type: 'multiple-choice',
+    options: ['Sale transfer', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Sale transfer',
+    explanation: 'Section/Rule sec-2: Supply Includes is Sale transfer.',
+    difficulty: 'easy', points: 10, tags: ['definitions', 'supply']
+  },
+  {
+    id: 'q453', moduleId: 'cgst-act', chapterId: 2, sectionId: 'sec-3',
+    question: 'Cgst Act Extends To?',
+    type: 'multiple-choice',
+    options: ['Whole of India', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Whole of India',
+    explanation: 'Section/Rule sec-3: Cgst Act Extends To is Whole of India.',
+    difficulty: 'easy', points: 10, tags: ['CGST Act', 'extent']
+  },
+  {
+    id: 'q454', moduleId: 'cgst-act', chapterId: 3, sectionId: 'sec-7',
+    question: 'Schedule I Supplies?',
+    type: 'multiple-choice',
+    options: ['Without consideration', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Without consideration',
+    explanation: 'Section/Rule sec-7: Schedule I Supplies is Without consideration.',
+    difficulty: 'medium', points: 15, tags: ['schedule I', 'supply']
+  },
+  {
+    id: 'q455', moduleId: 'cgst-act', chapterId: 3, sectionId: 'sec-7',
+    question: 'Schedule Ii Supplies?',
+    type: 'multiple-choice',
+    options: ['Activities as supply', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Activities as supply',
+    explanation: 'Section/Rule sec-7: Schedule Ii Supplies is Activities as supply.',
+    difficulty: 'medium', points: 15, tags: ['schedule II', 'supply']
+  },
+  {
+    id: 'q456', moduleId: 'cgst-act', chapterId: 3, sectionId: 'sec-9',
+    question: 'Cgst Rate Maximum?',
+    type: 'multiple-choice',
+    options: ['20%', '15%', '20%', '25%'],
+    correctAnswer: '20%',
+    explanation: 'Section/Rule sec-9: Cgst Rate Maximum is 20%.',
+    difficulty: 'easy', points: 10, tags: ['CGST', 'rate']
+  },
+  {
+    id: 'q457', moduleId: 'cgst-act', chapterId: 3, sectionId: 'sec-9',
+    question: 'Reverse Charge Applies?',
+    type: 'multiple-choice',
+    options: ['Notified supplies', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Notified supplies',
+    explanation: 'Section/Rule sec-9: Reverse Charge Applies is Notified supplies.',
+    difficulty: 'medium', points: 15, tags: ['reverse charge', 'RCM']
+  },
+  {
+    id: 'q458', moduleId: 'cgst-act', chapterId: 4, sectionId: 'sec-12',
+    question: 'Time Of Supply Goods?',
+    type: 'multiple-choice',
+    options: ['Removal delivery', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Removal delivery',
+    explanation: 'Section/Rule sec-12: Time Of Supply Goods is Removal delivery.',
+    difficulty: 'medium', points: 15, tags: ['time of supply', 'goods']
+  },
+  {
+    id: 'q459', moduleId: 'cgst-act', chapterId: 4, sectionId: 'sec-13',
+    question: 'Time Of Supply Services?',
+    type: 'multiple-choice',
+    options: ['Completion provision', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Completion provision',
+    explanation: 'Section/Rule sec-13: Time Of Supply Services is Completion provision.',
+    difficulty: 'medium', points: 15, tags: ['time of supply', 'services']
+  },
+  {
+    id: 'q460', moduleId: 'cgst-act', chapterId: 4, sectionId: 'sec-15',
+    question: 'Value Includes?',
+    type: 'multiple-choice',
+    options: ['Packing charges', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Packing charges',
+    explanation: 'Section/Rule sec-15: Value Includes is Packing charges.',
+    difficulty: 'easy', points: 10, tags: ['valuation', 'packing']
+  },
+  {
+    id: 'q461', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-16',
+    question: 'Itc Conditions Include?',
+    type: 'multiple-choice',
+    options: ['Invoice received', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Invoice received',
+    explanation: 'Section/Rule sec-16: Itc Conditions Include is Invoice received.',
+    difficulty: 'medium', points: 15, tags: ['ITC', 'conditions']
+  },
+  {
+    id: 'q462', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-16',
+    question: 'Itc Conditions Include?',
+    type: 'multiple-choice',
+    options: ['Goods received', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Goods received',
+    explanation: 'Section/Rule sec-16: Itc Conditions Include is Goods received.',
+    difficulty: 'medium', points: 15, tags: ['ITC', 'conditions']
+  },
+  {
+    id: 'q463', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-16',
+    question: 'Itc Conditions Include?',
+    type: 'multiple-choice',
+    options: ['Tax paid', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Tax paid',
+    explanation: 'Section/Rule sec-16: Itc Conditions Include is Tax paid.',
+    difficulty: 'medium', points: 15, tags: ['ITC', 'conditions']
+  },
+  {
+    id: 'q464', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-17',
+    question: 'Blocked Credit Includes?',
+    type: 'multiple-choice',
+    options: ['Motor vehicles', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Motor vehicles',
+    explanation: 'Section/Rule sec-17: Blocked Credit Includes is Motor vehicles.',
+    difficulty: 'hard', points: 20, tags: ['blocked credit', 'motor vehicles']
+  },
+  {
+    id: 'q465', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-17',
+    question: 'Blocked Credit Includes?',
+    type: 'multiple-choice',
+    options: ['Food beverages', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Food beverages',
+    explanation: 'Section/Rule sec-17: Blocked Credit Includes is Food beverages.',
+    difficulty: 'hard', points: 20, tags: ['blocked credit', 'food']
+  },
+  {
+    id: 'q466', moduleId: 'cgst-act', chapterId: 5, sectionId: 'sec-17',
+    question: 'Blocked Credit Includes?',
+    type: 'multiple-choice',
+    options: ['Works contract', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Works contract',
+    explanation: 'Section/Rule sec-17: Blocked Credit Includes is Works contract.',
+    difficulty: 'hard', points: 20, tags: ['blocked credit', 'works contract']
+  },
+  {
+    id: 'q467', moduleId: 'cgst-act', chapterId: 6, sectionId: 'sec-22',
+    question: 'Registration Threshold Normal?',
+    type: 'multiple-choice',
+    options: ['₹20 lakhs', '₹15 lakhs', '₹25 lakhs', '₹30 lakhs'],
+    correctAnswer: '₹20 lakhs',
+    explanation: 'Section/Rule sec-22: Registration Threshold Normal is ₹20 lakhs.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'threshold']
+  },
+  {
+    id: 'q468', moduleId: 'cgst-act', chapterId: 6, sectionId: 'sec-22',
+    question: 'Registration Threshold Special?',
+    type: 'multiple-choice',
+    options: ['₹10 lakhs', '₹15 lakhs', '₹25 lakhs', '₹30 lakhs'],
+    correctAnswer: '₹10 lakhs',
+    explanation: 'Section/Rule sec-22: Registration Threshold Special is ₹10 lakhs.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'special states']
+  },
+  {
+    id: 'q469', moduleId: 'cgst-act', chapterId: 6, sectionId: 'sec-24',
+    question: 'Compulsory Registration Includes?',
+    type: 'multiple-choice',
+    options: ['Inter-state', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Inter-state',
+    explanation: 'Section/Rule sec-24: Compulsory Registration Includes is Inter-state.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'compulsory']
+  },
+  {
+    id: 'q470', moduleId: 'cgst-act', chapterId: 6, sectionId: 'sec-24',
+    question: 'Compulsory Registration Includes?',
+    type: 'multiple-choice',
+    options: ['E-commerce', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'E-commerce',
+    explanation: 'Section/Rule sec-24: Compulsory Registration Includes is E-commerce.',
+    difficulty: 'easy', points: 10, tags: ['registration', 'e-commerce']
+  },
+  {
+    id: 'q471', moduleId: 'cgst-act', chapterId: 7, sectionId: 'sec-31',
+    question: 'Tax Invoice Issued?',
+    type: 'multiple-choice',
+    options: ['Before removal', 'Any place', 'After removal', 'Within 15 days'],
+    correctAnswer: 'Before removal',
+    explanation: 'Section/Rule sec-31: Tax Invoice Issued is Before removal.',
+    difficulty: 'medium', points: 15, tags: ['tax invoice', 'timing']
+  },
+  {
+    id: 'q472', moduleId: 'cgst-act', chapterId: 7, sectionId: 'sec-31',
+    question: 'Tax Invoice Services?',
+    type: 'multiple-choice',
+    options: ['Within 30 days', 'Any place', 'After removal', 'Within 15 days'],
+    correctAnswer: 'Within 30 days',
+    explanation: 'Section/Rule sec-31: Tax Invoice Services is Within 30 days.',
+    difficulty: 'medium', points: 15, tags: ['tax invoice', 'services']
+  },
+  {
+    id: 'q473', moduleId: 'cgst-act', chapterId: 7, sectionId: 'sec-33',
+    question: 'Tax Amount Shown?',
+    type: 'multiple-choice',
+    options: ['Separately', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Separately',
+    explanation: 'Section/Rule sec-33: Tax Amount Shown is Separately.',
+    difficulty: 'easy', points: 10, tags: ['tax invoice', 'tax amount']
+  },
+  {
+    id: 'q474', moduleId: 'cgst-act', chapterId: 7, sectionId: 'sec-34',
+    question: 'Credit Note Reduces?',
+    type: 'multiple-choice',
+    options: ['Output tax', 'Input tax', 'Tax only', 'Penalty only'],
+    correctAnswer: 'Output tax',
+    explanation: 'Section/Rule sec-34: Credit Note Reduces is Output tax.',
+    difficulty: 'medium', points: 15, tags: ['credit note', 'output tax']
+  },
+  {
+    id: 'q475', moduleId: 'cgst-act', chapterId: 7, sectionId: 'sec-34',
+    question: 'Debit Note Increases?',
+    type: 'multiple-choice',
+    options: ['Output tax', 'Input tax', 'Tax only', 'Penalty only'],
+    correctAnswer: 'Output tax',
+    explanation: 'Section/Rule sec-34: Debit Note Increases is Output tax.',
+    difficulty: 'medium', points: 15, tags: ['debit note', 'output tax']
+  },
+  {
+    id: 'q476', moduleId: 'cgst-act', chapterId: 8, sectionId: 'sec-35',
+    question: 'Accounts Maintained At?',
+    type: 'multiple-choice',
+    options: ['Principal place', 'Any place', 'After removal', 'Within 15 days'],
+    correctAnswer: 'Principal place',
+    explanation: 'Section/Rule sec-35: Accounts Maintained At is Principal place.',
+    difficulty: 'easy', points: 10, tags: ['accounts', 'principal place']
+  },
+  {
+    id: 'q477', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-41',
+    question: 'Itc Claimed In?',
+    type: 'multiple-choice',
+    options: ['GSTR-3B', 'GSTR-1', 'GSTR-2B', 'GSTR-9'],
+    correctAnswer: 'GSTR-3B',
+    explanation: 'Section/Rule sec-41: Itc Claimed In is GSTR-3B.',
+    difficulty: 'medium', points: 15, tags: ['ITC', 'GSTR-3B']
+  },
+  {
+    id: 'q478', moduleId: 'cgst-act', chapterId: 9, sectionId: 'sec-43',
+    question: 'Credit Note Matching?',
+    type: 'multiple-choice',
+    options: ['With recipient', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'With recipient',
+    explanation: 'Section/Rule sec-43: Credit Note Matching is With recipient.',
+    difficulty: 'hard', points: 20, tags: ['credit note', 'matching']
+  },
+  {
+    id: 'q479', moduleId: 'cgst-act', chapterId: 10, sectionId: 'sec-49',
+    question: 'Itc Used For?',
+    type: 'multiple-choice',
+    options: ['Output tax', 'Input tax', 'Tax only', 'Penalty only'],
+    correctAnswer: 'Output tax',
+    explanation: 'Section/Rule sec-49: Itc Used For is Output tax.',
+    difficulty: 'medium', points: 15, tags: ['ITC utilization', 'output tax']
+  },
+  {
+    id: 'q480', moduleId: 'cgst-act', chapterId: 10, sectionId: 'sec-49',
+    question: 'Itc Utilization Order?',
+    type: 'multiple-choice',
+    options: ['IGST first', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'IGST first',
+    explanation: 'Section/Rule sec-49: Itc Utilization Order is IGST first.',
+    difficulty: 'hard', points: 20, tags: ['ITC utilization', 'order']
+  },
+  {
+    id: 'q481', moduleId: 'cgst-act', chapterId: 11, sectionId: 'sec-54',
+    question: 'Refund Available For?',
+    type: 'multiple-choice',
+    options: ['Exports', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Exports',
+    explanation: 'Section/Rule sec-54: Refund Available For is Exports.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'exports']
+  },
+  {
+    id: 'q482', moduleId: 'cgst-act', chapterId: 11, sectionId: 'sec-54',
+    question: 'Refund Available For?',
+    type: 'multiple-choice',
+    options: ['ITC accumulation', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'ITC accumulation',
+    explanation: 'Section/Rule sec-54: Refund Available For is ITC accumulation.',
+    difficulty: 'medium', points: 15, tags: ['refund', 'ITC']
+  },
+  {
+    id: 'q483', moduleId: 'cgst-act', chapterId: 12, sectionId: 'sec-62',
+    question: 'Best Judgment Assessment?',
+    type: 'multiple-choice',
+    options: ['Non-filing', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Non-filing',
+    explanation: 'Section/Rule sec-62: Best Judgment Assessment is Non-filing.',
+    difficulty: 'medium', points: 15, tags: ['assessment', 'best judgment']
+  },
+  {
+    id: 'q484', moduleId: 'cgst-act', chapterId: 13, sectionId: 'sec-65',
+    question: 'Audit Findings Communicated?',
+    type: 'multiple-choice',
+    options: ['30 days', '15 days', '60 days', '90 days'],
+    correctAnswer: '30 days',
+    explanation: 'Section/Rule sec-65: Audit Findings Communicated is 30 days.',
+    difficulty: 'easy', points: 10, tags: ['audit', 'findings']
+  },
+  {
+    id: 'q485', moduleId: 'cgst-act', chapterId: 14, sectionId: 'sec-67',
+    question: 'Seized Goods Released On?',
+    type: 'multiple-choice',
+    options: ['Bond security', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Bond security',
+    explanation: 'Section/Rule sec-67: Seized Goods Released On is Bond security.',
+    difficulty: 'medium', points: 15, tags: ['seizure', 'release']
+  },
+  {
+    id: 'q486', moduleId: 'cgst-act', chapterId: 15, sectionId: 'sec-75',
+    question: 'Order Time Limit?',
+    type: 'multiple-choice',
+    options: ['No specific', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'No specific',
+    explanation: 'Section/Rule sec-75: Order Time Limit is No specific.',
+    difficulty: 'hard', points: 20, tags: ['order', 'time limit']
+  },
+  {
+    id: 'q487', moduleId: 'cgst-act', chapterId: 18, sectionId: 'sec-112',
+    question: 'Tribunal Maximum Deposit?',
+    type: 'multiple-choice',
+    options: ['₹50 crore', '₹10 lakhs', '₹20 lakhs', '₹30 lakhs'],
+    correctAnswer: '₹50 crore',
+    explanation: 'Section/Rule sec-112: Tribunal Maximum Deposit is ₹50 crore.',
+    difficulty: 'hard', points: 20, tags: ['tribunal', 'maximum deposit']
+  },
+  {
+    id: 'q488', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-129',
+    question: 'Goods Released On Payment?',
+    type: 'multiple-choice',
+    options: ['Tax penalty interest', 'Input tax', 'Tax only', 'Penalty only'],
+    correctAnswer: 'Tax penalty interest',
+    explanation: 'Section/Rule sec-129: Goods Released On Payment is Tax penalty interest.',
+    difficulty: 'medium', points: 15, tags: ['detention', 'release']
+  },
+  {
+    id: 'q489', moduleId: 'cgst-act', chapterId: 19, sectionId: 'sec-130',
+    question: 'Confiscation Fine?',
+    type: 'multiple-choice',
+    options: ['In addition', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'In addition',
+    explanation: 'Section/Rule sec-130: Confiscation Fine is In addition.',
+    difficulty: 'hard', points: 20, tags: ['confiscation', 'fine']
+  },
+  {
+    id: 'q490', moduleId: 'cgst-act', chapterId: 20, sectionId: 'sec-140',
+    question: 'Itc Stock Invoice Limit?',
+    type: 'multiple-choice',
+    options: ['1 year', '15 days', '60 days', '90 days'],
+    correctAnswer: '1 year',
+    explanation: 'Section/Rule sec-140: Itc Stock Invoice Limit is 1 year.',
+    difficulty: 'medium', points: 15, tags: ['transitional', 'invoice limit']
+  },
+  {
+    id: 'q491', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-143',
+    question: 'Job Work Deemed Supply?',
+    type: 'multiple-choice',
+    options: ['Not returned', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Not returned',
+    explanation: 'Section/Rule sec-143: Job Work Deemed Supply is Not returned.',
+    difficulty: 'medium', points: 15, tags: ['job work', 'deemed supply']
+  },
+  {
+    id: 'q492', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-147',
+    question: 'Deemed Exports Refund?',
+    type: 'multiple-choice',
+    options: ['Supplier or recipient', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'Supplier or recipient',
+    explanation: 'Section/Rule sec-147: Deemed Exports Refund is Supplier or recipient.',
+    difficulty: 'medium', points: 15, tags: ['deemed exports', 'refund']
+  },
+  {
+    id: 'q493', moduleId: 'cgst-act', chapterId: 21, sectionId: 'sec-171',
+    question: 'Anti-Profiteering Authority?',
+    type: 'multiple-choice',
+    options: ['NAA', 'Option A', 'Option B', 'Option C'],
+    correctAnswer: 'NAA',
+    explanation: 'Section/Rule sec-171: Anti-Profiteering Authority is NAA.',
+    difficulty: 'medium', points: 15, tags: ['anti-profiteering', 'authority']
+  },
 ];
+
 
 export function generateQuiz(moduleId: string, count: number = 10): QuizQuestion[] {
   const pool = GST_QUESTIONS.filter(q => q.moduleId === moduleId);

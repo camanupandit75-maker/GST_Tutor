@@ -13,6 +13,7 @@ export interface Section {
   difficulty: 'basic' | 'intermediate' | 'advanced';
   estimatedMinutes: number;
   practicalRelevance: 'high' | 'medium' | 'low';
+  fullText?: string; // Full legal text from ICAI publication
 }
 
 export interface Chapter {

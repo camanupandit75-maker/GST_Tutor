@@ -41,7 +41,14 @@ export const CGST_ACT_CHAPTERS = [
         difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const },
       { id: 'sec-8', number: '8', title: 'Composite and mixed supplies', description: 'Treatment of bundled supplies',
         keyPoints: ['Composite supply: naturally bundled, principal supply determines rate', 'Mixed supply: not naturally bundled, highest rate applies', 'Example composite: hotel accommodation with breakfast', 'Example mixed: gift hamper with chocolates, dry fruits, sweets'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
+        fullText: `**Section 8. Tax liability on composite and mixed supplies**
+
+The tax liability on a composite or a mixed supply shall be determined in the following manner, namely:—
+
+(a) a composite supply comprising two or more supplies, one of which is a principal supply, shall be treated as a supply of such principal supply; and
+
+(b) a mixed supply comprising two or more supplies shall be treated as a supply of that particular supply which attracts the highest rate of tax.` },
       { id: 'sec-9', number: '9', title: 'Levy and collection', description: 'Charging section for CGST',
         keyPoints: ['CGST on all intra-state supplies', 'Rate not exceeding 20%', 'Collected by Central Government', 'Reverse charge under sub-section (3) and (4)', 'RCM on notified goods/services', 'RCM on supplies from unregistered persons'],
         difficulty: 'intermediate' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const },
@@ -53,7 +60,20 @@ export const CGST_ACT_CHAPTERS = [
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
       { id: 'sec-11a', number: '11A', title: 'Non-levy in certain cases', description: 'Non-recovery for general practice',
         keyPoints: ['Where tax not levied due to general practice', 'Such practice prevalent across trade', 'No recovery of tax for that period'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const }
+        difficulty: 'intermediate' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const,
+        fullText: `**Section 11A. Power not to recover Goods and Services Tax not levied or short-levied as a result of general practice**
+
+Notwithstanding anything contained in this Act, if the Government is satisfied that —
+
+(a) a practice was, or is, generally prevalent regarding levy of central tax (including non-levy thereof) on any supply of goods or services or both; and
+
+(b) such supplies were, or are, liable to, —
+
+(i) central tax, in cases where according to the said practice, central tax was not, or is not being, levied, or
+
+(ii) a higher amount of central tax than what was, or is being, levied, in accordance with the said practice,
+
+the Government may, on the recommendation of the Council, by notification in the Official Gazette, direct that the whole of the central tax payable on such supplies, or, as the case may be, the central tax in excess of that payable on such supplies, but for the said practice, shall not be required to be paid in respect of the supplies on which the central tax was not, or is not being levied, or was, or is being, short-levied, in accordance with the said practice.` }
     ]
   },
   {
@@ -80,7 +100,36 @@ export const CGST_ACT_CHAPTERS = [
     sections: [
       { id: 'sec-16', number: '16', title: 'Eligibility and conditions for ITC', description: 'When can ITC be claimed',
         keyPoints: ['Must have tax invoice or debit note', 'Must have received goods/services', 'Tax must be paid by supplier to government', 'Must file return', 'Time limit: 30th November of next FY', 'Payment to supplier within 180 days'],
-        difficulty: 'advanced' as const, estimatedMinutes: 50, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 50, practicalRelevance: 'high' as const,
+        fullText: `**Section 16. Eligibility and conditions for taking input tax credit**
+
+(1) Every registered person shall, subject to such conditions and restrictions as may be prescribed and in the manner specified in section 49, be entitled to take credit of input tax charged on any supply of goods or services or both to him which are used or intended to be used in the course or furtherance of his business and the said amount shall be credited to the electronic credit ledger of such person.
+
+(2) Notwithstanding anything contained in this section, no registered person shall be entitled to the credit of any input tax in respect of any supply of goods or services or both to him unless,—
+
+(a) he is in possession of a tax invoice or debit note issued by a supplier registered under this Act, or such other tax paying documents as may be prescribed;
+
+(b) he has received the goods or services or both.
+
+Explanation.—For the purposes of this clause, it shall be deemed that the registered person has received the goods or, as the case may be, services—
+
+(i) where the goods are delivered by the supplier to a recipient or any other person on the direction of such registered person, whether acting as an agent or otherwise, before or during movement of goods, either by way of transfer of documents of title to goods or otherwise;
+
+(ii) where the services are provided by the supplier to any person on the direction of and on account of such registered person;
+
+(c) subject to the provisions of section 41, the tax charged in respect of such supply has been actually paid to the Government, either in cash or through utilisation of input tax credit admissible in respect of the said supply; and
+
+(d) he has furnished the return under section 39:
+
+Provided that where the goods against an invoice are received in lots or instalments, the registered person shall be entitled to take credit upon receipt of the last lot or instalment:
+
+Provided further that where a recipient fails to pay to the supplier of goods or services or both, other than the supplies on which tax is payable on reverse charge basis, the amount towards the value of supply along with tax payable thereon within a period of one hundred and eighty days from the date of issue of invoice by the supplier, an amount equal to the input tax credit availed by the recipient shall be added to his output tax liability, along with interest thereon, in such manner as may be prescribed:
+
+Provided also that the recipient shall be entitled to avail of the credit of input tax on payment made by him of the amount towards the value of supply of goods or services or both along with tax payable thereon.
+
+(3) Where the registered person has claimed depreciation on the tax component of the cost of capital goods and plant and machinery under the provisions of the Income-tax Act, 1961, the input tax credit on the said tax component shall not be allowed.
+
+(4) A registered person shall not be entitled to take input tax credit in respect of any invoice or debit note for supply of goods or services or both after the due date of furnishing of the return under section 39 for the month of September following the end of financial year to which such invoice or invoice relating to such debit note pertains or furnishing of the relevant annual return, whichever is earlier.` },
       { id: 'sec-17', number: '17', title: 'Apportionment and blocked credits', description: 'What ITC is NOT available',
         keyPoints: ['Motor vehicles (except for specified purposes)', 'Food and beverages, outdoor catering', 'Beauty treatment, health services', 'Club membership, fitness', 'Life/health insurance (except when mandatory)', 'Works contract for construction of immovable property', 'Goods for personal consumption', 'Goods lost, stolen, destroyed, written off, gifted'],
         difficulty: 'advanced' as const, estimatedMinutes: 50, practicalRelevance: 'high' as const },

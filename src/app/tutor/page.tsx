@@ -342,6 +342,7 @@ function searchCurriculum(query: string): { section: any; chapter: any; module: 
 
 function getAIResponse(question: string): string {
   let q = question.toLowerCase().trim();
+  const originalQ = q; // Keep original for checking abbreviations
   
   // Expand common GST abbreviations to full terms for better matching
   const abbreviations: Record<string, string> = {
@@ -370,6 +371,176 @@ function getAIResponse(question: string): string {
     if (abbrRegex.test(q)) {
       q = q.replace(abbrRegex, fullTerm);
     }
+  }
+  
+  // Handle LUT/Letter of Undertaking queries FIRST (before curriculum search)
+  // Check both original query (for "lut") and expanded query (for "letter of undertaking")
+  if (originalQ.includes('lut') || q.includes('letter of undertaking') || 
+      (q.includes('undertaking') && (q.includes('export') || q.includes('zero') || q.includes('supply')))) {
+    return `**Letter of Undertaking (LUT) under GST:**
+
+**Definition:**
+LUT is a document that allows exporters to make zero-rated supplies (exports and supplies to SEZ) without payment of IGST.
+
+**Key Features:**
+
+**1. Purpose:**
+- Allows exports without payment of IGST
+- Alternative to paying tax and claiming refund
+- Simplifies export process
+
+**2. Validity:**
+- Valid for 1 financial year
+- Must be filed before making exports
+- Can be renewed annually
+
+**3. Eligibility:**
+- Any registered person making exports
+- No restrictions on turnover
+- Can be used for both goods and services exports
+
+**4. Benefits:**
+- No need to pay tax upfront
+- No need to wait for refund
+- Working capital not blocked
+- Faster export process
+
+**5. Conditions:**
+- Must be filed electronically on GST portal
+- Must be filed before making exports
+- Cannot be used if bond was executed earlier
+- Must comply with export conditions
+
+**6. Zero-Rated Supplies:**
+- Export of goods or services
+- Supply to SEZ developer or unit
+- Can use LUT OR pay tax and claim refund
+
+**Important Notes:**
+- LUT is filed in Form RFD-11
+- Must be filed before each financial year
+- If LUT is rejected, can file bond instead
+- LUT cannot be used if there are pending refunds
+
+*Reference: [Section 16 of IGST Act - Zero rated supply](/modules/igst-act/igst-zero-rated)*`;
+  }
+  
+  // Handle "reversal formula" or "reverse formula" queries FIRST - common ITC reversal formula
+  if (q.includes('reversal formula') || q.includes('reverse formula') || 
+      (q.includes('reversal') && q.includes('formula')) ||
+      (q.includes('reverse') && q.includes('formula'))) {
+    return `**ITC Reversal Formula (Rule 38):**
+
+**Common Credit Reversal Formula:**
+\`\`\`
+Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
+\`\`\`
+
+**Where:**
+- **Exempt Turnover:** Value of exempt supplies (excluding taxes)
+- **Total Turnover:** Value of all supplies (excluding taxes)  
+- **Common Credit:** ITC on inputs/services used for both exempt and taxable supplies
+
+**Example Calculation:**
+- Total Turnover: ₹10,00,000
+- Exempt Turnover: ₹2,00,000
+- Common Credit: ₹50,000
+- **Reversal = (2,00,000 / 10,00,000) × 50,000 = ₹10,000**
+- **ITC Available = ₹50,000 - ₹10,000 = ₹40,000**
+
+**When to Apply:**
+- When making both exempt and taxable supplies
+- For ITC on common inputs/services
+- Calculated for each return period (monthly/quarterly)
+
+**Separate Books of Accounts:**
+- If **separate books of accounts** are maintained for exempt and taxable supplies
+- ITC can be **directly attributed** to each type of supply
+- **No reversal required** if ITC is fully attributable to taxable supplies
+- Formula applies only when ITC **cannot be directly attributed** (common credit)
+
+**Important Notes:**
+- Separate calculation for CGST, SGST, and IGST
+- Must be reversed in GSTR-3B
+- Interest applies if reversal delayed
+- Can be re-availed if exempt supply later becomes taxable
+- Maintain proper records for calculation and audit
+
+*Reference: [Section 17(2) of CGST Act](/modules/cgst-act/input-tax-credit) and [Rule 38 of CGST Rules](/modules/cgst-rules/cgst-rules-itc)*`;
+  }
+  
+  // Handle ITC reversal for exempt/non-exempt supplies queries FIRST
+  // Match variations: "itc reversal exempt non exempt", "itc reversal both exempt", "common credit exempt", etc.
+  // This must come BEFORE curriculum search to ensure correct response
+  if ((q.includes('itc reversal') || q.includes('itc apportionment') || q.includes('common credit') ||
+       (q.includes('itc') && (q.includes('reversal') || q.includes('apportion')))) &&
+      q.includes('exempt') &&
+      (q.includes('non exempt') || q.includes('non-exempt') || q.includes('nonexempt') || 
+       q.includes('taxable') || q.includes('both') || q.includes('mixed') ||
+       (q.includes('non') && q.includes('exempt')))) {
+    return `**ITC Reversal for Exempt and Non-Exempt Supplies:**
+
+**Section 17(2) - Apportionment of Credit:**
+
+When a registered person makes both exempt and taxable supplies, ITC must be apportioned. Only the portion attributable to taxable supplies can be claimed.
+
+**Rule 38 - Common Credit Reversal:**
+
+**Formula for Common Credit Reversal:**
+\`\`\`
+Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
+\`\`\`
+
+**Key Points:**
+
+**1. Common Credit:**
+- ITC on inputs/services used for both exempt and taxable supplies
+- Cannot be directly attributed to either type
+- Must be apportioned based on turnover ratio
+
+**2. Calculation Method:**
+- **Exempt Turnover:** Value of exempt supplies (excluding taxes)
+- **Total Turnover:** Value of all supplies (excluding taxes)
+- **Common Credit:** ITC on common inputs/services
+
+**3. Example:**
+- Total Turnover: ₹10,00,000
+- Exempt Turnover: ₹2,00,000
+- Common Credit: ₹50,000
+- Reversal = (2,00,000 / 10,00,000) × 50,000 = ₹10,000
+- **ITC Available:** ₹40,000
+
+**4. When to Reverse:**
+- Calculated for each return period (monthly/quarterly)
+- Must be reversed in GSTR-3B
+- Interest applies if reversal delayed
+
+**5. Exempt Supplies Include:**
+- Nil-rated supplies
+- Exempt supplies (by notification)
+- Non-taxable supplies
+- Supplies outside scope of GST
+
+**6. Important Notes:**
+- Reversal is required even if exempt supplies are small
+- Separate calculation for CGST, SGST, and IGST
+- Can be re-availed if exempt supply later becomes taxable
+- Must maintain proper records for calculation
+
+**7. Separate Books of Accounts:**
+- If **separate books of accounts** are maintained for exempt and taxable supplies
+- ITC can be **directly attributed** to each type of supply
+- **No reversal required** if ITC is fully attributable to taxable supplies
+- Formula applies only when ITC **cannot be directly attributed** (common credit)
+- Must maintain clear segregation in accounting records
+
+**8. Documentation:**
+- Maintain records of exempt and taxable turnover
+- Keep invoices of common inputs
+- Document calculation methodology
+- Maintain separate books if applicable
+
+*Reference: [Section 17(2) of CGST Act](/modules/cgst-act/input-tax-credit) and [Rule 38 of CGST Rules](/modules/cgst-rules/cgst-rules-itc)*`;
   }
   
   // Handle queries asking for list of exempt services/goods FIRST (before curriculum search)
@@ -413,7 +584,7 @@ function getAIResponse(question: string): string {
 
 **Note:** Exempt services are notified by the government. The complete list is in GST notifications. Exempt services do not attract GST, but ITC on inputs used for exempt services is not available.
 
-*Reference: Section 11 of CGST Act - Power to grant exemption*`;
+*Reference: [Section 11 of CGST Act - Power to grant exemption](/modules/cgst-act/levy-collection)*`;
   }
   
   if ((q.includes('which goods') || q.includes('what goods') || q.includes('list of goods')) && 
@@ -452,7 +623,7 @@ function getAIResponse(question: string): string {
 
 **Note:** Exempt goods are notified by the government. The complete list is in GST notifications. Exempt goods do not attract GST, but ITC on inputs used for exempt goods is not available.
 
-*Reference: Section 11 of CGST Act - Power to grant exemption*`;
+*Reference: [Section 11 of CGST Act - Power to grant exemption](/modules/cgst-act/levy-collection)*`;
   }
   
   // Use the expanded query (q) for all subsequent processing

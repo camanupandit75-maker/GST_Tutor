@@ -209,7 +209,76 @@ export const CGST_ACT_CHAPTERS_PART2 = [
         difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'low' as const },
       { id: 'sec-140', number: '140', title: 'Transitional arrangements for ITC', description: 'CENVAT credit carry forward',
         keyPoints: ['Credit in last return carried forward', 'TRAN-1 form for claiming credit', 'Time limit issues and court cases'],
-        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'medium' as const }
+        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'medium' as const,
+        fullText: `**Section 140. Transitional arrangements for input tax credit**
+
+A registered person, who was not registered under the existing law or who was engaged in the manufacture of exempted goods or provision of exempted services or who was providing works contract service and was availing of the benefit of notification No. 26/2012-Service Tax, dated the 20th June, 2012, or a first stage dealer or a second stage dealer or a registered importer or a depot of a manufacturer, shall be entitled to take, in his electronic credit ledger, credit of the amount of CENVAT credit carried forward in the return relating to the period ending with the day immediately preceding the appointed day, furnished by him under the existing law, in such manner as may be prescribed:
+
+Provided that the registered person shall not be allowed to take credit unless—
+
+(a) the said credit was admissible as CENVAT credit under the existing law;
+
+(b) the said credit was not admissible as input tax credit under this Act; and
+
+(c) the registered person has furnished all the returns required under the existing law for the period of six months immediately preceding the appointed day.
+
+(2) A registered person, who was not registered under the existing law, shall be entitled to take credit of eligible duties and taxes in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the appointed day, subject to the following conditions, namely:—
+
+(i) such inputs or goods are used or intended to be used for making taxable supplies under this Act;
+
+(ii) the said registered person is eligible for input tax credit under this Act;
+
+(iii) the said registered person is in possession of invoice or other prescribed documents evidencing payment of duty under the existing law in respect of such inputs;
+
+(iv) such invoices or other prescribed documents were issued not earlier than twelve months immediately preceding the appointed day; and
+
+(v) the supplier of services is not eligible for any abatement under this Act:
+
+Provided that where a registered person, other than a manufacturer or a service provider, does not have invoice or other prescribed documents evidencing payment of duty in respect of inputs held in stock on the appointed day, the registered person may, subject to such conditions, restrictions and safeguards as may be prescribed, including that the said taxable person shall pass on the benefit of such credit by way of reduced prices to the recipient, take credit at such rate and in such manner as may be prescribed.
+
+(3) A registered person, who was engaged in the manufacture of taxable as well as exempted goods under the Central Excise Act, 1944 or provision of taxable as well as exempted services under Chapter V of the Finance Act, 1994, but which are liable to tax under this Act, shall be entitled to take, in his electronic credit ledger,—
+
+(a) the amount of CENVAT credit carried forward in a return furnished under the existing law by him in respect of the period ending with the day immediately preceding the appointed day in such manner as may be prescribed; and
+
+(b) the amount of CENVAT credit of eligible duties in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the appointed day, relating to such exempted goods or services, in such manner as may be prescribed:
+
+Provided that if a registered person does not avail of the option within the time specified in sub-section (1) of section 10, he shall be liable to pay tax on the supply of goods and services referred to in sub-section (4) of section 7 and shall not be entitled to avail of input tax credit in respect of the same.
+
+(4) A registered person, who was either paying tax at a fixed rate or not paying any tax under the existing law, shall be entitled to take, in his electronic credit ledger, credit of eligible duties in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the appointed day, subject to the following conditions, namely:—
+
+(i) such inputs or goods are used or intended to be used for making taxable supplies under this Act;
+
+(ii) the said registered person is not paying tax under section 10;
+
+(iii) the said registered person is eligible for input tax credit under this Act;
+
+(iv) the said registered person is in possession of invoice or other prescribed documents evidencing payment of duty under the existing law in respect of inputs; and
+
+(v) such invoices or other prescribed documents were issued not earlier than twelve months immediately preceding the appointed day.
+
+(5) A registered person shall be entitled to take, in his electronic credit ledger, credit of eligible duties and taxes in respect of inputs or input services received on or after the appointed day but the duty or tax in respect of which has been paid under the existing law, subject to the condition that the invoice or any other duty or tax paying document of the same was recorded in the books of account of such person within a period of thirty days from the appointed day:
+
+Provided that the period of thirty days may, on sufficient cause being shown, be extended by the Commissioner for a further period not exceeding thirty days.
+
+(6) A registered person, who was either paying tax at a fixed rate or not paying any tax under the existing law, shall be entitled to take, in his electronic credit ledger, credit of eligible duties and taxes in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the appointed day, subject to the following conditions, namely:—
+
+(i) such inputs or goods are used or intended to be used for making taxable supplies under this Act;
+
+(ii) the said registered person is not paying tax under section 10;
+
+(iii) the said registered person is eligible for input tax credit under this Act;
+
+(iv) the said registered person is in possession of invoice or other prescribed documents evidencing payment of duty under the existing law in respect of inputs; and
+
+(v) such invoices or other prescribed documents were issued not earlier than twelve months immediately preceding the appointed day.
+
+(7) Notwithstanding anything to the contrary contained in this Act, the input tax credit on account of any services received prior to the appointed day by an exempted taxable person, who becomes liable to pay tax on the appointed day, shall not be allowed in the electronic credit ledger of such person.
+
+(8) Where a registered person having centralised registration under the existing law has obtained a registration under this Act, such person shall be allowed to take, in his electronic credit ledger, credit of the amount of CENVAT credit carried forward in a return, furnished under the existing law by him, in respect of the period ending with the day immediately preceding the appointed day, in such manner as may be prescribed.
+
+(9) Where a registered person was required to pay tax at a fixed rate or not paying any tax under the existing law, but is liable to pay tax under this Act, the input tax credit shall be allowed at such rate and in such manner and subject to such conditions and restrictions as may be prescribed.
+
+(10) The Central Government may, by notification, specify the manner and conditions subject to which the credit of eligible duties and taxes may be transferred from the electronic credit ledger of one registered person to another registered person where such transfer is pursuant to the provisions of an agreement or arrangement entered into between such persons for the transfer of business assets.` }
     ]
   },
   {

@@ -68,18 +68,18 @@ export default function ChapterPage() {
     <div className="space-y-6 animate-in">
       {/* Header */}
       <div>
-        <Link href={`/modules/${moduleId}`} className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-4">
+        <Link href={`/modules/${moduleId}`} className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-4 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to {module.name}
         </Link>
         <div className="flex items-start gap-4">
           <span className="text-5xl">{chapter.icon}</span>
           <div className="flex-1">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold text-white">
               {chapter.category === 'cgst-rules' ? chapter.title : `Chapter ${chapter.id}: ${chapter.title}`}
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">{chapter.description}</p>
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
+            <p className="text-gray-300 mt-2">{chapter.description}</p>
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-gray-300">
               <span className="flex items-center gap-1">
                 <BookOpen className="w-4 h-4" />
                 {chapter.sections.length} Sections
@@ -94,13 +94,13 @@ export default function ChapterPage() {
               </span>
             </div>
             <div className="mt-4 flex items-center gap-3">
-              <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
                 <div 
-                  className={cn("h-full transition-all", progressPercent === 100 ? "bg-green-500" : "bg-primary-500")} 
+                  className={cn("h-full transition-all", progressPercent === 100 ? "bg-green-500" : "bg-gradient-to-r from-blue-500 to-teal-500")} 
                   style={{ width: `${progressPercent}%` }} 
                 />
               </div>
-              <span className="text-sm font-medium">{progressPercent}%</span>
+              <span className="text-sm font-medium text-white">{progressPercent}%</span>
             </div>
           </div>
         </div>
@@ -117,12 +117,12 @@ export default function ChapterPage() {
             <div 
               key={section.id} 
               className={cn(
-                "card overflow-hidden transition-all",
-                isCompleted && "border-green-500 dark:border-green-500"
+                "card overflow-hidden transition-all bg-slate-800 border-slate-700",
+                isCompleted && "border-green-500"
               )}
             >
               <div 
-                className="p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                className="p-6 cursor-pointer hover:bg-slate-700/50 transition-colors"
                 onClick={() => toggleSection(section.id)}
               >
                 <div className="flex items-start gap-4">
@@ -130,17 +130,17 @@ export default function ChapterPage() {
                     "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm",
                     isCompleted 
                       ? "bg-green-500 text-white" 
-                      : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400"
+                      : "bg-slate-700 text-white"
                   )}>
                     {isCompleted ? <CheckCircle2 className="w-5 h-5" /> : section.number}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 dark:text-white">
+                        <h3 className="font-semibold text-white">
                           Section {section.number}: {section.title}
                         </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        <p className="text-sm text-gray-300 mt-1">
                           {section.description}
                         </p>
                         <div className="flex items-center gap-2 mt-2">
@@ -150,7 +150,7 @@ export default function ChapterPage() {
                           <span className={cn("px-2 py-1 rounded text-xs font-medium", getRelevanceColor(section.practicalRelevance))}>
                             {section.practicalRelevance} relevance
                           </span>
-                          <span className="flex items-center gap-1 text-xs text-gray-500">
+                          <span className="flex items-center gap-1 text-xs text-gray-400">
                             <Clock className="w-3 h-3" />
                             {section.estimatedMinutes}m
                           </span>
@@ -184,30 +184,200 @@ export default function ChapterPage() {
                   </div>
                   <button
                     onClick={() => toggleSection(section.id)}
-                    className="flex-shrink-0 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+                    className="flex-shrink-0 p-2 hover:bg-slate-700 rounded-lg transition-colors"
                   >
                     {isExpanded ? (
-                      <ChevronUp className="w-5 h-5 text-gray-400" />
+                      <ChevronUp className="w-5 h-5 text-white" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-gray-400" />
+                      <ChevronDown className="w-5 h-5 text-white" />
                     )}
                   </button>
                 </div>
               </div>
 
               {isExpanded && (
-                <div className="px-6 pb-6 pt-0 border-t border-gray-200 dark:border-gray-700">
+                <div className="px-6 pb-6 pt-0 border-t border-slate-700">
                   <div className="mt-4">
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Key Points:</h4>
+                    <h4 className="font-medium text-white mb-3">Key Points:</h4>
                     <ul className="space-y-2">
-                      {section.keyPoints.map((point, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                          <span className="text-primary-500 mt-1">•</span>
-                          <span>{point}</span>
-                        </li>
-                      ))}
+                      {section.keyPoints.map((point, idx) => {
+                        // Convert section references to hyperlinks using React components
+                        const sectionPattern = /(Section|Rule|Sec)\s+(\d+[A-Za-z]*(?:\([^)]+\))?)/gi;
+                        const parts: Array<{type: 'text' | 'link', content: string, href?: string}> = [];
+                        let lastIndex = 0;
+                        let match;
+                        
+                        while ((match = sectionPattern.exec(point)) !== null) {
+                          // Add text before match
+                          if (match.index > lastIndex) {
+                            parts.push({type: 'text', content: point.substring(lastIndex, match.index)});
+                          }
+                          
+                          // Find the referenced section
+                          const type = match[1];
+                          const num = match[2];
+                          let foundSection: any = null;
+                          let foundChapter: any = null;
+                          let foundModule: any = null;
+                          
+                          GST_MODULES.forEach(mod => {
+                            mod.chapters.forEach(ch => {
+                              ch.sections.forEach(sec => {
+                                const secNum = sec.number.replace(/[()]/g, '');
+                                const refNum = num.replace(/[()]/g, '');
+                                
+                                if (secNum === refNum || sec.number === num) {
+                                  foundSection = sec;
+                                  foundChapter = ch;
+                                  foundModule = mod;
+                                }
+                              });
+                            });
+                          });
+                          
+                          if (foundSection && foundChapter && foundModule) {
+                            // Link to section detail page to show full legal text
+                            const href = `/modules/${foundModule.id}/${foundChapter.slug}/${foundSection.id}`;
+                            parts.push({type: 'link', content: match[0], href});
+                          } else {
+                            parts.push({type: 'text', content: match[0]});
+                          }
+                          
+                          lastIndex = sectionPattern.lastIndex;
+                        }
+                        
+                        // Add remaining text
+                        if (lastIndex < point.length) {
+                          parts.push({type: 'text', content: point.substring(lastIndex)});
+                        }
+                        
+                        // If no matches, just use original text
+                        if (parts.length === 0) {
+                          parts.push({type: 'text', content: point});
+                        }
+                        
+                        return (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
+                            <span className="text-blue-400 mt-1">•</span>
+                            <span>
+                              {parts.map((part, partIdx) => 
+                                part.type === 'link' && part.href ? (
+                                  <Link 
+                                    key={partIdx}
+                                    href={part.href}
+                                    className="text-blue-400 hover:text-blue-300 underline font-medium"
+                                  >
+                                    {part.content}
+                                  </Link>
+                                ) : (
+                                  <span key={partIdx}>{part.content}</span>
+                                )
+                              )}
+                            </span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
+                  
+                  {/* Related Sections */}
+                  {(() => {
+                    // Find related sections based on keywords and topics
+                    const relatedSections: Array<{section: any, chapter: any, module: any}> = [];
+                    const sectionTitleLower = section.title.toLowerCase();
+                    const sectionDescLower = section.description.toLowerCase();
+                    
+                    // Keywords to match related sections
+                    const keywords = [
+                      ...sectionTitleLower.split(/\s+/).filter(w => w.length > 3),
+                      ...sectionDescLower.split(/\s+/).filter(w => w.length > 3)
+                    ];
+                    
+                    GST_MODULES.forEach(mod => {
+                      mod.chapters.forEach(ch => {
+                        ch.sections.forEach(sec => {
+                          // Skip current section
+                          if (mod.id === moduleId && ch.id === chapter.id && sec.id === section.id) return;
+                          
+                          const secTitleLower = sec.title.toLowerCase();
+                          const secDescLower = sec.description.toLowerCase();
+                          
+                          // Check for keyword matches
+                          const hasMatch = keywords.some(keyword => 
+                            keyword.length > 3 && (
+                              secTitleLower.includes(keyword) || 
+                              secDescLower.includes(keyword) ||
+                              sec.keyPoints.some((kp: string) => kp.toLowerCase().includes(keyword))
+                            )
+                          );
+                          
+                          if (hasMatch) {
+                            relatedSections.push({section: sec, chapter: ch, module: mod});
+                          }
+                        });
+                      });
+                    });
+                    
+                    // Limit to 3 most relevant
+                    const topRelated = relatedSections.slice(0, 3);
+                    
+                    return (
+                      <>
+                        {/* Reference Section */}
+                        <div className="mt-6 pt-4 border-t border-slate-700">
+                          <h4 className="font-medium text-white mb-3">Reference:</h4>
+                          <p className="text-sm text-gray-300">
+                            <Link 
+                              href={`/modules/${moduleId}`}
+                              className="text-blue-400 hover:text-blue-300 hover:underline font-medium"
+                            >
+                              {module.name}
+                            </Link>
+                            {' - '}
+                            <Link 
+                              href={`/modules/${moduleId}/${chapterSlug}`}
+                              className="text-blue-400 hover:text-blue-300 hover:underline font-medium"
+                            >
+                              {chapter.title}
+                            </Link>
+                            {' '}(Section {section.number})
+                            {' '}
+                            <Link 
+                              href={`/modules/${moduleId}/${chapterSlug}/${section.id}`}
+                              className="text-blue-400 hover:text-blue-300 hover:underline ml-2"
+                            >
+                              View Section Details →
+                            </Link>
+                          </p>
+                        </div>
+                        
+                        {/* Related Sections */}
+                        {topRelated.length > 0 && (
+                          <div className="mt-4 pt-4 border-t border-slate-700">
+                            <h4 className="font-medium text-white mb-3">Related Sections:</h4>
+                            <ul className="space-y-2">
+                              {topRelated.map((rel, idx) => (
+                                <li key={idx}>
+                                  <Link 
+                                    href={`/modules/${rel.module.id}/${rel.chapter.slug}/${rel.section.id}`}
+                                    className="text-sm text-blue-400 hover:text-blue-300 hover:underline flex items-start gap-2"
+                                  >
+                                    <span className="text-blue-400 mt-1">→</span>
+                                    <span>
+                                      <span className="font-medium">Section {rel.section.number}: {rel.section.title}</span>
+                                      {' '}in{' '}
+                                      <span className="font-medium">{rel.chapter.title}</span>
+                                      {' '}({rel.module.name})
+                                    </span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </>
+                    );
+                  })()}
                 </div>
               )}
             </div>
