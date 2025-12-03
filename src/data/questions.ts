@@ -4527,7 +4527,7 @@ export function generateQuiz(moduleId: string, count: number = 10): QuizQuestion
 
 export function generateMixedQuiz(count: number = 10, difficulty: string = 'mixed'): QuizQuestion[] {
   // Get all unique module IDs
-  const moduleIds = [...new Set(GST_QUESTIONS.map(q => q.moduleId))];
+  const moduleIds = Array.from(new Set(GST_QUESTIONS.map(q => q.moduleId)));
   
   // Filter by difficulty if specified
   let pool = GST_QUESTIONS;
