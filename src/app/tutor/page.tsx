@@ -642,7 +642,9 @@ ITC is blocked on:
 - Requires sanction from Commissioner
 - Can be initiated even after payment of tax/penalty
 - Separate from penalty proceedings
-- Court proceedings can take time`,
+- Court proceedings can take time
+
+*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 132](/modules/cgst-act/offences-penalties/sec-132) and [Section 138](/modules/cgst-act/offences-penalties/sec-138)*`,
 
   'when is prosecution done': `**When is Prosecution Initiated under GST:**
 
@@ -689,7 +691,9 @@ ITC is blocked on:
 **Time Limit:**
 - No specific time limit for prosecution
 - Can be initiated within reasonable time
-- Court proceedings may take time`,
+- Court proceedings may take time
+
+*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 132](/modules/cgst-act/offences-penalties/sec-132) and [Section 138](/modules/cgst-act/offences-penalties/sec-138)*`,
 
   'section 132': `**Section 132 - Prosecution for Offenses:**
 
@@ -722,7 +726,9 @@ ITC is blocked on:
 - Can compound before prosecution
 - Payment of compounding amount
 - Avoids imprisonment
-- Not available for serious offenses`,
+- Not available for serious offenses
+
+*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 132](/modules/cgst-act/offences-penalties/sec-132)*`,
 
   'section 138': `**Section 138 - Compounding of Offenses:**
 
@@ -747,7 +753,9 @@ ITC is blocked on:
 - Application to Commissioner
 - Payment of compounding amount
 - Offense compounded
-- No prosecution if compounded successfully`
+- No prosecution if compounded successfully
+
+*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 138](/modules/cgst-act/offences-penalties/sec-138)*`
 };
 
 
