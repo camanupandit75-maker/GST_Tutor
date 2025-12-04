@@ -19,17 +19,20 @@ const SUGGESTED_QUESTIONS = [
 
 const GST_RESPONSES: Record<string, string> = {
   'registration': `**GST Registration Threshold:**
-- Normal States: ₹20 lakhs aggregate turnover
-- Special Category States: ₹10 lakhs
-- For goods suppliers only: ₹40 lakhs
 
-**Compulsory Registration (Section 24):**
+**Normal States:** ₹20 lakhs aggregate turnover
+**Special Category States:** ₹10 lakhs
+**For goods suppliers only:** ₹40 lakhs
+
+**Compulsory Registration (As per Section 24):**
 - Inter-state suppliers
 - Casual taxable persons
 - Non-resident taxable persons
 - E-commerce operators
 - TDS deductors
-- Persons making taxable supplies on behalf of other taxable persons`,
+- Persons making taxable supplies on behalf of other taxable persons
+
+*Reference: [CGST Act - Chapter 6: Registration](/modules/cgst-act/registration) - [Section 22](/modules/cgst-act/registration/sec-22) and [Section 24](/modules/cgst-act/registration/sec-24)*`,
 
   'cgst sgst igst': `**GST Components:**
 
@@ -39,7 +42,9 @@ const GST_RESPONSES: Record<string, string> = {
 
 **Example:**
 - Intra-state sale of ₹10,000 @ 18%: CGST ₹900 + SGST ₹900
-- Inter-state sale of ₹10,000 @ 18%: IGST ₹1,800`,
+- Inter-state sale of ₹10,000 @ 18%: IGST ₹1,800
+
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 9](/modules/cgst-act/levy-collection/sec-9) and [IGST Act - Chapter 2: Levy and Collection](/modules/igst-act/igst-levy-collection) - [Section 5](/modules/igst-act/igst-levy-collection/sec-5)*`,
 
   'blocked credit': `**Blocked Credits under Section 17(5):**
 
@@ -53,21 +58,25 @@ ITC is NOT available on:
 7. Works contract for construction
 8. Goods/services for personal consumption
 9. Goods lost, stolen, destroyed, written off
-10. Tax paid under composition scheme`,
+10. Tax paid under composition scheme
 
-  'time of supply': `**Time of Supply of Goods (Section 12):**
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 17(5)](/modules/cgst-act/input-tax-credit/sec-17-5)*`,
+
+  'time of supply': `**Time of Supply of Goods (As per Section 12):**
 
 Earlier of:
 - Date of issue of invoice
 - Last date to issue invoice
 - Date of receipt of payment
 
-**Time of Supply of Services (Section 13):**
+**Time of Supply of Services (As per Section 13):**
 
 Earlier of:
 - Date of invoice (if issued within prescribed time)
 - Date of receipt of payment
-- Date of completion of service`,
+- Date of completion of service
+
+*Reference: [CGST Act - Chapter 4: Time and Value of Supply](/modules/cgst-act/time-value-supply) - [Section 12](/modules/cgst-act/time-value-supply/sec-12) and [Section 13](/modules/cgst-act/time-value-supply/sec-13)*`,
 
   'gstr-3b': `**GSTR-3B Filing:**
 
@@ -80,9 +89,11 @@ Earlier of:
 - ITC claimed
 - Tax payable and paid
 
-**Late Fee:** ₹50/day (₹20 for NIL return), max ₹5,000`,
+**Late Fee (As per Section 47):** ₹50/day (₹20 for NIL return), max ₹5,000
 
-  'composition': `**Composition Scheme (Section 10):**
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39) and [Section 47](/modules/cgst-act/returns/sec-47)*`,
+
+  'composition': `**Composition Scheme (As per Section 10):**
 
 **Eligibility:**
 - Turnover up to ₹1.5 crore (₹75 lakhs for special states)
@@ -97,23 +108,35 @@ Earlier of:
 - No inter-state supplies
 - No supply through e-commerce
 - Cannot collect tax from customers
-- No ITC available`,
+- No ITC available
 
-  'reverse charge': `**Reverse Charge Mechanism:**
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 10](/modules/cgst-act/levy-collection/sec-10)*`,
 
-Under RCM, the recipient pays GST instead of supplier.
+  'reverse charge': `**Reverse Charge Mechanism (RCM):**
+
+Under RCM, the **recipient pays GST** instead of supplier.
 
 **Section 9(3) - Notified supplies:**
-- Legal services by advocate
+- Legal services by advocate/firm
 - Services by goods transport agency
 - Sponsorship services
 - Services by director to company
+- Services by insurance agent
+- Services by recovery agent
 
 **Section 9(4) - From unregistered persons:**
 - Currently, mostly suspended except for specific cases
-- Applies to certain notified goods/services`,
+- Applies to certain notified goods/services
 
-  'e-way bill': `**E-Way Bill (Rule 138):**
+**Important Notes:**
+- RCM does **NOT apply to export of services**
+- Export of services is zero-rated (0% GST)
+- RCM applies only to domestic supplies
+- Recipient can claim ITC on RCM tax paid
+
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 9(3)](/modules/cgst-act/levy-collection/sec-9) and [Section 9(4)](/modules/cgst-act/levy-collection/sec-9)*`,
+
+  'e-way bill': `**E-Way Bill (As per Rule 138):**
 
 **When Required:**
 - Movement of goods worth > ₹50,000
@@ -129,9 +152,11 @@ Under RCM, the recipient pays GST instead of supplier.
 **Exemptions:**
 - Goods specified in Annexure
 - Movement within 50 km
-- Non-motorized conveyance`,
+- Non-motorized conveyance
 
-  'place of supply': `**Place of Supply (Sections 10-13 IGST Act):**
+*Reference: [CGST Rules - Chapter 15: E-Way Bills](/modules/cgst-rules/cgst-rules-eway-bills) - [Rule 138](/modules/cgst-rules/cgst-rules-eway-bills/rule-138)*`,
+
+  'place of supply': `**Place of Supply (As per Sections 10-13 IGST Act):**
 
 **For Goods:**
 - Location where movement terminates (if moved)
@@ -148,9 +173,11 @@ Under RCM, the recipient pays GST instead of supplier.
 
 **Intra-state Supply:**
 - Location of supplier and recipient in same state
-- Attracts CGST + SGST`,
+- Attracts CGST + SGST
 
-  'itc eligibility': `**ITC Eligibility (Section 16):**
+*Reference: [IGST Act - Chapter 3: Nature of Supply](/modules/igst-act/igst-nature-supply) - [Section 10](/modules/igst-act/igst-nature-supply/sec-10), [Section 12](/modules/igst-act/igst-nature-supply/sec-12), [Section 13](/modules/igst-act/igst-nature-supply/sec-13)*`,
+
+  'itc eligibility': `**ITC Eligibility (As per Section 16):**
 
 **Conditions:**
 1. Must have valid tax invoice/debit note
@@ -165,7 +192,9 @@ Under RCM, the recipient pays GST instead of supplier.
 - Exempt supplies
 - Blocked credits (Section 17)
 - Composition scheme
-- Non-business use`,
+- Non-business use
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 16](/modules/cgst-act/input-tax-credit/sec-16)*`,
 
   'returns': `**GST Returns:**
 
@@ -184,7 +213,9 @@ Under RCM, the recipient pays GST instead of supplier.
 
 **GSTR-9C (Reconciliation Statement):**
 - For turnover > ₹5 crore
-- CA certification required`,
+- CA certification required
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 37](/modules/cgst-act/returns/sec-37), [Section 39](/modules/cgst-act/returns/sec-39), [Section 44](/modules/cgst-act/returns/sec-44)*`,
 
   'all return due dates': `**All GST Return Due Dates:**
 
@@ -246,7 +277,9 @@ Under RCM, the recipient pays GST instead of supplier.
 - Due dates may be extended by government notifications
 - Late fees apply for delayed filing
 - Interest applies on late payment of tax
-- NIL returns have reduced late fees`,
+- NIL returns have reduced late fees
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 37](/modules/cgst-act/returns/sec-37), [Section 39](/modules/cgst-act/returns/sec-39), [Section 44](/modules/cgst-act/returns/sec-44)*`,
 
   'penalty': `**Penalties and Late Fees:**
 
@@ -276,49 +309,59 @@ Under RCM, the recipient pays GST instead of supplier.
 
   'late fee': `**Late Fees for GST Returns:**
 
-**GSTR-1 Late Fee:**
+**GSTR-1 Late Fee (As per Section 47):**
 - ₹200 per day (₹100 CGST + ₹100 SGST/IGST)
 - Maximum: ₹5,000 per return
 - NIL returns: ₹20/day, max ₹500
 
-**GSTR-3B Late Fee:**
+**GSTR-3B Late Fee (As per Section 47):**
 - ₹50 per day (₹25 CGST + ₹25 SGST/IGST)
 - Maximum: ₹5,000
 - NIL returns: ₹20/day, max ₹500
 
-**Interest on Late Payment:**
+**Interest on Late Payment (As per Section 50):**
 - 18% per annum on tax amount
 - From due date to payment date
 
 **Waiver:**
 - Late fee may be waived for first-time defaulters
-- Subject to conditions and approval`,
+- Subject to conditions and approval
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47) and [Section 50](/modules/cgst-act/returns/sec-50)*`,
 
   // Return Due Dates - Individual
   'gstr-1 due date': `**GSTR-1 Due Date:**
 - **Due:** 11th of the following month
 - Details of all outward supplies
-- Late fee: ₹200/day (₹100 CGST + ₹100 SGST/IGST), max ₹5,000
-- NIL return late fee: ₹20/day, max ₹500`,
+- Late fee (As per Section 47): ₹200/day (₹100 CGST + ₹100 SGST/IGST), max ₹5,000
+- NIL return late fee: ₹20/day, max ₹500
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 37](/modules/cgst-act/returns/sec-37) and [Section 47](/modules/cgst-act/returns/sec-47)*`,
 
   'gstr-3b due date': `**GSTR-3B Due Date:**
 - **Due:** 20th of the following month (monthly filers)
 - **QRMP taxpayers:** 22nd/24th of month following the quarter
 - Summary return with tax payment
-- Late fee: ₹50/day (₹25 CGST + ₹25 SGST/IGST), max ₹5,000
-- NIL return late fee: ₹20/day, max ₹500`,
+- Late fee (As per Section 47): ₹50/day (₹25 CGST + ₹25 SGST/IGST), max ₹5,000
+- NIL return late fee: ₹20/day, max ₹500
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39) and [Section 47](/modules/cgst-act/returns/sec-47)*`,
 
   'gstr-9 due date': `**GSTR-9 (Annual Return) Due Date:**
 - **Due:** 31st December of the following financial year
 - Annual consolidation of all returns
 - Must be filed by all regular taxpayers
-- Late fee applies for delayed filing`,
+- Late fee applies for delayed filing
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 44](/modules/cgst-act/returns/sec-44)*`,
 
   'gstr-9c due date': `**GSTR-9C Due Date:**
 - **Due:** 31st December of the following financial year
 - Required for taxpayers with turnover > ₹5 crore
 - Self-certified reconciliation statement
-- CA certification required`,
+- CA certification required
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 44](/modules/cgst-act/returns/sec-44) and [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
 
   // Late Fee Calculations
   'late fee calculation': `**Late Fee Calculation (As per Section 47):**
@@ -358,19 +401,25 @@ Under RCM, the recipient pays GST instead of supplier.
 **Interest Calculation:**
 - Simple interest basis
 - Calculated on daily basis
-- Formula: (Tax × Rate × Days) / 365`,
+- Formula: (Tax × Rate × Days) / 365
 
-  'interest 18 percent': `**18% Interest Rate (Section 50):**
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50](/modules/cgst-act/returns/sec-50)*`,
+
+  'interest 18 percent': `**18% Interest Rate (As per Section 50):**
 - Applies on late payment of tax
 - Calculated from due date to payment date
 - Simple interest basis
-- Example: ₹1,00,000 tax paid 30 days late = ₹1,00,000 × 18% × 30/365 = ₹1,479`,
+- Example: ₹1,00,000 tax paid 30 days late = ₹1,00,000 × 18% × 30/365 = ₹1,479
 
-  'interest 24 percent': `**24% Interest Rate (Section 50(3)):**
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50](/modules/cgst-act/returns/sec-50)*`,
+
+  'interest 24 percent': `**24% Interest Rate (As per Section 50(3)):**
 - Applies on excess ITC claimed
 - Calculated from date of utilization
 - Higher rate to discourage incorrect ITC claims
-- Example: ₹50,000 excess ITC utilized for 60 days = ₹50,000 × 24% × 60/365 = ₹1,973`,
+- Example: ₹50,000 excess ITC utilized for 60 days = ₹50,000 × 24% × 60/365 = ₹1,973
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50(3)](/modules/cgst-act/returns/sec-50)*`,
 
   // Registration Thresholds
   'registration threshold': `**GST Registration Thresholds:**
@@ -383,39 +432,51 @@ Under RCM, the recipient pays GST instead of supplier.
 - ₹10 lakhs aggregate turnover
 - States: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Himachal Pradesh, Uttarakhand
 
-**Compulsory Registration (Section 24):**
+**Compulsory Registration (As per Section 24):**
 - No threshold limit - must register regardless of turnover
-- Inter-state suppliers, casual taxable persons, e-commerce operators, TDS deductors`,
+- Inter-state suppliers, casual taxable persons, e-commerce operators, TDS deductors
+
+*Reference: [CGST Act - Chapter 6: Registration](/modules/cgst-act/registration) - [Section 22](/modules/cgst-act/registration/sec-22) and [Section 24](/modules/cgst-act/registration/sec-24)*`,
 
   'threshold 20 lakh': `**₹20 Lakh Threshold:**
 - Applies to normal states
 - For suppliers of goods and services combined
 - Aggregate turnover includes all taxable, exempt, and non-taxable supplies
-- Excludes taxes and inward supplies`,
+- Excludes taxes and inward supplies
+
+*Reference: [CGST Act - Chapter 6: Registration](/modules/cgst-act/registration) - [Section 22](/modules/cgst-act/registration/sec-22)*`,
 
   'threshold 40 lakh': `**₹40 Lakh Threshold:**
 - Applies to normal states
 - **Only for goods suppliers** (not service providers)
 - Service providers must register at ₹20 lakh threshold
-- If supplying both goods and services, ₹20 lakh threshold applies`,
+- If supplying both goods and services, ₹20 lakh threshold applies
+
+*Reference: [CGST Act - Chapter 6: Registration](/modules/cgst-act/registration) - [Section 22](/modules/cgst-act/registration/sec-22)*`,
 
   'threshold 10 lakh': `**₹10 Lakh Threshold:**
 - Applies to special category states
 - Lower threshold to support businesses in these states
-- Same rules as ₹20 lakh threshold but lower amount`,
+- Same rules as ₹20 lakh threshold but lower amount
+
+*Reference: [CGST Act - Chapter 6: Registration](/modules/cgst-act/registration) - [Section 22](/modules/cgst-act/registration/sec-22)*`,
 
   // ITC Rules
-  'itc time limit': `**ITC Time Limit (Section 16(4)):**
+  'itc time limit': `**ITC Time Limit (As per Section 16(4)):**
 - **Deadline:** 30th November of the following financial year
 - Or date of filing annual return (GSTR-9), whichever is earlier
 - ITC cannot be claimed after this date
-- Example: For FY 2023-24, ITC must be claimed by 30th November 2024`,
+- Example: For FY 2023-24, ITC must be claimed by 30th November 2024
 
-  'itc 180 days': `**ITC Reversal - 180 Days Rule (Section 16(2)):**
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 16(4)](/modules/cgst-act/input-tax-credit/sec-16)*`,
+
+  'itc 180 days': `**ITC Reversal - 180 Days Rule (As per Section 16(2)):**
 - Payment to supplier must be made within **180 days** of invoice date
 - If not paid within 180 days, ITC must be reversed
 - ITC can be re-availed when payment is made
-- Applies to all registered persons`,
+- Applies to all registered persons
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 16(2)](/modules/cgst-act/input-tax-credit/sec-16)*`,
 
   'itc blocked credits': `**Blocked Credits - Section 17(5):**
 
@@ -442,7 +503,9 @@ ITC is blocked on:
 - Works contract for construction
 - Personal consumption
 - Lost/stolen/destroyed goods
-- Composition scheme tax`,
+- Composition scheme tax
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 17(5)](/modules/cgst-act/input-tax-credit/sec-17-5)*`,
 
   // Penalty Provisions
   'penalty section 73': `**Section 73 - Penalty for Incorrect Return:**
@@ -450,83 +513,107 @@ ITC is blocked on:
 - Minimum: ₹10,000
 - Applies when: Tax not paid, short paid, or erroneously refunded
 - Show cause notice must be issued
-- Can be reduced to 25% if paid within 30 days of notice`,
+- Can be reduced to 25% if paid within 30 days of notice
+
+*Reference: [CGST Act - Chapter 15: Demands and Recovery](/modules/cgst-act/demands-recovery) - [Section 73](/modules/cgst-act/demands-recovery/sec-73)*`,
 
   'penalty section 74': `**Section 74 - Penalty for Fraud/Suppression:**
 - **Penalty:** Up to 100% of tax amount
 - Applies when: Fraud, willful misstatement, or suppression of facts
 - Show cause notice must be issued
 - Can be reduced to 50% if paid within 30 days of notice
-- Higher penalty to deter tax evasion`,
+- Higher penalty to deter tax evasion
 
-  'penalty 10 percent': `**10% Penalty (Section 73):**
+*Reference: [CGST Act - Chapter 15: Demands and Recovery](/modules/cgst-act/demands-recovery) - [Section 74](/modules/cgst-act/demands-recovery/sec-74)*`,
+
+  'penalty 10 percent': `**10% Penalty (As per Section 73):**
 - For incorrect returns without fraud
 - Up to 10% of tax amount or ₹10,000, whichever is higher
 - Can be reduced to 25% if paid within 30 days of notice
-- Applies to cases of non-payment, short payment, or erroneous refund`,
+- Applies to cases of non-payment, short payment, or erroneous refund
 
-  'penalty 100 percent': `**100% Penalty (Section 74):**
+*Reference: [CGST Act - Chapter 15: Demands and Recovery](/modules/cgst-act/demands-recovery) - [Section 73](/modules/cgst-act/demands-recovery/sec-73)*`,
+
+  'penalty 100 percent': `**100% Penalty (As per Section 74):**
 - For fraud, willful misstatement, or suppression
 - Up to 100% of tax amount
 - Can be reduced to 50% if paid within 30 days of notice
-- Higher penalty to deter tax evasion`,
+- Higher penalty to deter tax evasion
+
+*Reference: [CGST Act - Chapter 15: Demands and Recovery](/modules/cgst-act/demands-recovery) - [Section 74](/modules/cgst-act/demands-recovery/sec-74)*`,
 
   // E-way Bill Rules
-  'eway bill limit': `**E-Way Bill Limit:**
+  'eway bill limit': `**E-Way Bill Limit (As per Rule 138):**
 - **Threshold:** ₹50,000
 - Required when value of goods > ₹50,000
 - Applies to movement of goods (inter-state and intra-state)
-- Not required for exempt supplies or specified goods`,
+- Not required for exempt supplies or specified goods
 
-  'eway bill validity': `**E-Way Bill Validity:**
+*Reference: [CGST Rules - Chapter 15: E-Way Bills](/modules/cgst-rules/cgst-rules-eway-bills) - [Rule 138](/modules/cgst-rules/cgst-rules-eway-bills/rule-138)*`,
+
+  'eway bill validity': `**E-Way Bill Validity (As per Rule 138):**
 - **Regular goods:** 100 km per day
 - **Over Dimensional Cargo (ODC):** 200 km per day
 - Validity calculated from date and time of generation
 - Can be extended if goods not delivered within validity period
-- Example: 500 km distance = 5 days validity for regular goods`,
+- Example: 500 km distance = 5 days validity for regular goods
 
-  'eway bill 50000': `**E-Way Bill ₹50,000 Limit:**
+*Reference: [CGST Rules - Chapter 15: E-Way Bills](/modules/cgst-rules/cgst-rules-eway-bills) - [Rule 138](/modules/cgst-rules/cgst-rules-eway-bills/rule-138)*`,
+
+  'eway bill 50000': `**E-Way Bill ₹50,000 Limit (As per Rule 138):**
 - Required when invoice value > ₹50,000
 - Includes all taxes and charges
 - Not required for: Exempt supplies, non-taxable supplies, goods in Annexure
-- Movement within 50 km radius exempted`,
+- Movement within 50 km radius exempted
+
+*Reference: [CGST Rules - Chapter 15: E-Way Bills](/modules/cgst-rules/cgst-rules-eway-bills) - [Rule 138](/modules/cgst-rules/cgst-rules-eway-bills/rule-138)*`,
 
   // Composition Scheme
-  'composition limit': `**Composition Scheme Limit:**
+  'composition limit': `**Composition Scheme Limit (As per Section 10):**
 - **Normal states:** ₹1.5 crore turnover
 - **Special category states:** ₹75 lakhs turnover
 - Must opt for composition scheme before start of financial year
-- Cannot opt out during the year (except in certain cases)`,
+- Cannot opt out during the year (except in certain cases)
 
-  'composition rate': `**Composition Scheme Rates:**
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 10](/modules/cgst-act/levy-collection/sec-10)*`,
+
+  'composition rate': `**Composition Scheme Rates (As per Section 10):**
 - **Traders:** 1% (0.5% CGST + 0.5% SGST)
 - **Manufacturers:** 1% (0.5% CGST + 0.5% SGST)
 - **Restaurants:** 5% (2.5% CGST + 2.5% SGST)
 - Rates are on turnover, not profit
-- No ITC available under composition scheme`,
+- No ITC available under composition scheme
 
-  'composition 1.5 crore': `**Composition Scheme ₹1.5 Crore Limit:**
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 10](/modules/cgst-act/levy-collection/sec-10)*`,
+
+  'composition 1.5 crore': `**Composition Scheme ₹1.5 Crore Limit (As per Section 10):**
 - Applies to normal states
 - Turnover limit for eligibility
 - Special category states: ₹75 lakhs
 - Must file GSTR-4 quarterly
-- Cannot make inter-state supplies`,
+- Cannot make inter-state supplies
+
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 10](/modules/cgst-act/levy-collection/sec-10)*`,
 
   // Place of Supply Rules
-  'place of supply goods': `**Place of Supply - Goods (Section 10 IGST Act):**
+  'place of supply goods': `**Place of Supply - Goods (As per Section 10 IGST Act):**
 - **If goods moved:** Location where movement terminates
 - **If goods not moved:** Location of goods at time of delivery
 - **Installation/assembly:** Place where installation/assembly completed
-- Determines whether CGST+SGST or IGST applies`,
+- Determines whether CGST+SGST or IGST applies
 
-  'place of supply services': `**Place of Supply - Services (Section 12-13 IGST Act):**
+*Reference: [IGST Act - Chapter 3: Nature of Supply](/modules/igst-act/igst-nature-supply) - [Section 10](/modules/igst-act/igst-nature-supply/sec-10)*`,
+
+  'place of supply services': `**Place of Supply - Services (As per Section 12-13 IGST Act):**
 - **General rule:** Location of recipient (if known)
 - **If recipient location unknown:** Location of supplier
 - **Special rules for:**
   - Immovable property: Location of property
   - Restaurant: Location of restaurant
   - Transportation: Place where goods/passengers taken on board
-  - Banking/Insurance: Location of recipient`,
+  - Banking/Insurance: Location of recipient
+
+*Reference: [IGST Act - Chapter 3: Nature of Supply](/modules/igst-act/igst-nature-supply) - [Section 12](/modules/igst-act/igst-nature-supply/sec-12) and [Section 13](/modules/igst-act/igst-nature-supply/sec-13)*`,
 
   // RCM Provisions
   'rcm section 9 3': `**RCM - Section 9(3) - Notified Supplies:**
@@ -536,27 +623,35 @@ ITC is blocked on:
 - Services by director to company
 - Services by insurance agent
 - Services by recovery agent
-- Recipient must pay GST and claim ITC`,
+- Recipient must pay GST and claim ITC
+
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 9(3)](/modules/cgst-act/levy-collection/sec-9)*`,
 
   'rcm section 9 4': `**RCM - Section 9(4) - Unregistered Suppliers:**
 - Currently mostly suspended
 - Applies only to specific notified goods/services
 - Recipient pays GST when purchasing from unregistered supplier
 - Can claim ITC if eligible
-- Check latest notifications for active provisions`,
+- Check latest notifications for active provisions
+
+*Reference: [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 9(4)](/modules/cgst-act/levy-collection/sec-9)*`,
 
   // Additional Return Details
   'gstr-4': `**GSTR-4 (Composition Scheme Return):**
 - **Due:** 18th of month following the quarter
 - Quarterly return for composition taxpayers
 - Turnover limit: ₹1.5 crore (₹75 lakhs for special states)
-- Tax rate: 1% (traders/manufacturers) or 5% (restaurants)`,
+- Tax rate: 1% (traders/manufacturers) or 5% (restaurants)
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39) and [CGST Act - Chapter 3: Levy and Collection](/modules/cgst-act/levy-collection) - [Section 10](/modules/cgst-act/levy-collection/sec-10)*`,
 
   'gstr-5': `**GSTR-5 (Non-Resident Taxable Person):**
 - **Due:** 20th of the following month
 - For non-resident taxable persons
 - Must file return for each month of registration
-- Cannot opt for composition scheme`,
+- Cannot opt for composition scheme
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 40](/modules/cgst-act/returns/sec-40)*`,
 
   'gstr-6': `**GSTR-6 (Input Service Distributor Return):**
 - **Due:** 13th of the following month
@@ -623,13 +718,17 @@ ITC is blocked on:
 - **Due:** 10th of the following month
 - For persons deducting TDS under GST
 - TDS rate: 2% (1% CGST + 1% SGST/IGST)
-- TDS deducted on payments to suppliers`,
+- TDS deducted on payments to suppliers
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 51](/modules/cgst-act/returns/sec-51) and [Section 39](/modules/cgst-act/returns/sec-39)*`,
 
   'gstr-8': `**GSTR-8 (TCS Return):**
 - **Due:** 10th of the following month
 - For e-commerce operators collecting TCS
 - TCS rate: 1% (0.5% CGST + 0.5% SGST/IGST)
-- TCS collected on supplies made through e-commerce platform`,
+- TCS collected on supplies made through e-commerce platform
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52) and [Section 39](/modules/cgst-act/returns/sec-39)*`,
 
   // QRMP Scheme
   'qrmp': `**QRMP Scheme (Quarterly Return Monthly Payment):**
@@ -637,22 +736,28 @@ ITC is blocked on:
 - **GSTR-1:** Due 13th of month following quarter
 - **GSTR-3B:** Due 22nd/24th of month following quarter
 - **Monthly Payment:** Must pay tax monthly using PMT-06
-- Can opt in/out before start of quarter`,
+- Can opt in/out before start of quarter
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39)*`,
 
   // Additional Topics
-  'tds gst': `**TDS under GST (Section 51):**
+  'tds gst': `**TDS under GST (As per Section 51):**
 - **Rate:** 2% (1% CGST + 1% SGST/IGST)
 - Applies to: Government departments, local authorities, specified persons
 - Deducted on payments to suppliers
 - TDS return: GSTR-7 (due 10th of following month)
-- Supplier can claim TDS as credit`,
+- Supplier can claim TDS as credit
 
-  'tcs gst': `**TCS under GST (Section 52):**
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 51](/modules/cgst-act/returns/sec-51)*`,
+
+  'tcs gst': `**TCS under GST (As per Section 52):**
 - **Rate:** 1% (0.5% CGST + 0.5% SGST/IGST)
 - Applies to: E-commerce operators
 - Collected on supplies made through e-commerce platform
 - TCS return: GSTR-8 (due 10th of following month)
-- Supplier can claim TCS as credit`,
+- Supplier can claim TCS as credit
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52)*`,
 
   'refund': `**GST Refund (Section 54):**
 
@@ -731,19 +836,24 @@ ITC is blocked on:
 
 *Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
 
-  'audit': `**GST Audit (Section 35):**
+  'audit': `**GST Audit (As per Section 35):**
 - **Required for:** Turnover > ₹5 crore
 - **Due:** 30th September of following financial year
 - **Form:** GSTR-9C (reconciliation statement)
 - **CA Certification:** Required
-- **Audit by Department:** Can be conducted under Section 65`,
+- **Audit by Department:** Can be conducted under Section 65
+
+*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35) and [Section 65](/modules/cgst-act/audit/sec-65)*`,
 
   'assessment': `**GST Assessment:**
-- **Self-assessment:** Taxpayer files return and pays tax
-- **Provisional assessment:** Section 60 (when unable to determine tax)
-- **Scrutiny assessment:** Section 61 (department scrutiny)
-- **Best judgment assessment:** Section 62 (non-filers)
-- **Summary assessment:** Section 64 (to protect revenue)`,
+
+**Self-assessment:** Taxpayer files return and pays tax
+**Provisional assessment (As per Section 60):** When unable to determine tax
+**Scrutiny assessment (As per Section 61):** Department scrutiny
+**Best judgment assessment (As per Section 62):** For non-filers
+**Summary assessment (As per Section 64):** To protect revenue
+
+*Reference: [CGST Act - Chapter 12: Assessment](/modules/cgst-act/assessment) - [Section 60](/modules/cgst-act/assessment/sec-60), [Section 61](/modules/cgst-act/assessment/sec-61), [Section 62](/modules/cgst-act/assessment/sec-62), [Section 64](/modules/cgst-act/assessment/sec-64)*`,
 
   // Prosecution
   'prosecution': `**Prosecution under GST (Section 132):**
@@ -1017,7 +1127,60 @@ ITC is blocked on:
 - Maintain records of movement
 - Track goods sent and received
 
-*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 19](/modules/cgst-act/input-tax-credit/sec-19)*`
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 19](/modules/cgst-act/input-tax-credit/sec-19)*`,
+
+  // CA Certificate
+  'ca certificate': `**CA Certificate for GSTR-9C (As per Section 35):**
+
+**When Required:**
+- For taxpayers with **turnover > ₹5 crore**
+- Must file GSTR-9C (reconciliation statement)
+- CA certification is **mandatory**
+
+**GSTR-9C Requirements:**
+- **Due Date:** 31st December of following financial year
+- Self-certified reconciliation statement
+- **CA must certify** the reconciliation
+- Reconciliation between GSTR-9 and audited financial statements
+
+**CA Certification:**
+- CA must verify reconciliation statement
+- Must certify accuracy of reconciliation
+- CA must be in practice (not retired)
+- Digital signature required
+
+**Contents of GSTR-9C:**
+- Reconciliation of turnover
+- Reconciliation of tax paid
+- Reconciliation of ITC
+- Additional liability or refund, if any
+
+**Penalty for Non-filing:**
+- Late fee applies for delayed filing
+- May attract scrutiny/audit
+
+*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
+
+  'ca certification': `**CA Certification for GSTR-9C:**
+
+**Mandatory Requirement:**
+- Required for taxpayers with turnover > ₹5 crore
+- CA must certify GSTR-9C reconciliation statement
+- Due: 31st December of following financial year
+
+**CA's Role:**
+- Verify reconciliation between GSTR-9 and audited accounts
+- Certify accuracy of reconciliation
+- Must be practicing CA (not retired)
+- Digital signature required
+
+**What CA Certifies:**
+- Reconciliation of turnover
+- Reconciliation of tax paid
+- Reconciliation of ITC claimed
+- Additional liability or refund, if any
+
+*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`
 };
 
 
@@ -1461,6 +1624,7 @@ function getAIResponse(question: string): string {
     { patterns: ['refund procedure', 'refund process', 'how to claim refund'], key: 'refund procedure' },
     { patterns: ['refund timeline', 'refund time', 'refund duration'], key: 'refund timeline' },
     { patterns: ['isd', 'input service distributor', 'isd registration'], key: 'input service distributor' },
+    { patterns: ['ca certificate', 'ca certification', 'ca cert', 'chartered accountant certificate'], key: 'ca certificate' },
   ];
   
   for (const pattern of keywordPatterns) {
