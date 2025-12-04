@@ -249,7 +249,14 @@ Provided also that the recipient shall be entitled to avail of the credit of inp
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
       { id: 'sec-47', number: '47', title: 'Levy of late fee', description: 'Late fee for delayed returns',
         keyPoints: ['₹100/day CGST + ₹100/day SGST', 'Max ₹5,000 (₹2,500 each)', 'NIL return: ₹20/day, max ₹500', 'Annual return: ₹200/day, max 0.25% of turnover'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 47. Levy of late fee**
+
+(1) Any registered person who fails to furnish the details of outward or inward supplies required under section 37 or section 38 or returns required under section 39 or section 45 by the due date shall pay a late fee of one hundred rupees for every day during which such failure continues subject to a maximum amount of five thousand rupees.
+
+(2) Any registered person who fails to furnish the return required under section 44 by the due date shall be liable to pay a late fee of one hundred rupees for every day during which such failure continues subject to a maximum of an amount calculated at a quarter per cent. of his turnover in the State or Union territory.
+
+(3) Any registered person who fails to furnish the return required under section 52 by the due date shall be liable to pay a late fee of ten thousand rupees or an amount calculated at the rate of one per cent. of the turnover in the State or Union territory, whichever is higher, subject to a maximum of twenty-five thousand rupees.` },
       { id: 'sec-48', number: '48', title: 'GST Practitioners', description: 'Authorized representatives',
         keyPoints: ['Qualified persons can act on behalf of taxpayers', 'CA, CMA, CS, Advocates eligible', 'Enrolled with GST portal'],
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const }
@@ -270,13 +277,82 @@ Provided also that the recipient shall be entitled to avail of the credit of inp
         difficulty: 'advanced' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
       { id: 'sec-50', number: '50', title: 'Interest on delayed payment', description: 'Interest rates for late payment',
         keyPoints: ['Delayed payment: 18% p.a.', 'Excess/undue ITC claim: 24% p.a.', 'Interest from due date to payment date', 'Simple interest'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 50. Interest on delayed payment of tax**
+
+(1) Every person who is liable to pay tax in accordance with the provisions of this Act or the rules made thereunder, but fails to pay the tax or any part thereof to the Government within the period prescribed, shall for the period for which the tax or any part thereof remains unpaid, pay, on his own, interest at such rate, not exceeding eighteen per cent., as may be notified by the Government on the recommendations of the Council.
+
+(2) The interest under sub-section (1) shall be calculated, in such manner as may be prescribed, from the day succeeding the day on which such tax was due to be paid.
+
+(3) A taxable person who makes an undue or excess claim of input tax credit under sub-section (10) of section 42 or undue or excess reduction in output tax liability under sub-section (10) of section 43, shall pay interest on such undue or excess claim or on such undue or excess reduction, as the case may be, at such rate not exceeding twenty-four per cent. as may be notified by the Government on the recommendations of the Council.` },
       { id: 'sec-51', number: '51', title: 'Tax deduction at source', description: 'TDS under GST',
         keyPoints: ['Applicable on government, PSU contracts', 'Rate: 2% (1% CGST + 1% SGST or 2% IGST)', 'On payments > ₹2.5 lakhs per contract', 'Deposit by 10th of next month', 'TDS certificate to be issued'],
-        difficulty: 'advanced' as const, estimatedMinutes: 40, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 40, practicalRelevance: 'high' as const,
+        fullText: `**Section 51. Tax deduction at source**
+
+(1) Notwithstanding anything to the contrary contained in this Act, the Government may mandate,—
+
+(a) a department or establishment of the Central Government or State Government; or
+
+(b) local authority; or
+
+(c) Governmental agencies; or
+
+(d) such persons or category of persons as may be notified by the Government on the recommendations of the Council,
+
+(hereafter in this section referred to as "the deductor"), to deduct tax at the rate of two per cent. from the payment made or credited to the supplier (hereafter in this section referred to as "the deductee") of taxable goods or services or both, where the total value of such supply, under a contract, exceeds two lakh and fifty thousand rupees:
+
+Provided that no deduction shall be made if the location of the supplier and the place of supply is in a State or Union territory which is different from the State or, as the case may be, Union territory of registration of the recipient.
+
+(2) The amount deducted as tax under this section shall be paid to the Government by the deductor within ten days after the end of the month in which such deduction is made, in such manner as may be prescribed.
+
+(3) The deductor shall furnish to the deductee a certificate mentioning therein the contract value, rate of deduction, amount deducted, amount paid to the Government and such other particulars in such manner as may be prescribed.
+
+(4) If any deductor fails to furnish to the deductee the certificate, after deducting the tax at source, within five days of crediting the amount so deducted to the Government, the deductor shall pay, by way of a late fee, a sum of one hundred rupees per day from the day after the expiry of such five days period until the failure is rectified, subject to a maximum amount of five thousand rupees.
+
+(5) The deductee shall claim credit, in his electronic credit ledger, of the tax deducted and reflected in the return of the deductor furnished under sub-section (3) of section 39, in such manner as may be prescribed.
+
+(6) If any deductor fails to pay to the Government the amount deducted as tax under sub-section (1), he shall pay interest in accordance with the provisions of sub-section (1) of section 50, in addition to the amount of tax deducted.
+
+(7) The determination of the amount in default under this section shall be made in the manner specified in section 73 or section 74.
+
+(8) The refund to the deductor or the deductee arising on account of excess or erroneous deduction shall be dealt with in accordance with the provisions of section 54:
+
+Provided that no refund to the deductor shall be granted, if the amount deducted has been credited to the electronic cash ledger of the deductee.` },
       { id: 'sec-52', number: '52', title: 'Collection of tax at source', description: 'TCS by e-commerce operators',
         keyPoints: ['E-commerce operator to collect TCS', 'Rate: 1% (0.5% CGST + 0.5% SGST or 1% IGST)', 'On net value of taxable supplies', 'Monthly statement by 10th', 'Credit to supplier on filing return'],
-        difficulty: 'advanced' as const, estimatedMinutes: 40, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 40, practicalRelevance: 'high' as const,
+        fullText: `**Section 52. Collection of tax at source**
+
+(1) Notwithstanding anything to the contrary contained in this Act, every electronic commerce operator (hereafter in this section referred to as the "operator"), not being an agent, shall collect an amount calculated at such rate not exceeding one per cent., as may be notified by the Government on the recommendations of the Council, of the net value of taxable supplies made through it by other suppliers where the consideration with respect to such supplies is to be collected by the operator.
+
+(2) The power to collect the amount specified in sub-section (1) shall be without prejudice to any other mode of recovery from the operator.
+
+(3) The amount collected under sub-section (1) shall be paid to the Government by the operator within ten days after the end of the month in which such collection is made, in such manner as may be prescribed.
+
+(4) Every operator who collects the amount specified in sub-section (1) shall furnish a statement, electronically, containing the details of outward supplies of goods or services or both effected through it, including the supplies of goods or services or both returned through it, and the amount collected under sub-section (1) during a month, in such form and manner as may be prescribed, within ten days after the end of such month.
+
+(5) Every operator who collects the amount specified in sub-section (1) shall furnish an annual statement, electronically, containing the details of outward supplies of goods or services or both effected through it, including the supplies of goods or services or both returned through it, and the amount collected under sub-section (1) during the financial year, in such form and manner as may be prescribed, within such time as may be prescribed.
+
+(6) If any operator after furnishing a statement under sub-section (4) discovers any omission or incorrect particulars therein, other than as a result of scrutiny, audit, inspection or enforcement activity by the tax authorities, he shall rectify such omission or incorrect particulars in the statement to be furnished for the month during which such omission or incorrect particulars are noticed, subject to payment of interest, if any, in accordance with the provisions of section 50:
+
+Provided that no such rectification of any omission or incorrect particulars shall be allowed after the due date for furnishing of statement for the month of September following the end of the financial year or the actual date of furnishing of the relevant annual statement, whichever is earlier.
+
+(7) The supplier who has supplied the goods or services or both through the operator shall claim credit, in his electronic credit ledger, of the amount collected and reflected in the statement of the operator furnished under sub-section (4), in such manner as may be prescribed.
+
+(8) If any operator after furnishing a statement under sub-section (4) discovers any omission or incorrect particulars therein, other than as a result of scrutiny, audit, inspection or enforcement activity by the tax authorities, he shall rectify such omission or incorrect particulars in the statement to be furnished for the month during which such omission or incorrect particulars are noticed, subject to payment of interest, if any, in accordance with the provisions of section 50:
+
+Provided that no such rectification of any omission or incorrect particulars shall be allowed after the due date for furnishing of statement for the month of September following the end of the financial year or the actual date of furnishing of the relevant annual statement, whichever is earlier.
+
+(9) The amount collected by the operator under sub-section (1) shall be paid to the Government by the operator within ten days after the end of the month in which such collection is made, in such manner as may be prescribed.
+
+(10) If any operator fails to pay the amount collected under sub-section (1) to the Government, he shall pay interest in accordance with the provisions of sub-section (1) of section 50, in addition to the amount of tax collected.
+
+(11) The determination of the amount in default under this section shall be made in the manner specified in section 73 or section 74.
+
+(12) The refund to the operator or the supplier arising on account of excess or erroneous collection shall be dealt with in accordance with the provisions of section 54:
+
+Provided that no refund to the operator shall be granted, if the amount collected has been credited to the electronic cash ledger of the supplier.` },
       { id: 'sec-53', number: '53', title: 'Transfer of ITC', description: 'Credit transfer on state change',
         keyPoints: ['On change of place of business', 'Credit transferred through return'],
         difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'medium' as const },

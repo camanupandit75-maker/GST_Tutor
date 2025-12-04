@@ -51,6 +51,38 @@ export const CGST_ACT_CHAPTERS_PART2 = [
     id: 13, slug: 'audit', title: 'Audit', icon: '🔍', category: 'cgst-act' as const,
     description: 'Department audit and special audit provisions',
     sections: [
+      { id: 'sec-35', number: '35', title: 'Accounts and other records', description: 'Maintenance of accounts and records',
+        keyPoints: ['Maintain accounts and records at principal place of business', 'Preserve for 72 months', 'Accounts in electronic form acceptable', 'GSTR-9C for turnover > ₹5 crore'],
+        difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
+        fullText: `**Section 35. Accounts and other records**
+
+(1) Every registered person shall keep and maintain, at his principal place of business, as mentioned in the certificate of registration, a true and correct account of—
+
+(a) production or manufacture of goods;
+
+(b) inward and outward supply of goods or services or both;
+
+(c) stock of goods;
+
+(d) input tax credit availed;
+
+(e) output tax payable and paid; and
+
+(f) such other particulars as may be prescribed:
+
+Provided that where more than one place of business is specified in the certificate of registration, the accounts relating to each place of business shall be kept at such places of business:
+
+Provided further that the registered person may keep and maintain such accounts and other particulars in electronic form in such manner as may be prescribed.
+
+(2) Every owner or operator of a warehouse or godown or any other place used for storage of goods and every transporter, irrespective of whether he is a registered person or not, shall maintain records of the consigner, consignee and other relevant details of the goods in such manner as may be prescribed.
+
+(3) The Commissioner may notify a class of taxable persons to maintain additional accounts or documents for such purpose as may be specified therein.
+
+(4) Where the Commissioner considers that any class of taxable persons is unable to keep and maintain accounts in accordance with the provisions of this section, he may, for reasons to be recorded in writing, permit such class of taxable persons to maintain accounts in such manner as may be prescribed.
+
+(5) Every registered person whose turnover during a financial year exceeds the prescribed limit shall get his accounts audited by a chartered accountant or a cost accountant and shall submit a copy of the audited annual accounts, the reconciliation statement under sub-section (2) of section 44 and such other documents in such form and manner as may be prescribed.
+
+(6) Subject to the provisions of clause (h) of sub-section (4) of section 17, where the registered person fails to account for the goods or services or both in accordance with the provisions of sub-section (1), the proper officer shall determine the amount of tax payable on the goods or services or both that are not accounted for, as if such goods or services or both had been supplied by such person, and the provisions of section 73 or section 74, as the case may be, shall, mutatis mutandis, apply.` },
       { id: 'sec-65', number: '65', title: 'Audit by tax authorities', description: 'Department audit procedure',
         keyPoints: ['Commissioner may conduct audit', 'Prior notice of 15 working days', 'Complete within 3 months (extendable by 6 months)', 'Findings communicated within 30 days'],
         difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const },
@@ -89,10 +121,70 @@ export const CGST_ACT_CHAPTERS_PART2 = [
     sections: [
       { id: 'sec-73', number: '73', title: 'Determination of tax - non-fraud cases', description: 'Demand for non-fraud cases',
         keyPoints: ['For cases not involving fraud/suppression', 'Time limit: 3 years from due date of annual return', 'SCN at least 3 months before order', 'Penalty: 10% of tax or ₹10,000', 'No penalty if paid before SCN'],
-        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const,
+        fullText: `**Section 73. Determination of tax not paid or short paid or erroneously refunded or input tax credit wrongly availed or utilised for any reason other than fraud or any wilful misstatement or suppression of facts**
+
+(1) Where it appears to the proper officer that any tax has not been paid or short paid or erroneously refunded, or where input tax credit has been wrongly availed or utilised for any reason, other than the reason of fraud or any wilful-misstatement or suppression of facts to evade tax, he shall serve notice on the person chargeable with tax which has not been so paid or short paid or to whom the refund has erroneously been made, or who has wrongly availed or utilised input tax credit, requiring him to show cause as to why he should not pay the amount specified in the notice along with interest payable thereon under section 50 and a penalty leviable under the provisions of this Act or the rules made thereunder.
+
+(2) The proper officer shall issue the notice under sub-section (1) at least three months prior to the time limit specified in sub-section (10) for issuance of order.
+
+(3) Where a notice has been issued for any period under sub-section (1), the proper officer may serve a statement, containing the details of tax not paid or short paid or erroneously refunded or input tax credit wrongly availed or utilised for such periods other than those covered under sub-section (1), on the person chargeable with tax.
+
+(4) The service of such statement shall be deemed to be service of notice on such person under sub-section (1), subject to the condition that the grounds relied upon for such tax periods other than those covered under sub-section (1) are the same as are mentioned in the earlier notice.
+
+(5) The person chargeable with tax may, before service of notice under sub-section (1), pay the amount of tax along with interest payable under section 50 on the basis of his own ascertainment of such tax or the tax as ascertained by the proper officer and inform the proper officer in writing of such payment.
+
+(6) The proper officer, on receipt of such information, shall not serve any notice under sub-section (1) in respect of the tax so paid or any penalty payable under the provisions of this Act or the rules made thereunder.
+
+(7) Where the proper officer is of the opinion that the amount paid under sub-section (5) falls short of the amount actually payable, he shall proceed to issue the notice as provided for in sub-section (1) in respect of such amount which falls short of the amount actually payable.
+
+(8) Where any person chargeable with tax under sub-section (1) or sub-section (3) pays the said tax along with interest payable under section 50 within thirty days of issue of the notice, no penalty shall be payable and all proceedings in respect of the said notice shall be deemed to be concluded.
+
+(9) The proper officer shall, after considering the representation, if any, made by the person chargeable with tax, determine the amount of tax, interest and a penalty equivalent to ten per cent. of tax or ten thousand rupees, whichever is higher, due from such person and issue an order.
+
+(10) The proper officer shall issue the order under sub-section (9) within three years from the due date for furnishing of annual return for the financial year to which the tax not paid or short paid or input tax credit wrongly availed or utilised relates to or within three years from the date of erroneous refund.
+
+(11) Notwithstanding anything contained in sub-section (6) or sub-section (8), penalty under sub-section (9) shall be payable where any person chargeable with tax under sub-section (1) does not pay the said tax in full within thirty days of issue of the notice.
+
+(12) Where any person chargeable with tax under sub-section (1) or sub-section (3) pays the said tax along with interest payable under section 50 and a penalty equivalent to twenty-five per cent. of such tax within thirty days of issue of the notice, all proceedings in respect of the said notice shall be deemed to be concluded.
+
+(13) The proper officer may, on receipt of an application from the person who has issued an invoice in respect of a supply and has paid the tax thereon, reduce the amount of tax payable by such person, if the recipient does not claim input tax credit on such invoice and the invoice is not declared in the return furnished under section 39.
+
+(14) The proper officer shall determine the amount of tax, interest and penalty due from the person who has not paid the tax or has short paid the tax or has erroneously been refunded, or who has wrongly availed or utilised input tax credit, and pass an order in writing.
+
+(15) The proper officer shall issue the order under sub-section (14) within three years from the due date for furnishing of annual return for the financial year to which the tax not paid or short paid or input tax credit wrongly availed or utilised relates to or within three years from the date of erroneous refund.
+
+(16) Notwithstanding anything contained in sub-section (12), penalty under sub-section (14) shall be payable where any person chargeable with tax under sub-section (1) or sub-section (3) does not pay the said tax in full within thirty days of issue of the notice.
+
+(17) The proper officer may, on receipt of an application from the person who has issued an invoice in respect of a supply and has paid the tax thereon, reduce the amount of tax payable by such person, if the recipient does not claim input tax credit on such invoice and the invoice is not declared in the return furnished under section 39.` },
       { id: 'sec-74', number: '74', title: 'Determination of tax - fraud cases', description: 'Demand for fraud cases',
         keyPoints: ['Fraud, willful misstatement, suppression', 'Time limit: 5 years from due date of annual return', 'Penalty: 100% of tax', 'Reduced to 15% if paid before SCN', '25% if paid within 30 days of SCN', '50% if paid within 30 days of order'],
-        difficulty: 'advanced' as const, estimatedMinutes: 50, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 50, practicalRelevance: 'high' as const,
+        fullText: `**Section 74. Determination of tax not paid or short paid or erroneously refunded or input tax credit wrongly availed or utilised by reason of fraud or any wilful misstatement or suppression of facts**
+
+(1) Where it appears to the proper officer that any tax has not been paid or short paid or erroneously refunded or where input tax credit has been wrongly availed or utilised by reason of fraud, or any wilful-misstatement or suppression of facts to evade tax, he shall serve notice on the person chargeable with tax which has not been so paid or short paid or to whom the refund has erroneously been made, or who has wrongly availed or utilised input tax credit, requiring him to show cause as to why he should not pay the amount specified in the notice along with interest payable thereon under section 50 and a penalty equivalent to the tax specified in the notice.
+
+(2) The proper officer shall issue the notice under sub-section (1) at least six months prior to the time limit specified in sub-section (10) for issuance of order.
+
+(3) Where a notice has been issued for any period under sub-section (1), the proper officer may serve a statement, containing the details of tax not paid or short paid or erroneously refunded or input tax credit wrongly availed or utilised for such periods other than those covered under sub-section (1), on the person chargeable with tax.
+
+(4) The service of such statement shall be deemed to be service of notice on such person under sub-section (1), subject to the condition that the grounds relied upon for such tax periods other than those covered under sub-section (1) are the same as are mentioned in the earlier notice.
+
+(5) The person chargeable with tax may, before service of notice under sub-section (1), pay the amount of tax along with interest payable under section 50 and a penalty equivalent to fifteen per cent. of such tax on the basis of his own ascertainment of such tax or the tax as ascertained by the proper officer and inform the proper officer in writing of such payment.
+
+(6) The proper officer, on receipt of such information, shall not serve any notice under sub-section (1) in respect of the tax so paid or any penalty payable under the provisions of this Act or the rules made thereunder.
+
+(7) Where the proper officer is of the opinion that the amount paid under sub-section (5) falls short of the amount actually payable, he shall proceed to issue the notice as provided for in sub-section (1) in respect of such amount which falls short of the amount actually payable.
+
+(8) Where any person chargeable with tax under sub-section (1) or sub-section (3) pays the said tax along with interest payable under section 50 and a penalty equivalent to twenty-five per cent. of such tax within thirty days of issue of the notice, all proceedings in respect of the said notice shall be deemed to be concluded.
+
+(9) The proper officer shall, after considering the representation, if any, made by the person chargeable with tax, determine the amount of tax, interest and a penalty equivalent to one hundred per cent. of such tax, due from such person and issue an order.
+
+(10) The proper officer shall issue the order under sub-section (9) within five years from the due date for furnishing of annual return for the financial year to which the tax not paid or short paid or input tax credit wrongly availed or utilised relates to or within five years from the date of erroneous refund.
+
+(11) Where any person chargeable with tax under sub-section (1) or sub-section (3) pays the said tax along with interest payable under section 50 and a penalty equivalent to fifty per cent. of such tax within thirty days of issue of the order, all proceedings in respect of the said notice shall be deemed to be concluded.
+
+(12) The proper officer may, on receipt of an application from the person who has issued an invoice in respect of a supply and has paid the tax thereon, reduce the amount of tax payable by such person, if the recipient does not claim input tax credit on such invoice and the invoice is not declared in the return furnished under section 39.` },
       { id: 'sec-74a', number: '74A', title: 'Unified provision for FY 2024-25 onwards', description: 'New unified demand provision',
         keyPoints: ['Applicable from FY 2024-25 onwards', 'Unified time limit: 42/54 months', 'Replaces dual timelines of 73/74', 'Penalty based on whether fraud or not'],
         difficulty: 'advanced' as const, estimatedMinutes: 40, practicalRelevance: 'high' as const },

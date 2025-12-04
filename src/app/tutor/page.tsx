@@ -1161,7 +1161,7 @@ ITC is blocked on:
 - Late fee applies for delayed filing
 - May attract scrutiny/audit
 
-*Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit)*`,
+*Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
 
   'ca certification': `**CA Certification for GSTR-9C:**
 
