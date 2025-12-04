@@ -1530,7 +1530,25 @@ function getAIResponse(question: string): string {
     }
   }
   
-  // Check for prosecution queries FIRST (before penalty checks)
+  // Check for CA certificate queries FIRST (before other checks)
+  // This ensures CA certificate queries are matched correctly, even with typos
+  // Check for "ca" + "certificate/certifcate/cert" pattern
+  if ((q.includes('ca') || originalQ.includes('ca')) && 
+      (q.includes('certificate') || q.includes('certifcate') || q.includes('cert') || 
+       originalQ.includes('certificate') || originalQ.includes('certifcate') || originalQ.includes('cert'))) {
+    return GST_RESPONSES['ca certificate'];
+  }
+  
+  // Also check for full phrases
+  if (q.includes('ca certificate') || q.includes('ca certifcate') || q.includes('ca cert') || 
+      q.includes('ca certification') || q.includes('chartered accountant certificate') ||
+      originalQ.includes('ca certificate') || originalQ.includes('ca certifcate') || 
+      originalQ.includes('ca cert') || originalQ.includes('ca certification') ||
+      originalQ.includes('chartered accountant certificate')) {
+    return GST_RESPONSES['ca certificate'];
+  }
+  
+  // Check for prosecution queries (after CA certificate checks)
   // This ensures prosecution queries don't get matched to penalty responses
   if ((q.includes('prosecution') || originalQ.includes('prosecution')) &&
       (q.includes('when') || q.includes('lead') || q.includes('offense') || q.includes('offence') || 
