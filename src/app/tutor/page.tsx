@@ -722,7 +722,7 @@ ITC is blocked on:
 - TDS rate: 2% (1% CGST + 1% SGST/IGST)
 - TDS deducted on payments to suppliers
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 51](/modules/cgst-act/returns/sec-51) and [Section 39](/modules/cgst-act/returns/sec-39)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 51](/modules/cgst-act/payment-tax/sec-51) and [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39)*`,
 
   'gstr-8': `**GSTR-8 (TCS Return):**
 - **Due:** 10th of the following month
@@ -730,7 +730,7 @@ ITC is blocked on:
 - TCS rate: 1% (0.5% CGST + 0.5% SGST/IGST)
 - TCS collected on supplies made through e-commerce platform
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52) and [Section 39](/modules/cgst-act/returns/sec-39)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 52](/modules/cgst-act/payment-tax/sec-52) and [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39)*`,
 
   // QRMP Scheme
   'qrmp': `**QRMP Scheme (Quarterly Return Monthly Payment):**
@@ -750,7 +750,7 @@ ITC is blocked on:
 - TDS return: GSTR-7 (due 10th of following month)
 - Supplier can claim TDS as credit
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 51](/modules/cgst-act/returns/sec-51)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 51](/modules/cgst-act/payment-tax/sec-51)*`,
 
   'tcs gst': `**TCS under GST (As per Section 52):**
 - **Rate:** 1% (0.5% CGST + 0.5% SGST/IGST)
@@ -759,7 +759,7 @@ ITC is blocked on:
 - TCS return: GSTR-8 (due 10th of following month)
 - Supplier can claim TCS as credit
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 52](/modules/cgst-act/payment-tax/sec-52)*`,
 
   'refund': `**GST Refund (Section 54):**
 
