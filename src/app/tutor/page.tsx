@@ -490,7 +490,9 @@ ITC is NOT available on:
 7. Works contract for construction of immovable property
 8. Goods/services for personal consumption
 9. Goods lost, stolen, destroyed, written off
-10. Tax paid under composition scheme`,
+10. Tax paid under composition scheme
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 17(5)](/modules/cgst-act/input-tax-credit/sec-17-5)*`,
 
   'section 17 5': `**Section 17(5) - Blocked Credits:**
 
@@ -659,7 +661,7 @@ ITC is blocked on:
 - Distribution of ITC to branches/units
 - Must be registered as ISD
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52)*`,
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 39](/modules/cgst-act/returns/sec-39) and [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 20](/modules/cgst-act/input-tax-credit/sec-20)*`,
 
   'input service distributor': `**Input Service Distributor (ISD) - Section 2(61):**
 
