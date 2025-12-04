@@ -611,7 +611,143 @@ ITC is blocked on:
 - **Provisional assessment:** Section 60 (when unable to determine tax)
 - **Scrutiny assessment:** Section 61 (department scrutiny)
 - **Best judgment assessment:** Section 62 (non-filers)
-- **Summary assessment:** Section 64 (to protect revenue)`
+- **Summary assessment:** Section 64 (to protect revenue)`,
+
+  // Prosecution
+  'prosecution': `**Prosecution under GST (Section 132):**
+
+**When Prosecution is Initiated:**
+- **Tax evasion:** When tax evaded > ₹5 crore
+- **Fake invoices:** Issuing invoices without supply of goods/services
+- **Fraudulent ITC:** Availing/utilizing ITC using fake invoices
+- **Suppression of facts:** Willful suppression to evade tax
+- **Multiple offenses:** Repeated violations
+
+**Offenses Punishable:**
+1. **Tax evasion > ₹5 crore:** Imprisonment up to 5 years + fine
+2. **Fake invoices:** Imprisonment up to 5 years + fine
+3. **Fraudulent ITC:** Imprisonment up to 5 years + fine
+4. **Suppression of facts:** Imprisonment up to 5 years + fine
+5. **Obstructing officers:** Imprisonment up to 6 months + fine
+6. **Tampering with evidence:** Imprisonment up to 3 years + fine
+
+**Compounding of Offenses (Section 138):**
+- Can be compounded before prosecution
+- Payment of compounding amount
+- Reduces penalty and avoids imprisonment
+- Not available for certain serious offenses
+
+**Important Notes:**
+- Prosecution is criminal proceeding
+- Requires sanction from Commissioner
+- Can be initiated even after payment of tax/penalty
+- Separate from penalty proceedings
+- Court proceedings can take time`,
+
+  'when is prosecution done': `**When is Prosecution Initiated under GST:**
+
+**Prosecution is done when:**
+
+1. **Tax Evasion > ₹5 Crore:**
+   - When tax evaded exceeds ₹5 crore
+   - Willful evasion of tax
+   - Suppression of facts to evade tax
+
+2. **Fake Invoices:**
+   - Issuing invoices without actual supply
+   - Using fake invoices to claim ITC
+   - Creating false documents
+
+3. **Fraudulent ITC:**
+   - Availing ITC using fake invoices
+   - Utilizing ITC without actual receipt of goods/services
+   - ITC fraud exceeding ₹5 crore
+
+4. **Repeated Offenses:**
+   - Multiple violations of GST provisions
+   - Habitual offender
+   - Non-compliance despite notices
+
+5. **Serious Violations:**
+   - Obstructing GST officers
+   - Tampering with evidence
+   - Destroying documents
+
+**Process:**
+- **Section 132:** Offenses and penalties
+- **Section 138:** Compounding of offenses (can avoid prosecution)
+- Requires **sanction from Commissioner**
+- **Criminal proceedings** in court
+- Can be initiated **even after payment** of tax/penalty
+
+**Compounding Available:**
+- Can compound offense before prosecution
+- Pay compounding amount
+- Avoids imprisonment
+- Not available for serious offenses like fake invoices
+
+**Time Limit:**
+- No specific time limit for prosecution
+- Can be initiated within reasonable time
+- Court proceedings may take time`,
+
+  'section 132': `**Section 132 - Prosecution for Offenses:**
+
+**Offenses Punishable:**
+
+1. **Tax Evasion > ₹5 Crore:**
+   - Imprisonment: Up to 5 years + fine
+
+2. **Fake Invoices:**
+   - Issuing invoices without supply
+   - Imprisonment: Up to 5 years + fine
+
+3. **Fraudulent ITC:**
+   - Availing/utilizing ITC using fake invoices
+   - Imprisonment: Up to 5 years + fine
+
+4. **Suppression of Facts:**
+   - Willful suppression to evade tax
+   - Imprisonment: Up to 5 years + fine
+
+5. **Obstructing Officers:**
+   - Obstructing GST officers in duty
+   - Imprisonment: Up to 6 months + fine
+
+6. **Tampering with Evidence:**
+   - Tampering/destroying evidence
+   - Imprisonment: Up to 3 years + fine
+
+**Compounding (Section 138):**
+- Can compound before prosecution
+- Payment of compounding amount
+- Avoids imprisonment
+- Not available for serious offenses`,
+
+  'section 138': `**Section 138 - Compounding of Offenses:**
+
+**Compounding Available:**
+- Can compound offense **before prosecution**
+- Payment of compounding amount
+- **Avoids imprisonment**
+- Reduces penalty
+
+**Compounding Amount:**
+- Minimum: ₹10,000 or 50% of tax amount (whichever higher)
+- Maximum: ₹30,000 or 150% of tax amount (whichever higher)
+- Varies based on offense
+
+**Not Available For:**
+- Fake invoices without supply
+- Fraudulent ITC using fake invoices
+- Second or subsequent offense
+- Offenses committed after compounding
+
+**Process:**
+- Application to Commissioner
+- Payment of compounding amount
+- Offense compounded
+- No prosecution if compounded successfully`
 };
 
 
@@ -909,6 +1045,9 @@ function getRelatedTopics(query: string): string[] {
   if (q.includes('interest')) {
     topics.push('Interest 18 percent', 'Interest 24 percent', 'Late fee calculation');
   }
+  if (q.includes('prosecution') || q.includes('offense') || q.includes('criminal')) {
+    topics.push('Prosecution', 'Section 132', 'Section 138 Compounding', 'Penalty Section 73', 'Penalty Section 74');
+  }
   
   return topics.slice(0, 5); // Return top 5 related topics
 }
@@ -1018,6 +1157,9 @@ function getAIResponse(question: string): string {
     { patterns: ['qrmp', 'quarterly return'], key: 'qrmp' },
     { patterns: ['tds', 'tax deducted'], key: 'tds gst' },
     { patterns: ['tcs', 'tax collected'], key: 'tcs gst' },
+    { patterns: ['prosecution', 'when is prosecution', 'prosecution done'], key: 'when is prosecution done' },
+    { patterns: ['section 132', 'prosecution offense'], key: 'section 132' },
+    { patterns: ['section 138', 'compounding'], key: 'section 138' },
   ];
   
   for (const pattern of keywordPatterns) {
