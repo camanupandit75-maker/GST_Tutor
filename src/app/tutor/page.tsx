@@ -845,7 +845,7 @@ ITC is blocked on:
 - **CA Certification:** Required
 - **Audit by Department:** Can be conducted under Section 65
 
-*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35) and [Section 65](/modules/cgst-act/audit/sec-65)*`,
+*Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit) - [Section 65](/modules/cgst-act/audit/sec-65)*`,
 
   'assessment': `**GST Assessment:**
 
@@ -1161,7 +1161,7 @@ ITC is blocked on:
 - Late fee applies for delayed filing
 - May attract scrutiny/audit
 
-*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
+*Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit)*`,
 
   'ca certification': `**CA Certification for GSTR-9C:**
 
@@ -1182,7 +1182,7 @@ ITC is blocked on:
 - Reconciliation of ITC claimed
 - Additional liability or refund, if any
 
-*Reference: [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`
+*Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit)*`
 };
 
 
@@ -1346,9 +1346,13 @@ function formatMessageContent(content: string): string {
         let processedLine = refLine.replace(/^\*Reference:\s*/, '');
         processedLine = processedLine.replace(/\*$/, ''); // Remove trailing *
         
-        // Replace each markdown link with HTML link
+        // Replace each markdown link with HTML link (use Next.js Link via onClick for internal navigation)
         processedLine = processedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
-          return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline">${text}</a>`;
+          // Check if it's an internal link (starts with /)
+          if (url.startsWith('/')) {
+            return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline cursor-pointer" onclick="event.preventDefault(); window.location.href='${url}'">${text}</a>`;
+          }
+          return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
         });
         
         refHtml += processedLine + '</p></div>';
@@ -1412,8 +1416,13 @@ function formatMessageContent(content: string): string {
           }
           // Format bold text
           let formattedLine = line.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-white">$1</strong>');
-          // Format links
-          formattedLine = formattedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline">$1</a>');
+          // Format links (handle internal navigation)
+          formattedLine = formattedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+            if (url.startsWith('/')) {
+              return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline cursor-pointer" onclick="event.preventDefault(); window.location.href='${url}'">${text}</a>`;
+            }
+            return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+          });
           currentSection += formattedLine + ' ';
         }
       }
@@ -1435,8 +1444,13 @@ function formatMessageContent(content: string): string {
   
   html = sections.join('');
   
-  // Final cleanup - ensure all links are formatted
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline" target="_self">$1</a>');
+  // Final cleanup - ensure all remaining markdown links are formatted
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+    if (url.startsWith('/')) {
+      return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline cursor-pointer" onclick="event.preventDefault(); window.location.href='${url}'">${text}</a>`;
+    }
+    return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  });
   
   return html || '<p class="text-sm text-gray-200">' + content.replace(/\n/g, '<br/>') + '</p>';
 }
