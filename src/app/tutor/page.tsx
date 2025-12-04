@@ -1501,6 +1501,28 @@ function getAIResponse(question: string): string {
   let q = question.toLowerCase().trim();
   const originalQ = q; // Keep original for checking abbreviations
   
+  // Check for CA certificate queries VERY FIRST (before ANY processing)
+  // This ensures CA certificate queries are matched correctly, even with typos
+  const hasCa = q.includes('ca') || originalQ.includes('ca');
+  const certPattern = /\bcert\w*/i;
+  const hasCert = certPattern.test(q) || certPattern.test(originalQ);
+  
+  // If query has "ca" and anything starting with "cert", return CA certificate response IMMEDIATELY
+  if (hasCa && hasCert) {
+    return GST_RESPONSES['ca certificate'];
+  }
+  
+  // Also check for full phrases with typos
+  const caCertPhrases = [
+    'ca certificate', 'ca certifcate', 'ca certficate', 'ca certicate', 
+    'ca cert', 'ca certification', 'chartered accountant certificate',
+    'chartered accountant cert', 'ca certif', 'ca certfic'
+  ];
+  
+  if (caCertPhrases.some(phrase => q.includes(phrase) || originalQ.includes(phrase))) {
+    return GST_RESPONSES['ca certificate'];
+  }
+  
   // Expand common GST abbreviations to full terms for better matching
   const abbreviations: Record<string, string> = {
     'tds': 'tax deducted at source',
@@ -1530,31 +1552,6 @@ function getAIResponse(question: string): string {
     }
   }
   
-  // Check for CA certificate queries FIRST (before other checks)
-  // This ensures CA certificate queries are matched correctly, even with typos
-  // Handle various typos: certifcate, certficate, certicate, etc.
-  const hasCa = q.includes('ca') || originalQ.includes('ca');
-  
-  // Match any word that starts with "cert" - handles all typos
-  const certPattern = /\bcert\w*/i;
-  const hasCert = certPattern.test(q) || certPattern.test(originalQ);
-  
-  // If query has "ca" and anything starting with "cert", return CA certificate response
-  // This catches: certificate, certifcate, certficate, certicate, cert, certification, etc.
-  if (hasCa && hasCert) {
-    return GST_RESPONSES['ca certificate'];
-  }
-  
-  // Also check for full phrases with typos (more specific matching)
-  const caCertPhrases = [
-    'ca certificate', 'ca certifcate', 'ca certficate', 'ca certicate', 
-    'ca cert', 'ca certification', 'chartered accountant certificate',
-    'chartered accountant cert', 'ca certif', 'ca certfic'
-  ];
-  
-  if (caCertPhrases.some(phrase => q.includes(phrase) || originalQ.includes(phrase))) {
-    return GST_RESPONSES['ca certificate'];
-  }
   
   // Check for prosecution queries (after CA certificate checks)
   // This ensures prosecution queries don't get matched to penalty responses
