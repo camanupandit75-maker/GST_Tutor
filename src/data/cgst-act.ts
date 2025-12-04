@@ -8,10 +8,506 @@ export const CGST_ACT_CHAPTERS = [
     sections: [
       { id: 'sec-1', number: '1', title: 'Short title, extent and commencement', description: 'Introduction to CGST Act 2017',
         keyPoints: ['Called Central Goods and Services Tax Act 2017', 'Extends to whole of India', 'Effective from 1st July 2017'],
-        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'low' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'low' as const,
+        fullText: `**Section 1. Short title, extent and commencement**
+
+(1) This Act may be called the Central Goods and Services Tax Act, 2017.
+
+(2) It extends to the whole of India.
+
+(3) It shall come into force on such date as the Central Government may, by notification in the Official Gazette, appoint:
+
+Provided that different dates may be appointed for different provisions of this Act and any reference in any such provision to the commencement of this Act shall be construed as a reference to the coming into force of that provision.` },
       { id: 'sec-2', number: '2', title: 'Definitions', description: '121 key definitions forming the foundation of GST',
         keyPoints: ['Aggregate turnover definition', 'Business definition', 'Goods and Services defined', 'Supply meaning', 'Taxable person', 'Input tax credit'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 60, practicalRelevance: 'high' as const }
+        difficulty: 'intermediate' as const, estimatedMinutes: 60, practicalRelevance: 'high' as const,
+        fullText: `**Section 2. Definitions**
+
+In this Act, unless the context otherwise requires,—
+
+(1) "actionable claim" shall have the same meaning as assigned to it in section 3 of the Transfer of Property Act, 1882;
+
+(2) "address of delivery" means the address of the recipient of goods or services or both indicated on the tax invoice issued by a registered person for delivery of such goods or services or both;
+
+(3) "address on record" means the address of the recipient as available in the records of the supplier;
+
+(4) "adjudicating authority" means any authority, appointed or authorised to pass any order or decision under this Act, but does not include the Central Board of Indirect Taxes and Customs, the Revisional Authority, the Authority for Advance Ruling, the Appellate Authority for Advance Ruling, the Appellate Authority and the Appellate Tribunal;
+
+(5) "agent" means a person, including a factor, broker, commission agent, arhatia, del credere agent, an auctioneer or any other mercantile agent, by whatever name called, who carries on the business of supply or receipt of goods or services or both on behalf of another;
+
+(6) "aggregate turnover" means the aggregate value of all taxable supplies (excluding the value of inward supplies on which tax is payable by a person on reverse charge basis), exempt supplies, exports of goods or services or both and inter-State supplies of persons having the same Permanent Account Number, to be computed on all India basis but excludes central tax, State tax, Union territory tax, integrated tax and cess;
+
+(7) "agriculturist" means an individual or a Hindu Undivided Family who undertakes cultivation of land—
+
+(a) by own labour, or
+
+(b) by the labour of family, or
+
+(c) by servants on wages payable in cash or kind or by hired labour under personal supervision or the personal supervision of any member of the family;
+
+(8) "Appellate Authority" means the Appellate Authority for Advance Ruling constituted under section 99;
+
+(9) "Appellate Tribunal" means the Goods and Services Tax Appellate Tribunal constituted under section 109;
+
+(10) "appointed day" means the date on which the provisions of this Act shall come into force;
+
+(11) "assessment" means determination of tax liability under this Act and includes self-assessment, re-assessment, provisional assessment, summary assessment and best judgment assessment;
+
+(12) "associated enterprises" shall have the same meaning as assigned to it in section 92A of the Income-tax Act, 1961;
+
+(13) "audit" means the examination of records, returns and other documents maintained or furnished by the registered person under this Act or the rules made thereunder or under any other law for the time being in force to verify the correctness of turnover declared, taxes paid, refund claimed and input tax credit availed, and to assess his compliance with the provisions of this Act or the rules made thereunder;
+
+(14) "authorised bank" shall mean a bank or a branch of a bank authorised by the Government to collect the tax or any other amount payable under this Act;
+
+(15) "authorised representative" means the representative as referred to in section 116;
+
+(16) "Board" means the Central Board of Indirect Taxes and Customs constituted under the Central Boards of Revenue Act, 1963;
+
+(17) "business" includes—
+
+(a) any trade, commerce, manufacture, profession, vocation, adventure, wager or any other similar activity, whether or not it is for a pecuniary benefit;
+
+(b) any activity or transaction in connection with or incidental or ancillary to sub-clause (a);
+
+(c) any activity or transaction in the nature of sub-clause (a), whether or not there is volume, frequency, continuity or regularity of such transaction;
+
+(d) supply or acquisition of goods including capital goods and services in connection with commencement or closure of business;
+
+(e) provision by a club, association, society, or any such body (for a subscription or any other consideration) of the facilities or benefits to its members, as the case may be;
+
+(f) admission, for a consideration, of persons to any premises;
+
+(g) services supplied by a person as the holder of an office which has been accepted by him in the course or furtherance of his trade, profession or vocation;
+
+(h) services provided by a race club by way of totalisator or a licence to bookmaker in such club; and
+
+(i) any activity or transaction undertaken by the Central Government, a State Government or any local authority in which they are engaged as public authorities;
+
+(18) "business vertical" means a distinguishable component of an enterprise that is engaged in the supply of individual goods or services or a group of related goods or services which is subject to risks and returns that are different from those of the other business verticals.
+
+Explanation.—Factors that should be considered in determining whether goods or services are related include—
+
+(a) the nature of the goods or services;
+
+(b) the nature of the production processes;
+
+(c) the type or class of customers for the goods or services;
+
+(d) the methods used to distribute the goods or supply of services; and
+
+(e) the nature of the regulatory environment (wherever applicable), including banking, insurance, or public utilities;
+
+(19) "capital goods" means goods, the value of which is capitalised in the books of account of the person claiming the input tax credit and which are used or intended to be used in the course or furtherance of business;
+
+(20) "casual taxable person" means a person who occasionally undertakes transactions involving supply of goods or services or both in the course or furtherance of business, whether as principal, agent or in any other capacity, in a State or a Union territory where he has no fixed place of business;
+
+(21) "central tax" means the central goods and services tax levied under section 9;
+
+(22) "cess" shall have the same meaning as assigned to it in the Goods and Services Tax (Compensation to States) Act;
+
+(23) "Commissioner" means the Commissioner of central tax and includes the Principal Commissioner of central tax appointed under section 3 and the Commissioner of integrated tax appointed under the Integrated Goods and Services Tax Act;
+
+(24) "Commissioner in the Board" means the Commissioner referred to in section 168;
+
+(25) "common portal" means the common goods and services tax electronic portal referred to in section 146;
+
+(26) "common working days" in respect of a State or Union territory shall mean such days in succession which are not declared as gazetted holidays by the Central Government or the concerned State Government or Union territory Administration;
+
+(27) "company secretary" means a company secretary as defined in clause (c) of sub-section (1) of section 2 of the Company Secretaries Act, 1980;
+
+(28) "competent authority" means such authority as may be notified by the Government;
+
+(29) "composite supply" means a supply made by a taxable person to a recipient consisting of two or more taxable supplies of goods or services or both, or any combination thereof, which are naturally bundled and supplied in conjunction with each other in the ordinary course of business, one of which is a principal supply;
+
+Illustration.—Where goods are packed and transported with insurance, the supply of goods, packing materials, transport and insurance is a composite supply and supply of goods is a principal supply;
+
+(30) "consideration" in relation to the supply of goods or services or both includes—
+
+(a) any payment made or to be made, whether in money or otherwise, in respect of, in response to, or for the inducement of, the supply of goods or services or both, whether by the recipient or by any other person but shall not include any payment made by the recipient on his own account, where the supplier and recipient are related, the price is not the sole consideration;
+
+(b) the monetary value of any act or forbearance, in respect of, in response to, or for the inducement of, the supply of goods or services or both, whether by the recipient or by any other person but shall not include any payment made by the recipient on his own account:
+
+Provided that a deposit given in respect of the supply of goods or services or both shall not be considered as payment made for such supply unless the supplier applies such deposit as consideration for the said supply;
+
+(31) "continuous supply of goods" means a supply of goods which is provided, or agreed to be provided, continuously or on recurrent basis, under a contract, whether or not by means of a wire, cable, pipeline or other conduit, and for which the supplier invoices the recipient on a regular or periodic basis and includes supply of such goods as the Government may, by notification, specify;
+
+(32) "continuous supply of services" means a supply of services which is provided, or agreed to be provided, continuously or on recurrent basis, under a contract, for a period exceeding three months with periodic payment obligations and includes supply of such services as the Government may, by notification, specify;
+
+(33) "conveyance" includes a vessel, an aircraft and a vehicle;
+
+(34) "cost accountant" means a cost accountant as defined in clause (c) of sub-section (1) of section 2 of the Cost and Works Accountants Act, 1959;
+
+(35) "Council" means the Goods and Services Tax Council established under article 279A of the Constitution;
+
+(36) "credit note" means a document issued by a registered person under sub-section (1) of section 34;
+
+(37) "debit note" means a document issued by a registered person under sub-section (3) of section 34;
+
+(38) "deemed exports" means such supplies of goods as may be notified under section 147;
+
+(39) "designated authority" means such authority as may be notified by the Board;
+
+(40) "document" includes written or printed record of any sort and electronic record as defined in clause (t) of section 2 of the Information Technology Act, 2000;
+
+(41) "drawback" in relation to any goods manufactured in India and exported, means the rebate of duty, tax or charge chargeable on any imported materials or excisable materials used or taxable services used in the manufacture of such goods;
+
+(42) "electronic cash ledger" means the electronic cash ledger referred to in sub-section (1) of section 49;
+
+(43) "electronic commerce" means the supply of goods or services or both, including digital products over digital or electronic network;
+
+(44) "electronic commerce operator" means any person who owns, operates or manages digital or electronic facility or platform for electronic commerce;
+
+(45) "electronic credit ledger" means the electronic credit ledger referred to in sub-section (2) of section 49;
+
+(46) "exempt supply" means supply of any goods or services or both which attracts nil rate of tax or which may be exempt from tax under section 11, or under section 6 of the Integrated Goods and Services Tax Act, and includes non-taxable supply;
+
+(47) "existing law" means any law, rule, regulation, notification, order, bye-law, ordinance, direction or instruction (hereafter in this section referred to as law) relating to levy and collection of duty or tax on goods or services or both passed or made before the commencement of this Act by Parliament or any Authority or person having power to make law, and includes any notification, order, instruction or direction issued thereunder, including in respect of—
+
+(a) tax on the sale or purchase of goods including the Value Added Tax under the Central Sales Tax Act, 1956;
+
+(b) the Central Excise Act, 1944;
+
+(c) Chapter V of the Finance Act, 1994;
+
+(d) the Luxury Tax Act, 2011;
+
+(e) the Entry Tax Act, 2007;
+
+(f) the Entertainment Tax Act, 1985;
+
+(g) the Taxes on Luxuries Act, 1987;
+
+(h) the Karnataka Tax on Entry of Goods Act, 1979;
+
+(i) the Kerala Tax on Luxuries Act, 1976;
+
+(j) the Maharashtra Tax on the Entry of Motor Vehicles into Local Areas Act, 1987;
+
+(k) the Punjab Tax on Entry of Goods into Local Areas Act, 2000;
+
+(l) the Rajasthan Tax on Entry of Goods into Local Areas Act, 1999;
+
+(m) the Tamil Nadu Tax on Entry of Goods Act, 2001;
+
+(n) the West Bengal Tax on Entry of Goods into the Area of Local Authorities Act, 2012;
+
+(o) the Assam Value Added Tax Act, 2003;
+
+(p) the Bihar Value Added Tax Act, 2005;
+
+(q) the Chhattisgarh Value Added Tax Act, 2005;
+
+(r) the Delhi Value Added Tax Act, 2004;
+
+(s) the Goa Value Added Tax Act, 2005;
+
+(t) the Gujarat Value Added Tax Act, 2003;
+
+(u) the Haryana Value Added Tax Act, 2003;
+
+(v) the Himachal Pradesh Value Added Tax Act, 2005;
+
+(w) the Jammu and Kashmir Value Added Tax Act, 2005;
+
+(x) the Jharkhand Value Added Tax Act, 2005;
+
+(y) the Karnataka Value Added Tax Act, 2003;
+
+(z) the Kerala Value Added Tax Act, 2003;
+
+(za) the Madhya Pradesh Value Added Tax Act, 2002;
+
+(zb) the Maharashtra Value Added Tax Act, 2002;
+
+(zc) the Manipur Value Added Tax Act, 2004;
+
+(zd) the Meghalaya Value Added Tax Act, 2003;
+
+(ze) the Mizoram Value Added Tax Act, 2005;
+
+(zf) the Nagaland Value Added Tax Act, 2005;
+
+(zg) the Odisha Value Added Tax Act, 2004;
+
+(zh) the Puducherry Value Added Tax Act, 2007;
+
+(zi) the Punjab Value Added Tax Act, 2005;
+
+(zj) the Rajasthan Value Added Tax Act, 2003;
+
+(zk) the Sikkim Value Added Tax Act, 2004;
+
+(zl) the Tamil Nadu Value Added Tax Act, 2006;
+
+(zm) the Tripura Value Added Tax Act, 2004;
+
+(zn) the Uttar Pradesh Value Added Tax Act, 2008;
+
+(zo) the Uttarakhand Value Added Tax Act, 2005;
+
+(zp) the West Bengal Value Added Tax Act, 2003;
+
+(zq) any other Act, rule, regulation, notification, order, bye-law, ordinance, direction or instruction relating to tax on goods or services or both, in force in any part of India, before the commencement of this Act;
+
+(48) "family" means,—
+
+(i) the spouse and children of the person, and
+
+(ii) the parents, grand-parents, brothers and sisters of the person if they are wholly or mainly dependent on the said person;
+
+(49) "fixed establishment" means a place (other than the registered place of business) which is characterised by a sufficient degree of permanence and suitable structure in terms of human and technical resources to supply services, or to receive and use services for its own needs;
+
+(50) "Fund" means the Consumer Welfare Fund established under section 57;
+
+(51) "goods" means every kind of movable property other than money and securities but includes actionable claim, growing crops, grass and things attached to or forming part of the land which are agreed to be severed before supply or under a contract of supply;
+
+(52) "Government" means the Central Government;
+
+(53) "Goods and Services Tax (Compensation to States) Act" means the Goods and Services Tax (Compensation to States) Act, 2017;
+
+(54) "goods and services tax practitioner" means any person who has been approved under section 48 to act as such practitioner;
+
+(55) "India" means the territory of India as referred to in article 1 of the Constitution, its territorial waters, seabed and subsoil underlying such waters, continental shelf, exclusive economic zone or any other maritime zone as referred to in the Territorial Waters, Continental Shelf, Exclusive Economic Zone and other Maritime Zones Act, 1976, and the air space above its territory and territorial waters;
+
+(56) "Integrated Goods and Services Tax Act" means the Integrated Goods and Services Tax Act, 2017;
+
+(57) "integrated tax" means the integrated goods and services tax levied under the Integrated Goods and Services Tax Act;
+
+(58) "input" means any goods other than capital goods used or intended to be used by a supplier in the course or furtherance of business;
+
+(59) "input service" means any service used or intended to be used by a supplier in the course or furtherance of business;
+
+(60) "Input Service Distributor" means an office of the supplier of goods or services or both which receives tax invoices issued under section 31 towards the receipt of input services and issues a prescribed document for the purposes of distributing the credit of central tax, State tax, integrated tax or Union territory tax paid on the said services to a supplier of taxable goods or services or both having the same Permanent Account Number as that of the said office;
+
+(61) "input tax" in relation to a registered person, means the central tax, State tax, integrated tax or Union territory tax charged on any supply of goods or services or both made to him and includes—
+
+(a) the integrated goods and services tax charged on import of goods;
+
+(b) the tax payable under the provisions of sub-sections (3) and (4) of section 9;
+
+(c) the tax payable under the provisions of sub-sections (3) and (4) of section 5 of the Integrated Goods and Services Tax Act;
+
+(d) the tax payable under the provisions of sub-sections (3) and (4) of section 9 of the respective State Goods and Services Tax Act; or
+
+(e) the tax payable under the provisions of sub-sections (3) and (4) of section 7 of the Union Territory Goods and Services Tax Act,
+
+but does not include the tax paid under the composition levy;
+
+(62) "input tax credit" means the credit of input tax;
+
+(63) "intra-State supply of goods" shall have the same meaning as assigned to it in section 8 of the Integrated Goods and Services Tax Act;
+
+(64) "intra-State supply of services" shall have the same meaning as assigned to it in section 8 of the Integrated Goods and Services Tax Act;
+
+(65) "invoice" or "tax invoice" means the tax invoice referred to in section 31;
+
+(66) "inward supply" in relation to a person, shall mean receipt of goods or services or both whether by purchase, acquisition or any other means with or without consideration;
+
+(67) "job work" means any treatment or process undertaken by a person on goods belonging to another registered person and the expression "job worker" shall be construed accordingly;
+
+(68) "local authority" means—
+
+(a) a "Panchayat" as defined in clause (d) of article 243 of the Constitution;
+
+(b) a "Municipality" as defined in clause (e) of article 243P of the Constitution;
+
+(c) a Municipal Committee, a Zilla Parishad, a District Board, and any other authority legally entitled to, or entrusted by the Central Government or any State Government with the control or management of a municipal or local fund;
+
+(d) a Cantonment Board as defined in clause (c) of section 3 of the Cantonments Act, 2006;
+
+(e) a Regional Council or a District Council constituted under the Sixth Schedule to the Constitution;
+
+(f) a Development Board constituted under article 371 of the Constitution; or
+
+(g) a Regional Council constituted under article 371A of the Constitution;
+
+(69) "location of the recipient of services" means,—
+
+(a) where a supply is received at a place of business for which the registration has been obtained, the location of such place of business;
+
+(b) where a supply is received at a place other than the place of business for which registration has been obtained (a fixed establishment elsewhere), the location of such fixed establishment;
+
+(c) where a supply is received at more than one establishment, whether the place of business or fixed establishment, the location of the establishment most directly concerned with the receipt of the supply; and
+
+(d) in absence of such places, the location of the usual place of residence of the recipient;
+
+(70) "location of the supplier of services" means,—
+
+(a) where a supply is made from a place of business for which the registration has been obtained, the location of such place of business;
+
+(b) where a supply is made from a place other than the place of business for which registration has been obtained (a fixed establishment elsewhere), the location of such fixed establishment;
+
+(c) where a supply is made from more than one establishment, whether the place of business or fixed establishment, the location of the establishment most directly concerned with the provisions of the supply; and
+
+(d) in absence of such places, the location of the usual place of residence of the supplier;
+
+(71) "manufacture" means processing of raw material or inputs in any manner that results in emergence of a new product having a distinct name, character and use and the term "manufacturer" shall be construed accordingly;
+
+(72) "market value" shall mean the full amount which a recipient of a supply of goods or services or both would have to pay to a supplier of such goods or services or both, at that time, to obtain such supply, assuming that the transaction is between un-related parties and the price is the sole consideration;
+
+(73) "mixed supply" means two or more individual supplies of goods or services, or any combination thereof, made in conjunction with each other by a taxable person for a single price where such supply does not constitute a composite supply.
+
+Illustration.—A supply of a package consisting of canned foods, sweets, chocolates, cakes, dry fruits, aerated drinks and fruit juices when supplied for a single price is a mixed supply. Each of these items can be supplied separately and is not dependent on any other. It shall not be a mixed supply if these items are supplied separately;
+
+(74) "money" means the Indian legal tender or any foreign currency, cheque, promissory note, bill of exchange, letter of credit, draft, pay order, traveller cheque, money order, postal or electronic remittance or any other instrument recognised by the Reserve Bank of India when used as a consideration to settle an obligation or exchange with Indian legal tender of another denomination but shall not include any currency that is held for its numismatic value;
+
+(75) "non-resident taxable person" means any person who occasionally undertakes transactions involving supply of goods or services or both, whether as principal or agent or in any other capacity, but who has no fixed place of business or residence in India;
+
+(76) "notification" means a notification published in the Official Gazette and the expressions "notify" and "notified" shall be construed accordingly;
+
+(77) "other territory" includes territories other than those comprising in a State and those referred to in sub-clauses (a) to (e) of clause (114);
+
+(78) "output tax" in relation to a taxable person, means the tax chargeable under this Act on taxable supply of goods or services or both made by him or by his agent but excludes tax payable by him on reverse charge basis;
+
+(79) "outward supply" in relation to a taxable person, means supply of goods or services or both, whether by sale, transfer, barter, exchange, licence, rental, lease or disposal or any other means, with or without consideration;
+
+(80) "person" includes—
+
+(a) an individual;
+
+(b) a Hindu Undivided Family;
+
+(c) a company;
+
+(d) a firm;
+
+(e) a Limited Liability Partnership;
+
+(f) an association of persons or a body of individuals, whether incorporated or not, in India or outside India;
+
+(g) any corporation established by or under any Central Act, State Act or Provincial Act or a Government company as defined in clause (45) of section 2 of the Companies Act, 2013;
+
+(h) any body corporate incorporated by or under the laws of a country outside India;
+
+(i) a co-operative society registered under any law relating to co-operative societies;
+
+(j) a local authority;
+
+(k) Central Government or a State Government;
+
+(l) society as defined under the Societies Registration Act, 1860;
+
+(m) trust; and
+
+(n) every artificial juridical person, not falling within any of the above;
+
+(81) "place of business" includes—
+
+(a) a place from where the business is ordinarily carried on, and includes a warehouse, a godown or any other place where a taxable person stores his goods, or provides or receives goods or services or both; or
+
+(b) a place where a taxable person maintains his books of account; or
+
+(c) a place where a taxable person is engaged in business through an agent, by whatever name called;
+
+(82) "place of supply" means the place of supply as referred to in Chapter V of the Integrated Goods and Services Tax Act;
+
+(83) "prescribed" means prescribed by rules made under this Act on the recommendations of the Council;
+
+(84) "principal" means a person on whose behalf an agent carries on the business of supply or receipt of goods or services or both;
+
+(85) "principal place of business" means the place of business specified as the principal place of business in the certificate of registration;
+
+(86) "principal supply" means the supply of goods or services which constitutes the predominant element of a composite supply and to which any other supply forming part of that composite supply is ancillary;
+
+(87) "proper officer" in relation to any function to be performed under this Act, means the Commissioner or the officer of the central tax who is assigned that function by the Commissioner in the Board;
+
+(88) "quarter" shall mean a period comprising three consecutive calendar months, ending on the last day of March, June, September or December of a calendar year;
+
+(89) "recipient" of supply of goods or services or both, means—
+
+(a) where a consideration is payable for the supply of goods or services or both, the person who is liable to pay that consideration,
+
+(b) where no consideration is payable for the supply of goods, the person to whom the goods are delivered or made available, or to whom possession or use of the goods is given or made available, and
+
+(c) where no consideration is payable for the supply of services, the person to whom the service is rendered,
+
+and any reference to a person to whom a supply is made shall be construed as a reference to the recipient of the supply and shall include an agent acting as such on behalf of the recipient in relation to the goods or services or both so supplied;
+
+(90) "registered person" means a person who is registered under section 25 but does not include a person having a Unique Identity Number;
+
+(91) "regulations" means the regulations made by the Board under this Act on the recommendations of the Council;
+
+(92) "removal" in relation to goods, means—
+
+(a) despatch of the goods for delivery by the supplier or any other person acting on behalf of such supplier, or
+
+(b) collection of the goods by the recipient or any other person acting on behalf of such recipient;
+
+(93) "return" means any return prescribed or otherwise required to be furnished by or under this Act or the rules made thereunder;
+
+(94) "reverse charge" means the liability to pay tax by the recipient of supply of goods or services or both instead of the supplier of such goods or services or both under sub-section (3) or sub-section (4) of section 9, or under sub-section (3) or sub-section (4) of section 5 of the Integrated Goods and Services Tax Act, or under sub-section (3) or sub-section (4) of section 9 of the respective State Goods and Services Tax Act, or under sub-section (3) or sub-section (4) of section 7 of the Union Territory Goods and Services Tax Act;
+
+(95) "Revisional Authority" means an authority appointed or authorised for revision of decision or orders as referred to in section 108;
+
+(96) "Schedule" means a Schedule appended to this Act;
+
+(97) "securities" shall have the same meaning as assigned to it in clause (h) of section 2 of the Securities Contracts (Regulation) Act, 1956;
+
+(98) "services" means anything other than goods, money and securities but includes activities relating to the use of money or its conversion by cash or by any other mode, from one form, currency or denomination, to another form, currency or denomination for which a separate consideration is charged;
+
+(99) "State" includes a Union territory with Legislature;
+
+(100) "State tax" means the tax levied under any State Goods and Services Tax Act;
+
+(101) "supplier" in relation to any goods or services or both, shall mean the person supplying the said goods or services or both and shall include an agent acting as such on behalf of such supplier in relation to the goods or services or both so supplied;
+
+(102) "tax period" means the period for which the return is required to be furnished;
+
+(103) "taxable person" means a person who is registered or liable to be registered under section 22 or section 24;
+
+(104) "taxable supply" means a supply of goods or services or both which is chargeable to tax under this Act;
+
+(105) "taxable territory" means the territory to which the provisions of this Act apply;
+
+(106) "telecommunication service" means service of any description (including electronic mail, voice mail, data services, audio text services, video text services, radio paging and cellular mobile telephone services) which is made available to users by means of any transmission or reception of signs, signals, writing, images and sounds or intelligence of any nature, by wire, radio, optical or other electromagnetic systems;
+
+(107) "the State Goods and Services Tax Act" means the State Goods and Services Tax Act, 2017;
+
+(108) "turnover in State" or "turnover in Union territory" means the aggregate value of all taxable supplies (excluding the value of inward supplies on which tax is payable by a person on reverse charge basis) and exempt supplies made within a State or Union territory by a taxable person, exports of goods or services or both and inter-State supplies of goods or services or both made from the State or Union territory by the said taxable person but excludes central tax, State tax, Union territory tax, integrated tax and cess;
+
+(109) "usual place of residence" means—
+
+(a) in case of an individual, the place where he ordinarily resides;
+
+(b) in other cases, the place where the person is incorporated or otherwise legally constituted;
+
+(110) "Union territory" means the territory of—
+
+(a) the Andaman and Nicobar Islands;
+
+(b) Lakshadweep;
+
+(c) Dadra and Nagar Haveli and Daman and Diu;
+
+(d) Ladakh;
+
+(e) Chandigarh; or
+
+(f) other territory.
+
+Explanation.—For the purposes of this Act, each of the territories specified in sub-clauses (a) to (f) shall be considered to be a separate Union territory;
+
+(111) "Union territory tax" means the Union territory goods and services tax levied under the Union Territory Goods and Services Tax Act;
+
+(112) "valid return" means a return furnished under sub-section (1) of section 39 on which self-assessed tax has been paid in full;
+
+(113) "voucher" means an instrument where there is an obligation to accept it as consideration or part consideration for a supply of goods or services or both and where the goods or services or both or the identity of the supplier is not indicated at the time of the issue of the voucher;
+
+(114) "works contract" means a contract for building, construction, fabrication, completion, erection, installation, fitting out, improvement, modification, repair, maintenance, renovation, alteration or commissioning of any immovable property wherein transfer of property in goods (whether as goods or in some other form) is involved in the execution of such contract;
+
+(115) words and expressions used but not defined in this Act and defined in the Integrated Goods and Services Tax Act, the Union Territory Goods and Services Tax Act and the Goods and Services Tax (Compensation to States) Act shall have the same meaning as assigned to them in those Acts;
+
+(116) any reference in this Act to a law which is not in force in the State of Jammu and Kashmir, shall, in relation to that State be construed as a reference to the corresponding law, if any, in force in that State;
+
+(117) words and expressions used but not defined in this Act but defined in the Central Excise Act, 1944 or the Finance Act, 1994, shall have the same meaning as assigned to them in those Acts, unless the context otherwise requires;
+
+(118) any reference in this Act to a law which is not in force in the State of Jammu and Kashmir, shall, in relation to that State be construed as a reference to the corresponding law, if any, in force in that State;
+
+(119) words and expressions used but not defined in this Act but defined in the Central Excise Act, 1944 or the Finance Act, 1994, shall have the same meaning as assigned to them in those Acts, unless the context otherwise requires;
+
+(120) any reference in this Act to a law which is not in force in the State of Jammu and Kashmir, shall, in relation to that State be construed as a reference to the corresponding law, if any, in force in that State;
+
+(121) words and expressions used but not defined in this Act but defined in the Central Excise Act, 1944 or the Finance Act, 1994, shall have the same meaning as assigned to them in those Acts, unless the context otherwise requires.` },
     ]
   },
   {
@@ -20,16 +516,36 @@ export const CGST_ACT_CHAPTERS = [
     sections: [
       { id: 'sec-3', number: '3', title: 'Officers under this Act', description: 'Appointment of GST officers',
         keyPoints: ['Principal Chief Commissioner', 'Chief Commissioner', 'Principal Commissioner', 'Commissioner', 'Additional/Joint Commissioner', 'Deputy/Assistant Commissioner', 'Superintendent', 'Inspector'],
-        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'low' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'low' as const,
+        fullText: `**Section 3. Officers under this Act**
+
+The Government may, by notification, appoint such persons as it may think fit to be officers under this Act and may assign to them such functions as may be specified therein.` },
       { id: 'sec-4', number: '4', title: 'Appointment of officers', description: 'Power to appoint officers',
         keyPoints: ['Board may appoint officers', 'Central Government appoints Principal Chief Commissioners'],
-        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'low' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'low' as const,
+        fullText: `**Section 4. Appointment of officers**
+
+(1) The Board may, in addition to the officers as may be notified by the Government under section 3, appoint such persons as it may think fit to be officers under this Act.
+
+(2) Without prejudice to the provisions of sub-section (1), the Board may, by order, authorise any officer referred to in clauses (a) to (h) of sub-section (1) of section 3 to appoint officers of central tax below the rank of Assistant Commissioner of central tax for the administration of this Act.` },
       { id: 'sec-5', number: '5', title: 'Powers of officers', description: 'Delegation and exercise of powers',
         keyPoints: ['Powers can be delegated', 'Subject to conditions specified'],
-        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const,
+        fullText: `**Section 5. Powers of officers**
+
+(1) Subject to such conditions and limitations as the Board may impose, an officer of central tax may exercise the powers and discharge the duties conferred or imposed on him under this Act.
+
+(2) An officer of central tax may exercise the powers and discharge the duties conferred or imposed under this Act on any other officer of central tax who is subordinate to him.
+
+(3) The Commissioner may, subject to such conditions and limitations as may be specified in this behalf by him, delegate his powers to any other officer who is subordinate to him.
+
+(4) Notwithstanding anything contained in this section, an Appellate Authority shall not exercise the powers and discharge the duties conferred or imposed on any other officer of central tax.` },
       { id: 'sec-6', number: '6', title: 'Authorisation of officers', description: 'Cross-empowerment provisions',
         keyPoints: ['State officers can act as Central officers', 'Central officers can act as State officers', 'Facilitates single interface'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'medium' as const }
+        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'medium' as const,
+        fullText: `**Section 6. Authorisation of officers of State tax or Union territory tax as proper officer in certain circumstances**
+
+Without prejudice to the provisions of this Act, the officers appointed under the State Goods and Services Tax Act or the Union Territory Goods and Services Tax Act are authorised to be the proper officers for the purposes of this Act, subject to such conditions as the Government shall, on the recommendations of the Council, by notification, specify.` }
     ]
   },
   {
