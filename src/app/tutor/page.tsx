@@ -290,7 +290,328 @@ Under RCM, the recipient pays GST instead of supplier.
 
 **Waiver:**
 - Late fee may be waived for first-time defaulters
-- Subject to conditions and approval`
+- Subject to conditions and approval`,
+
+  // Return Due Dates - Individual
+  'gstr-1 due date': `**GSTR-1 Due Date:**
+- **Due:** 11th of the following month
+- Details of all outward supplies
+- Late fee: ₹200/day (₹100 CGST + ₹100 SGST/IGST), max ₹5,000
+- NIL return late fee: ₹20/day, max ₹500`,
+
+  'gstr-3b due date': `**GSTR-3B Due Date:**
+- **Due:** 20th of the following month (monthly filers)
+- **QRMP taxpayers:** 22nd/24th of month following the quarter
+- Summary return with tax payment
+- Late fee: ₹50/day (₹25 CGST + ₹25 SGST/IGST), max ₹5,000
+- NIL return late fee: ₹20/day, max ₹500`,
+
+  'gstr-9 due date': `**GSTR-9 (Annual Return) Due Date:**
+- **Due:** 31st December of the following financial year
+- Annual consolidation of all returns
+- Must be filed by all regular taxpayers
+- Late fee applies for delayed filing`,
+
+  'gstr-9c due date': `**GSTR-9C Due Date:**
+- **Due:** 31st December of the following financial year
+- Required for taxpayers with turnover > ₹5 crore
+- Self-certified reconciliation statement
+- CA certification required`,
+
+  // Late Fee Calculations
+  'late fee calculation': `**Late Fee Calculation:**
+
+**GSTR-1:**
+- ₹200 per day = ₹100 CGST + ₹100 SGST/IGST
+- Maximum: ₹5,000 per return
+- Example: 10 days late = ₹2,000 (₹1,000 CGST + ₹1,000 SGST)
+
+**GSTR-3B:**
+- ₹50 per day = ₹25 CGST + ₹25 SGST/IGST
+- Maximum: ₹5,000
+- Example: 20 days late = ₹1,000 (₹500 CGST + ₹500 SGST)
+
+**NIL Returns:**
+- GSTR-1: ₹20/day (₹10 + ₹10), max ₹500
+- GSTR-3B: ₹20/day, max ₹500`,
+
+  // Interest Rates
+  'interest rate': `**Interest Rates under GST:**
+
+**Section 50 - Interest on Late Payment:**
+- **Rate:** 18% per annum
+- Calculated from due date to date of payment
+- Applies on tax amount not paid or paid late
+
+**Section 50(3) - Interest on Excess ITC:**
+- **Rate:** 24% per annum
+- Applies when ITC claimed is more than eligible
+- Calculated from date of utilization
+
+**Interest Calculation:**
+- Simple interest basis
+- Calculated on daily basis
+- Formula: (Tax × Rate × Days) / 365`,
+
+  'interest 18 percent': `**18% Interest Rate (Section 50):**
+- Applies on late payment of tax
+- Calculated from due date to payment date
+- Simple interest basis
+- Example: ₹1,00,000 tax paid 30 days late = ₹1,00,000 × 18% × 30/365 = ₹1,479`,
+
+  'interest 24 percent': `**24% Interest Rate (Section 50(3)):**
+- Applies on excess ITC claimed
+- Calculated from date of utilization
+- Higher rate to discourage incorrect ITC claims
+- Example: ₹50,000 excess ITC utilized for 60 days = ₹50,000 × 24% × 60/365 = ₹1,973`,
+
+  // Registration Thresholds
+  'registration threshold': `**GST Registration Thresholds:**
+
+**Normal States:**
+- ₹20 lakhs aggregate turnover (goods + services)
+- ₹40 lakhs for goods suppliers only
+
+**Special Category States:**
+- ₹10 lakhs aggregate turnover
+- States: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, Himachal Pradesh, Uttarakhand
+
+**Compulsory Registration (Section 24):**
+- No threshold limit - must register regardless of turnover
+- Inter-state suppliers, casual taxable persons, e-commerce operators, TDS deductors`,
+
+  'threshold 20 lakh': `**₹20 Lakh Threshold:**
+- Applies to normal states
+- For suppliers of goods and services combined
+- Aggregate turnover includes all taxable, exempt, and non-taxable supplies
+- Excludes taxes and inward supplies`,
+
+  'threshold 40 lakh': `**₹40 Lakh Threshold:**
+- Applies to normal states
+- **Only for goods suppliers** (not service providers)
+- Service providers must register at ₹20 lakh threshold
+- If supplying both goods and services, ₹20 lakh threshold applies`,
+
+  'threshold 10 lakh': `**₹10 Lakh Threshold:**
+- Applies to special category states
+- Lower threshold to support businesses in these states
+- Same rules as ₹20 lakh threshold but lower amount`,
+
+  // ITC Rules
+  'itc time limit': `**ITC Time Limit (Section 16(4)):**
+- **Deadline:** 30th November of the following financial year
+- Or date of filing annual return (GSTR-9), whichever is earlier
+- ITC cannot be claimed after this date
+- Example: For FY 2023-24, ITC must be claimed by 30th November 2024`,
+
+  'itc 180 days': `**ITC Reversal - 180 Days Rule (Section 16(2)):**
+- Payment to supplier must be made within **180 days** of invoice date
+- If not paid within 180 days, ITC must be reversed
+- ITC can be re-availed when payment is made
+- Applies to all registered persons`,
+
+  'itc blocked credits': `**Blocked Credits - Section 17(5):**
+
+ITC is NOT available on:
+1. Motor vehicles (except for specified purposes like transportation, renting)
+2. Food and beverages, outdoor catering
+3. Beauty treatment, health services
+4. Club membership, fitness services
+5. Life/health insurance for employees
+6. Travel benefits (LTC, home travel)
+7. Works contract for construction of immovable property
+8. Goods/services for personal consumption
+9. Goods lost, stolen, destroyed, written off
+10. Tax paid under composition scheme`,
+
+  'section 17 5': `**Section 17(5) - Blocked Credits:**
+
+ITC is blocked on:
+- Motor vehicles (except specified purposes)
+- Food, beverages, outdoor catering
+- Beauty treatment, health services
+- Club membership, fitness
+- Employee insurance, travel benefits
+- Works contract for construction
+- Personal consumption
+- Lost/stolen/destroyed goods
+- Composition scheme tax`,
+
+  // Penalty Provisions
+  'penalty section 73': `**Section 73 - Penalty for Incorrect Return:**
+- **Penalty:** Up to 10% of tax amount
+- Minimum: ₹10,000
+- Applies when: Tax not paid, short paid, or erroneously refunded
+- Show cause notice must be issued
+- Can be reduced to 25% if paid within 30 days of notice`,
+
+  'penalty section 74': `**Section 74 - Penalty for Fraud/Suppression:**
+- **Penalty:** Up to 100% of tax amount
+- Applies when: Fraud, willful misstatement, or suppression of facts
+- Show cause notice must be issued
+- Can be reduced to 50% if paid within 30 days of notice
+- Higher penalty to deter tax evasion`,
+
+  'penalty 10 percent': `**10% Penalty (Section 73):**
+- For incorrect returns without fraud
+- Up to 10% of tax amount or ₹10,000, whichever is higher
+- Can be reduced to 25% if paid within 30 days of notice
+- Applies to cases of non-payment, short payment, or erroneous refund`,
+
+  'penalty 100 percent': `**100% Penalty (Section 74):**
+- For fraud, willful misstatement, or suppression
+- Up to 100% of tax amount
+- Can be reduced to 50% if paid within 30 days of notice
+- Higher penalty to deter tax evasion`,
+
+  // E-way Bill Rules
+  'eway bill limit': `**E-Way Bill Limit:**
+- **Threshold:** ₹50,000
+- Required when value of goods > ₹50,000
+- Applies to movement of goods (inter-state and intra-state)
+- Not required for exempt supplies or specified goods`,
+
+  'eway bill validity': `**E-Way Bill Validity:**
+- **Regular goods:** 100 km per day
+- **Over Dimensional Cargo (ODC):** 200 km per day
+- Validity calculated from date and time of generation
+- Can be extended if goods not delivered within validity period
+- Example: 500 km distance = 5 days validity for regular goods`,
+
+  'eway bill 50000': `**E-Way Bill ₹50,000 Limit:**
+- Required when invoice value > ₹50,000
+- Includes all taxes and charges
+- Not required for: Exempt supplies, non-taxable supplies, goods in Annexure
+- Movement within 50 km radius exempted`,
+
+  // Composition Scheme
+  'composition limit': `**Composition Scheme Limit:**
+- **Normal states:** ₹1.5 crore turnover
+- **Special category states:** ₹75 lakhs turnover
+- Must opt for composition scheme before start of financial year
+- Cannot opt out during the year (except in certain cases)`,
+
+  'composition rate': `**Composition Scheme Rates:**
+- **Traders:** 1% (0.5% CGST + 0.5% SGST)
+- **Manufacturers:** 1% (0.5% CGST + 0.5% SGST)
+- **Restaurants:** 5% (2.5% CGST + 2.5% SGST)
+- Rates are on turnover, not profit
+- No ITC available under composition scheme`,
+
+  'composition 1.5 crore': `**Composition Scheme ₹1.5 Crore Limit:**
+- Applies to normal states
+- Turnover limit for eligibility
+- Special category states: ₹75 lakhs
+- Must file GSTR-4 quarterly
+- Cannot make inter-state supplies`,
+
+  // Place of Supply Rules
+  'place of supply goods': `**Place of Supply - Goods (Section 10 IGST Act):**
+- **If goods moved:** Location where movement terminates
+- **If goods not moved:** Location of goods at time of delivery
+- **Installation/assembly:** Place where installation/assembly completed
+- Determines whether CGST+SGST or IGST applies`,
+
+  'place of supply services': `**Place of Supply - Services (Section 12-13 IGST Act):**
+- **General rule:** Location of recipient (if known)
+- **If recipient location unknown:** Location of supplier
+- **Special rules for:**
+  - Immovable property: Location of property
+  - Restaurant: Location of restaurant
+  - Transportation: Place where goods/passengers taken on board
+  - Banking/Insurance: Location of recipient`,
+
+  // RCM Provisions
+  'rcm section 9 3': `**RCM - Section 9(3) - Notified Supplies:**
+- Legal services by advocate/firm
+- Services by goods transport agency
+- Sponsorship services
+- Services by director to company
+- Services by insurance agent
+- Services by recovery agent
+- Recipient must pay GST and claim ITC`,
+
+  'rcm section 9 4': `**RCM - Section 9(4) - Unregistered Suppliers:**
+- Currently mostly suspended
+- Applies only to specific notified goods/services
+- Recipient pays GST when purchasing from unregistered supplier
+- Can claim ITC if eligible
+- Check latest notifications for active provisions`,
+
+  // Additional Return Details
+  'gstr-4': `**GSTR-4 (Composition Scheme Return):**
+- **Due:** 18th of month following the quarter
+- Quarterly return for composition taxpayers
+- Turnover limit: ₹1.5 crore (₹75 lakhs for special states)
+- Tax rate: 1% (traders/manufacturers) or 5% (restaurants)`,
+
+  'gstr-5': `**GSTR-5 (Non-Resident Taxable Person):**
+- **Due:** 20th of the following month
+- For non-resident taxable persons
+- Must file return for each month of registration
+- Cannot opt for composition scheme`,
+
+  'gstr-6': `**GSTR-6 (Input Service Distributor):**
+- **Due:** 13th of the following month
+- For Input Service Distributors (ISD)
+- Distribution of ITC to branches/units
+- Must be registered as ISD`,
+
+  'gstr-7': `**GSTR-7 (TDS Return):**
+- **Due:** 10th of the following month
+- For persons deducting TDS under GST
+- TDS rate: 2% (1% CGST + 1% SGST/IGST)
+- TDS deducted on payments to suppliers`,
+
+  'gstr-8': `**GSTR-8 (TCS Return):**
+- **Due:** 10th of the following month
+- For e-commerce operators collecting TCS
+- TCS rate: 1% (0.5% CGST + 0.5% SGST/IGST)
+- TCS collected on supplies made through e-commerce platform`,
+
+  // QRMP Scheme
+  'qrmp': `**QRMP Scheme (Quarterly Return Monthly Payment):**
+- **Eligibility:** Turnover up to ₹5 crore
+- **GSTR-1:** Due 13th of month following quarter
+- **GSTR-3B:** Due 22nd/24th of month following quarter
+- **Monthly Payment:** Must pay tax monthly using PMT-06
+- Can opt in/out before start of quarter`,
+
+  // Additional Topics
+  'tds gst': `**TDS under GST (Section 51):**
+- **Rate:** 2% (1% CGST + 1% SGST/IGST)
+- Applies to: Government departments, local authorities, specified persons
+- Deducted on payments to suppliers
+- TDS return: GSTR-7 (due 10th of following month)
+- Supplier can claim TDS as credit`,
+
+  'tcs gst': `**TCS under GST (Section 52):**
+- **Rate:** 1% (0.5% CGST + 0.5% SGST/IGST)
+- Applies to: E-commerce operators
+- Collected on supplies made through e-commerce platform
+- TCS return: GSTR-8 (due 10th of following month)
+- Supplier can claim TCS as credit`,
+
+  'refund': `**GST Refund:**
+- **Time limit:** 2 years from relevant date
+- **Types:** Export refund, ITC refund, excess payment refund
+- **Process:** File refund application (RFD-01)
+- **Interest:** 6% if refund delayed beyond 60 days
+- **Documents:** Invoice, shipping bill, bank statement`,
+
+  'audit': `**GST Audit (Section 35):**
+- **Required for:** Turnover > ₹5 crore
+- **Due:** 30th September of following financial year
+- **Form:** GSTR-9C (reconciliation statement)
+- **CA Certification:** Required
+- **Audit by Department:** Can be conducted under Section 65`,
+
+  'assessment': `**GST Assessment:**
+- **Self-assessment:** Taxpayer files return and pays tax
+- **Provisional assessment:** Section 60 (when unable to determine tax)
+- **Scrutiny assessment:** Section 61 (department scrutiny)
+- **Best judgment assessment:** Section 62 (non-filers)
+- **Summary assessment:** Section 64 (to protect revenue)`
 };
 
 
@@ -525,6 +846,73 @@ function formatMessageContent(content: string): string {
   return html || '<p class="text-sm text-gray-200">' + content.replace(/\n/g, '<br/>') + '</p>';
 }
 
+// Fuzzy matching function for better keyword detection
+function fuzzyMatch(query: string, keywords: string[]): { matched: boolean; score: number; keyword: string } {
+  const q = query.toLowerCase().trim();
+  let bestMatch = { matched: false, score: 0, keyword: '' };
+  
+  for (const keyword of keywords) {
+    const kw = keyword.toLowerCase();
+    
+    // Exact match (highest score)
+    if (q === kw || q.includes(kw) || kw.includes(q)) {
+      return { matched: true, score: 100, keyword };
+    }
+    
+    // Check if all words in keyword are present
+    const kwWords = kw.split(/\s+/);
+    const allWordsPresent = kwWords.every(word => word.length > 2 && q.includes(word));
+    if (allWordsPresent) {
+      const score = (kwWords.filter(w => q.includes(w)).length / kwWords.length) * 80;
+      if (score > bestMatch.score) {
+        bestMatch = { matched: true, score, keyword };
+      }
+    }
+    
+    // Check for partial word matches
+    for (const word of kwWords) {
+      if (word.length > 3 && q.includes(word)) {
+        const score = (word.length / Math.max(q.length, kw.length)) * 60;
+        if (score > bestMatch.score) {
+          bestMatch = { matched: true, score, keyword };
+        }
+      }
+    }
+  }
+  
+  return bestMatch;
+}
+
+// Get related topics based on query
+function getRelatedTopics(query: string): string[] {
+  const q = query.toLowerCase();
+  const topics: string[] = [];
+  
+  if (q.includes('return') || q.includes('gstr')) {
+    topics.push('GSTR-1 due date', 'GSTR-3B due date', 'GSTR-9 due date', 'Late fee calculation');
+  }
+  if (q.includes('penalty') || q.includes('late')) {
+    topics.push('Penalty Section 73', 'Penalty Section 74', 'Late fee calculation', 'Interest rate');
+  }
+  if (q.includes('itc') || q.includes('credit')) {
+    topics.push('ITC eligibility', 'ITC time limit', 'ITC 180 days', 'Blocked credits');
+  }
+  if (q.includes('registration') || q.includes('threshold')) {
+    topics.push('Registration threshold', 'Threshold 20 lakh', 'Threshold 40 lakh', 'Composition scheme');
+  }
+  if (q.includes('eway') || q.includes('way bill')) {
+    topics.push('E-way bill limit', 'E-way bill validity', 'E-way bill rules');
+  }
+  if (q.includes('composition')) {
+    topics.push('Composition limit', 'Composition rate', 'GSTR-4');
+  }
+  if (q.includes('interest')) {
+    topics.push('Interest 18 percent', 'Interest 24 percent', 'Late fee calculation');
+  }
+  
+  return topics.slice(0, 5); // Return top 5 related topics
+}
+
 function getAIResponse(question: string): string {
   let q = question.toLowerCase().trim();
   const originalQ = q; // Keep original for checking abbreviations
@@ -591,6 +979,53 @@ function getAIResponse(question: string): string {
       (q.includes('return due date') && (q.includes('all') || q.includes('list'))) ||
       (originalQ.includes('all return') && (originalQ.includes('due date') || originalQ.includes('due dates')))) {
     return GST_RESPONSES['all return due dates'];
+  }
+  
+  // Try fuzzy matching against all GST_RESPONSES keys
+  const responseKeys = Object.keys(GST_RESPONSES);
+  const fuzzyResult = fuzzyMatch(q, responseKeys);
+  
+  // If fuzzy match found with good score (>= 60), use it
+  if (fuzzyResult.matched && fuzzyResult.score >= 60) {
+    return GST_RESPONSES[fuzzyResult.keyword];
+  }
+  
+  // Also check original query for fuzzy match
+  const originalFuzzyResult = fuzzyMatch(originalQ, responseKeys);
+  if (originalFuzzyResult.matched && originalFuzzyResult.score >= 60) {
+    return GST_RESPONSES[originalFuzzyResult.keyword];
+  }
+  
+  // Check specific keyword patterns with fuzzy matching
+  const keywordPatterns: Array<{ patterns: string[]; key: string }> = [
+    { patterns: ['gstr-1', 'gstr 1', 'gstr1', 'return 1'], key: 'gstr-1 due date' },
+    { patterns: ['gstr-3b', 'gstr 3b', 'gstr3b', 'return 3b', '3b return'], key: 'gstr-3b due date' },
+    { patterns: ['gstr-9', 'gstr 9', 'gstr9', 'annual return'], key: 'gstr-9 due date' },
+    { patterns: ['gstr-9c', 'gstr 9c', 'gstr9c', 'reconciliation'], key: 'gstr-9c due date' },
+    { patterns: ['late fee', 'latefee', 'delay fee'], key: 'late fee' },
+    { patterns: ['interest rate', 'interest', '18 percent', '18%'], key: 'interest rate' },
+    { patterns: ['24 percent', '24%', 'excess itc interest'], key: 'interest 24 percent' },
+    { patterns: ['registration threshold', 'threshold', '20 lakh', '40 lakh', '10 lakh'], key: 'registration threshold' },
+    { patterns: ['itc time limit', 'itc deadline', 'november 30'], key: 'itc time limit' },
+    { patterns: ['itc 180', '180 days', 'payment 180'], key: 'itc 180 days' },
+    { patterns: ['blocked credit', 'section 17 5', 'section 17(5)'], key: 'itc blocked credits' },
+    { patterns: ['penalty 73', 'section 73', '10 percent penalty'], key: 'penalty section 73' },
+    { patterns: ['penalty 74', 'section 74', '100 percent penalty'], key: 'penalty section 74' },
+    { patterns: ['eway bill', 'ewaybill', 'e way bill', '50,000', '50000'], key: 'eway bill limit' },
+    { patterns: ['composition', 'composition scheme', '1.5 crore'], key: 'composition limit' },
+    { patterns: ['place of supply', 'pos goods', 'pos services'], key: 'place of supply' },
+    { patterns: ['rcm', 'reverse charge', 'section 9 3'], key: 'rcm section 9 3' },
+    { patterns: ['qrmp', 'quarterly return'], key: 'qrmp' },
+    { patterns: ['tds', 'tax deducted'], key: 'tds gst' },
+    { patterns: ['tcs', 'tax collected'], key: 'tcs gst' },
+  ];
+  
+  for (const pattern of keywordPatterns) {
+    if (pattern.patterns.some(p => q.includes(p) || originalQ.includes(p))) {
+      if (GST_RESPONSES[pattern.key]) {
+        return GST_RESPONSES[pattern.key];
+      }
+    }
   }
   
   // Handle LUT/Letter of Undertaking queries (after penalty checks)
@@ -1211,24 +1646,66 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
 **Composition Scheme:** Special Category States threshold is ₹75 lakhs (instead of ₹1.5 crore)`;
   }
   
-  // If no curriculum match and no hardcoded response, provide helpful guidance
+  // If no curriculum match and no hardcoded response, provide helpful guidance with related topics
   const totalChapters = GST_MODULES.reduce((acc, m) => acc + m.chapters.length, 0);
   const totalSections = GST_MODULES.reduce((acc, m) => acc + m.chapters.reduce((chAcc, ch) => chAcc + ch.sections.length, 0), 0);
   
-  return `I searched through ${totalChapters} chapters and ${totalSections} sections in the GST curriculum but couldn't find a specific match for "${question}".
+  // Get related topics based on query
+  const relatedTopics = getRelatedTopics(q);
+  
+  // Check if query seems uncertain or unclear
+  const uncertainKeywords = ['maybe', 'possibly', 'might', 'perhaps', 'probably', 'not sure', 'uncertain', 'doubt'];
+  const isUncertain = uncertainKeywords.some(kw => q.includes(kw)) || 
+                      (q.length < 10 && !q.match(/\d/)) || // Very short queries without numbers
+                      (q.split(' ').length < 3 && !q.match(/section|gstr|itc|gst/i)); // Very short without key terms
+  
+  let response = '';
+  
+  if (isUncertain || q.length < 5) {
+    response = `I'm not certain about the exact answer to "${question}". 
 
-**Tips for better results:**
+**Please check official sources:**
+- GST Portal: https://www.gst.gov.in
+- CBIC Website: https://www.cbic.gov.in
+- ICAI Publications for detailed provisions
+
+**I can help with:**
+- Return due dates (GSTR-1, 3B, 9, 9C)
+- Late fees and penalties
+- ITC rules and time limits
+- Registration thresholds
+- E-way bill requirements
+- Composition scheme details`;
+  } else {
+    response = `I searched through ${totalChapters} chapters and ${totalSections} sections in the GST curriculum but couldn't find a specific match for "${question}".
+
+**Related Topics You Might Find Helpful:**`;
+    
+    if (relatedTopics.length > 0) {
+      response += '\n';
+      relatedTopics.forEach((topic, index) => {
+        response += `\n${index + 1}. ${topic}`;
+      });
+    } else {
+      response += `\n- GST Return Due Dates\n- Late Fee Calculations\n- ITC Rules and Time Limits\n- Registration Thresholds\n- Penalty Provisions\n- E-way Bill Requirements`;
+    }
+    
+    response += `\n\n**Tips for better results:**
 - Use specific section numbers: "Section 16", "Section 17(5)", "Section 9"
 - Use specific terms: "input tax credit", "time of supply", "place of supply", "composition scheme"
 - Ask about specific topics: "GST registration", "e-way bill", "refunds", "assessments"
 
 **Example questions:**
+- "What is the due date for GSTR-3B?"
 - "Explain Section 16 on ITC eligibility"
 - "What is time of supply for goods?"
 - "Tell me about composition scheme"
-- "What are the provisions for refunds?"
+- "What are the late fees for returns?"
 
 I can search through all CGST Act, CGST Rules, and IGST Act provisions to find the answer!`;
+  }
+  
+  return response;
 }
 
 export default function TutorPage() {
