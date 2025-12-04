@@ -1532,19 +1532,27 @@ function getAIResponse(question: string): string {
   
   // Check for CA certificate queries FIRST (before other checks)
   // This ensures CA certificate queries are matched correctly, even with typos
-  // Check for "ca" + "certificate/certifcate/cert" pattern
-  if ((q.includes('ca') || originalQ.includes('ca')) && 
-      (q.includes('certificate') || q.includes('certifcate') || q.includes('cert') || 
-       originalQ.includes('certificate') || originalQ.includes('certifcate') || originalQ.includes('cert'))) {
+  // Handle various typos: certifcate, certficate, certicate, etc.
+  const hasCa = q.includes('ca') || originalQ.includes('ca');
+  
+  // Match any word that starts with "cert" - handles all typos
+  const certPattern = /\bcert\w*/i;
+  const hasCert = certPattern.test(q) || certPattern.test(originalQ);
+  
+  // If query has "ca" and anything starting with "cert", return CA certificate response
+  // This catches: certificate, certifcate, certficate, certicate, cert, certification, etc.
+  if (hasCa && hasCert) {
     return GST_RESPONSES['ca certificate'];
   }
   
-  // Also check for full phrases
-  if (q.includes('ca certificate') || q.includes('ca certifcate') || q.includes('ca cert') || 
-      q.includes('ca certification') || q.includes('chartered accountant certificate') ||
-      originalQ.includes('ca certificate') || originalQ.includes('ca certifcate') || 
-      originalQ.includes('ca cert') || originalQ.includes('ca certification') ||
-      originalQ.includes('chartered accountant certificate')) {
+  // Also check for full phrases with typos (more specific matching)
+  const caCertPhrases = [
+    'ca certificate', 'ca certifcate', 'ca certficate', 'ca certicate', 
+    'ca cert', 'ca certification', 'chartered accountant certificate',
+    'chartered accountant cert', 'ca certif', 'ca certfic'
+  ];
+  
+  if (caCertPhrases.some(phrase => q.includes(phrase) || originalQ.includes(phrase))) {
     return GST_RESPONSES['ca certificate'];
   }
   
