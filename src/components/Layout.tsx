@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  LayoutDashboard, BookOpen, Target, BarChart3, MessageCircle, Trophy, Settings, Menu, X, Sun, Moon, Flame, GraduationCap
+  LayoutDashboard, BookOpen, Target, BarChart3, MessageCircle, Trophy, Settings, Menu, X, Sun, Moon, Flame, GraduationCap, Info
 } from 'lucide-react';
 import { useAppStore } from '@/lib/store';
 import { cn } from '@/lib/utils';
@@ -18,6 +18,7 @@ const NAV_ITEMS = [
   { href: '/tutor', icon: MessageCircle, label: 'AI Tutor' },
   { href: '/achievements', icon: Trophy, label: 'Achievements' },
   { href: '/settings', icon: Settings, label: 'Settings' },
+  { href: '/about', icon: Info, label: 'About Us' },
 ];
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
