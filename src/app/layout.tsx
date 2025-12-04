@@ -3,7 +3,7 @@ import './globals.css';
 import AppLayout from '@/components/Layout';
 
 export const metadata: Metadata = {
-  title: 'GST Tutor - Complete GST Learning Platform',
+  title: 'GstEk - Complete GST Learning Platform',
   description: 'Master GST Act(s) and Rules with interactive lessons, quizzes, and AI-powered tutoring. Based on ICAI November 2025 Edition.',
   keywords: 'GST, CGST, IGST, SGST, Tax, India, CA, ICAI, Learning, Tutorial',
 };

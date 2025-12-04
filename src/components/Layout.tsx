@@ -69,7 +69,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }}>
               <GraduationCap className="w-8 h-8 text-blue-400" />
             </motion.div>
-            <span className="font-bold text-lg text-white">GST Tutor</span>
+            <span className="font-bold text-lg text-white">Gst<span className="text-teal-400">Ek</span></span>
           </Link>
           <motion.button 
             whileTap={{ scale: 0.95 }}
@@ -103,7 +103,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <div className="flex items-center justify-between mb-6">
                 <Link href="/" className="flex items-center gap-2">
                   <GraduationCap className="w-8 h-8 text-blue-400" />
-                  <span className="font-bold text-xl text-white">GST Tutor</span>
+                  <span className="font-bold text-xl text-white">Gst<span className="text-teal-400">Ek</span></span>
                 </Link>
                 <motion.button 
                   whileTap={{ scale: 0.95 }}
@@ -150,7 +150,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <GraduationCap className="w-10 h-10 text-blue-400" />
             </motion.div>
             <div>
-              <h1 className="font-bold text-xl text-white">GST Tutor</h1>
+              <h1 className="font-bold text-xl text-white">Gst<span className="text-teal-400">Ek</span></h1>
               <p className="text-xs text-gray-400">ICAI Nov 2025 Edition</p>
             </div>
           </Link>

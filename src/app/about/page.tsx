@@ -46,7 +46,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-3xl md:text-4xl font-bold text-white mb-3"
             >
-              About GST Tutor
+              About Gst<span className="text-teal-400">Ek</span>
             </motion.h1>
             <motion.p 
               initial={{ x: -20, opacity: 0 }}
@@ -71,7 +71,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-3">Our Mission</h2>
               <p className="text-gray-300 leading-relaxed">
-                GST Tutor is a comprehensive learning platform designed to help aspiring Chartered Accountants 
+                Gst<span className="text-teal-400">Ek</span> is a comprehensive learning platform designed to help aspiring Chartered Accountants 
                 master the complexities of Goods and Services Tax (GST). Our content is meticulously curated 
                 and based on the official <strong className="text-white">ICAI GST Act(s) & Rules - November 2025 Edition</strong>, 
                 ensuring that you receive the most accurate and up-to-date information.
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-white mb-4">Created by CA Manu Pandit</h2>
               <p className="text-gray-300 mb-6">
-                GST Tutor was created by a Chartered Accountant with years of experience 
+                Gst<span className="text-teal-400">Ek</span> was created by a Chartered Accountant with years of experience 
                 in GST compliance and taxation. The platform reflects real-world expertise and a 
                 deep understanding of the challenges faced by CA students and professionals.
               </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
           className="text-center py-8"
         >
           <p className="text-gray-400 flex items-center justify-center gap-2">
-            © 2025 GST Tutor. Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by CA Manu Pandit
+            © 2025 Gst<span className="text-teal-400">Ek</span>. Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by CA Manu Pandit
           </p>
         </motion.div>
       </div>

@@ -177,7 +177,7 @@ export default function SettingsPage() {
           <Info className="w-5 h-5" /> About
         </h2>
         <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-          <p><strong>GST Tutor</strong> - Complete GST Learning Platform</p>
+          <p><strong>Gst<span className="text-teal-400">Ek</span></strong> - Complete GST Learning Platform</p>
           <p>Based on ICAI GST Act(s) & Rules - November 2025 Edition</p>
           <p>Version 1.0.0</p>
           <p className="text-xs mt-4">This platform is for educational purposes. Always refer to official government notifications and circulars for the latest GST provisions.</p>
