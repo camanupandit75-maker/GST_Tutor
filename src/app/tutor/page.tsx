@@ -1352,9 +1352,12 @@ function formatMessageContent(content: string): string {
         });
         
         refHtml += processedLine + '</p></div>';
-        currentSection = refHtml;
+        sections.push(refHtml); // Push Reference section immediately
+        currentSection = ''; // Clear currentSection
       } else {
-        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${refLine.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
+        const refHtml = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${refLine.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
+        sections.push(refHtml);
+        currentSection = '';
       }
       inKeyPoints = false;
       inRelatedTopics = false;
