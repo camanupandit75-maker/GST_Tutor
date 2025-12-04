@@ -1311,7 +1311,7 @@ function formatMessageContent(content: string): string {
     // Detect Key Points section
     if (line.trim().startsWith('**Key Points:**')) {
       if (currentSection) sections.push(currentSection);
-      currentSection = '<h4 class="text-sm font-semibold mt-4 mb-2 text-white">Key Points:</h4><ul class="list-disc space-y-1 mb-4 ml-4">';
+      currentSection = '<h4 class="text-sm font-semibold mt-4 mb-2 text-gray-900 dark:text-white">Key Points:</h4><ul class="list-disc space-y-1 mb-4 ml-4">';
       inKeyPoints = true;
       continue;
     }
@@ -1319,7 +1319,7 @@ function formatMessageContent(content: string): string {
     // Detect Related Topics section
     if (line.trim().startsWith('**Related Topics:**')) {
       if (currentSection) sections.push(currentSection);
-      currentSection = '<div class="mt-4 pt-4 border-t border-gray-600"><h4 class="text-xs font-semibold mb-2 text-gray-400">Related Topics:</h4><ul class="list-disc space-y-1 ml-4">';
+      currentSection = '<div class="mt-4 pt-4 border-t border-gray-300 dark:border-gray-600"><h4 class="text-xs font-semibold mb-2 text-gray-600 dark:text-gray-400">Related Topics:</h4><ul class="list-disc space-y-1 ml-4">';
       inRelatedTopics = true;
       inKeyPoints = false;
       continue;
@@ -1340,7 +1340,7 @@ function formatMessageContent(content: string): string {
       
       if (links.length > 0) {
         // Build HTML with all links, preserving the original text structure
-        let refHtml = '<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2"><strong>Reference:</strong> ';
+        let refHtml = '<div class="mt-4 pt-4 border-t border-gray-300 dark:border-gray-600"><p class="text-xs text-gray-600 dark:text-gray-400 mb-2"><strong>Reference:</strong> ';
         
         // Replace markdown links with HTML links while preserving separators
         let processedLine = refLine.replace(/^\*Reference:\s*/, '');
@@ -1350,16 +1350,16 @@ function formatMessageContent(content: string): string {
         processedLine = processedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
           // Check if it's an internal link (starts with /)
           if (url.startsWith('/')) {
-            return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline cursor-pointer" onclick="event.preventDefault(); window.location.href='${url}'">${text}</a>`;
+            return `<a href="${url}" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline cursor-pointer" onclick="event.preventDefault(); window.location.href='${url}'">${text}</a>`;
           }
-          return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+          return `<a href="${url}" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
         });
         
         refHtml += processedLine + '</p></div>';
         sections.push(refHtml); // Push Reference section immediately
         currentSection = ''; // Clear currentSection
       } else {
-        const refHtml = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${refLine.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
+        const refHtml = `<div class="mt-4 pt-4 border-t border-gray-300 dark:border-gray-600"><p class="text-xs text-gray-600 dark:text-gray-400 mb-2">${refLine.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
         sections.push(refHtml);
         currentSection = '';
       }
@@ -1377,8 +1377,8 @@ function formatMessageContent(content: string): string {
         currentSection += `<li class="text-xs mb-1"><a href="${linkMatch[2]}" class="text-blue-400 hover:text-blue-300 underline">${linkMatch[1]}</a></li>`;
       } else {
         // Format any bold text in bullet
-        const formattedBullet = bulletContent.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-white">$1</strong>');
-        currentSection += `<li class="text-sm text-gray-200 mb-1">${formattedBullet}</li>`;
+        const formattedBullet = bulletContent.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-gray-900 dark:text-white">$1</strong>');
+        currentSection += `<li class="text-sm text-gray-700 dark:text-gray-200 mb-1">${formattedBullet}</li>`;
       }
       continue;
     }
@@ -1401,21 +1401,21 @@ function formatMessageContent(content: string): string {
     if (!inKeyPoints && !inRelatedTopics) {
       if (line.trim() === '') {
         if (currentSection.trim()) {
-          currentSection += '</p><p class="text-sm text-gray-200 mb-2">';
+          currentSection += '</p><p class="text-sm text-gray-700 dark:text-gray-200 mb-2">';
         }
       } else {
         // Format title (first **text** on its own line)
         if (line.match(/^\*\*[^*]+\*\*$/)) {
           if (currentSection) sections.push(currentSection);
           const title = line.replace(/\*\*/g, '');
-          currentSection = `<h3 class="text-lg font-bold mb-2 text-white">${title}</h3>`;
+          currentSection = `<h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">${title}</h3>`;
         } else {
           // Format subtitle or regular text
           if (!currentSection || currentSection.endsWith('</h3>')) {
-            currentSection += '<p class="text-sm text-gray-300 mb-4">';
+            currentSection += '<p class="text-sm text-gray-700 dark:text-gray-300 mb-4">';
           }
           // Format bold text
-          let formattedLine = line.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-white">$1</strong>');
+          let formattedLine = line.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-gray-900 dark:text-white">$1</strong>');
           // Format links (handle internal navigation)
           formattedLine = formattedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
             if (url.startsWith('/')) {
@@ -1452,7 +1452,7 @@ function formatMessageContent(content: string): string {
     return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
   });
   
-  return html || '<p class="text-sm text-gray-200">' + content.replace(/\n/g, '<br/>') + '</p>';
+  return html || '<p class="text-sm text-gray-700 dark:text-gray-200">' + content.replace(/\n/g, '<br/>') + '</p>';
 }
 
 // Fuzzy matching function for better keyword detection
@@ -2508,7 +2508,7 @@ export default function TutorPage() {
                     {msg.role === 'user' ? <User className="w-4 h-4 text-white" /> : <Bot className="w-4 h-4 text-gray-600 dark:text-gray-400" />}
                   </div>
                   <div className={cn("chat-bubble", msg.role === 'user' ? "chat-bubble-user" : "chat-bubble-assistant")}>
-                    <div className="prose prose-sm dark:prose-invert max-w-none" 
+                    <div className="prose prose-sm dark:prose-invert prose-gray dark:prose-invert max-w-none text-gray-700 dark:text-gray-200" 
                       dangerouslySetInnerHTML={{ 
                         __html: formatMessageContent(msg.content)
                       }} />

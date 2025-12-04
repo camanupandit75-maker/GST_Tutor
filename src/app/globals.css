@@ -197,6 +197,14 @@
   }
   
   /* Ensure links in chat bubbles are visible and clickable */
+  .chat-bubble-assistant a {
+    @apply text-blue-600 dark:text-blue-400 underline cursor-pointer !important;
+  }
+  
+  html.light .chat-bubble-assistant a {
+    @apply text-blue-700 hover:text-blue-800 !important;
+  }
+  
   .chat-bubble-assistant a,
   .prose a {
     @apply text-blue-400 hover:text-blue-300 underline cursor-pointer !important;
