@@ -195,6 +195,17 @@
   html.light .chat-bubble-assistant {
     @apply bg-white/90 text-gray-900;
   }
+  
+  /* Ensure links in chat bubbles are visible and clickable */
+  .chat-bubble-assistant a,
+  .prose a {
+    @apply text-blue-400 hover:text-blue-300 underline cursor-pointer !important;
+  }
+  
+  html.light .chat-bubble-assistant a,
+  html.light .prose a {
+    @apply text-blue-600 hover:text-blue-700 underline cursor-pointer !important;
+  }
 }
 
 @layer utilities {
