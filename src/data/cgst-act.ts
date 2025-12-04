@@ -981,7 +981,36 @@ Explanation.—For the purposes of clauses (c) and (d), the expression "construc
 (7) The amount of credit under sub-section (5) shall be calculated in such manner as may be prescribed.` },
       { id: 'sec-18', number: '18', title: 'ITC in special circumstances', description: 'ITC on registration, switching schemes',
         keyPoints: ['ITC on inputs in stock on date of registration', 'ITC when switching from composition to normal', 'ITC when exempt supply becomes taxable', 'Within 1 year from invoice date'],
-        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const,
+        fullText: `**Section 18. Availability of credit in special circumstances**
+
+(1) Subject to such conditions and restrictions as may be prescribed—
+
+(a) a person who has applied for registration under this Act within thirty days from the date on which he becomes liable to registration and has been granted such registration shall be entitled to take credit of input tax in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the day immediately preceding the date from which he becomes liable to pay tax under the provisions of this Act;
+
+(b) a person who takes registration under sub-section (3) of section 25 shall be entitled to take credit of input tax in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock on the day immediately preceding the date of grant of registration;
+
+(c) where any registered person ceases to pay tax under section 10, he shall be entitled to take credit of input tax in respect of inputs held in stock, inputs contained in semi-finished or finished goods held in stock and on capital goods on the day immediately preceding the date from which he becomes liable to pay tax under section 9:
+
+Provided that the credit on capital goods shall be reduced by such percentage points as may be prescribed;
+
+(d) where an exempt supply of goods or services or both by a registered person becomes a taxable supply, such person shall be entitled to take credit of input tax in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock relatable to such exempt supply and on capital goods exclusively used for such exempt supply on the day immediately preceding the date from which such supply becomes taxable:
+
+Provided that the credit on capital goods shall be reduced by such percentage points as may be prescribed.
+
+(2) A registered person shall not be entitled to take input tax credit under sub-section (1) in respect of any supply of goods or services or both to him after the expiry of one year from the date of issue of tax invoice relating to such supply.
+
+(3) Where there is a change in the constitution of a registered person on account of sale, merger, demerger, amalgamation, lease or transfer of the business with the specific provision for transfer of liabilities, the said registered person shall be allowed to transfer the input tax credit which remains unutilised in his electronic credit ledger to such sold, merged, demerged, amalgamated, leased or transferred business in such manner as may be prescribed.
+
+(4) Where any registered person who has availed of input tax credit opts to pay tax under section 10 or, where the goods or services or both supplied by him become exempt absolutely under section 11, he shall pay an amount, by way of debit in the electronic credit ledger or electronic cash ledger, equivalent to the credit of input tax in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock and on capital goods, reduced by such percentage points as may be prescribed, on the day immediately preceding the date of exercising of such option or, as the case may be, the date of such exemption:
+
+Provided that after payment of such amount, the balance of input tax credit, if any, lying in his electronic credit ledger shall lapse.
+
+(5) The amount of credit under sub-section (1) and the amount payable under sub-section (4) shall be calculated in such manner as may be prescribed.
+
+(6) In case of supply of capital goods or plant and machinery, on which input tax credit has been taken, the registered person shall pay an amount equal to the input tax credit taken on the said capital goods or plant and machinery reduced by such percentage points as may be prescribed or the tax on the transaction value of such capital goods or plant and machinery determined under section 15, whichever is higher:
+
+Provided that where refractory bricks, moulds and dies, jigs and fixtures are supplied as scrap, the taxable person may pay tax on the transaction value of such goods determined under section 15.` },
       { id: 'sec-19', number: '19', title: 'ITC on inputs sent for job work', description: 'Job work ITC provisions',
         keyPoints: ['Inputs sent for job work: return within 1 year', 'Capital goods: return within 3 years', 'If not returned, deemed supply'],
         difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
@@ -1024,7 +1053,10 @@ Provided that where the capital goods are sent directly to a job worker, the per
 (5) The Input Service Distributor shall distribute the input tax credit only to the recipients to whom the input service is attributable and such distribution shall be subject to such conditions and restrictions as may be prescribed.` },
       { id: 'sec-21', number: '21', title: 'Manner of recovery of excess credit', description: 'Recovery of wrongly taken ITC',
         keyPoints: ['Excess credit taken: add to output tax liability', 'Interest @ 24% applicable', 'Show cause notice procedure'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const }
+        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const,
+        fullText: `**Section 21. Manner of recovery of credit**
+
+Where the amount of input tax credit availed by a registered person is found to exceed the amount of input tax credit to which he is entitled, the excess amount shall be added to the output tax liability of such person and such person shall be liable to pay interest on the excess amount so added at such rate not exceeding twenty-four per cent. as may be notified by the Government on the recommendations of the Council.` }
     ]
   },
   {
@@ -1055,7 +1087,16 @@ Explanation.—For the purposes of this section,—
 (iii) the expression "special category States" shall mean the States as specified in sub-clause (g) of clause (4) of article 279A of the Constitution.` },
       { id: 'sec-23', number: '23', title: 'Persons not liable for registration', description: 'Exemptions from registration',
         keyPoints: ['Persons making only exempt supplies', 'Agriculturist to extent of supply of produce', 'Persons making only supplies under reverse charge'],
-        difficulty: 'basic' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const,
+        fullText: `**Section 23. Persons not liable for registration**
+
+(1) The following persons shall not be liable to registration, namely:—
+
+(a) any person engaged exclusively in the business of supplying goods or services or both that are not liable to tax or wholly exempt from tax under this Act or under the Integrated Goods and Services Tax Act;
+
+(b) an agriculturist, to the extent of supply of produce out of cultivation of land.
+
+(2) The Government may, on the recommendations of the Council, by notification, specify the category of persons who may be exempted from obtaining registration under this Act.` },
       { id: 'sec-24', number: '24', title: 'Compulsory registration', description: 'Registration regardless of turnover',
         keyPoints: ['Inter-state suppliers', 'Casual taxable persons', 'Non-resident taxable persons', 'Persons liable to pay under reverse charge', 'E-commerce operators', 'TDS deductors', 'Persons supplying through e-commerce'],
         difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
@@ -1084,7 +1125,40 @@ Notwithstanding anything contained in sub-section (1) of section 22, the followi
 (x) such other person or class of persons as may be notified by the Government on the recommendations of the Council.` },
       { id: 'sec-25', number: '25', title: 'Procedure for registration', description: 'Registration application process',
         keyPoints: ['Apply within 30 days of becoming liable', 'GSTIN: 15 digit number', 'State code (2) + PAN (10) + Entity (1) + Z + Check digit', 'Aadhaar authentication'],
-        difficulty: 'basic' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 25. Procedure for registration**
+
+(1) Every person who is liable to be registered under section 22 or section 24 shall apply for registration in every such State or Union territory in which he is so liable within thirty days from the date on which he becomes liable to registration, in such manner and subject to such conditions as may be prescribed:
+
+Provided that a casual taxable person or a non-resident taxable person shall apply for registration at least five days prior to the commencement of business.
+
+Provided further that a person having a unit, as defined in clause (zc) of section 2 of the Special Economic Zones Act, 2005, in a Special Economic Zone or being a Special Economic Zone developer shall have to apply for a separate registration, as distinct from his place of business located outside the Special Economic Zone in the same State or Union territory.
+
+Explanation.—Every person who makes a supply from the territorial waters of India shall obtain registration in the coastal State or Union territory where the nearest point of the appropriate baseline is located.
+
+(2) A person seeking registration under this Act shall be granted a single registration in a State or Union territory:
+
+Provided that a person having multiple places of business in a State or Union territory may be granted a separate registration for each such place of business, subject to such conditions as may be prescribed.
+
+(3) A person, though not liable to be registered under section 22 or section 24 may get himself registered voluntarily, and all provisions of this Act, as are applicable to a registered person, shall apply to such person.
+
+(4) A person who has obtained or is required to obtain registration under sub-section (3) of section 25 of the Central Goods and Services Tax Act shall, in respect of supplies made by him, in terms of clause (a) of sub-section (1) of section 7 of the Central Goods and Services Tax Act, be deemed to be a registered person under this Act with effect from the date on which he becomes liable to registration under sub-section (1) of section 22 and all the provisions of this Act shall apply to such person with effect from the said date.
+
+(5) Where a person who is liable to be registered under this Act fails to obtain registration, the proper officer may, without prejudice to any action which may be taken under this Act or under any other law for the time being in force, proceed to register such person in such manner as may be prescribed.
+
+(6) Notwithstanding anything contained in sub-section (1),—
+
+(a) any specialised agency of the United Nations Organisation or any Multilateral Financial Institution and Organisation notified under the United Nations (Privileges and Immunities) Act, 1947, Consulate or Embassy of foreign countries; and
+
+(b) any other person or class of persons, as may be notified by the Commissioner,
+
+shall be granted a Unique Identity Number in such manner and for such purposes, including refund of taxes on the supplies of goods or services or both received by them, as may be prescribed.
+
+(7) The registration or the Unique Identity Number shall be granted or rejected after due verification in such manner and within such period as may be prescribed.
+
+(8) A certificate of registration shall be issued in such form and with effect from such date as may be prescribed.
+
+(9) A registration or a Unique Identity Number shall be deemed to have been granted after the expiry of the period prescribed under sub-section (7), if no deficiency has been communicated to the applicant within that period.` },
       { id: 'sec-26', number: '26', title: 'Deemed registration', description: 'Automatic registration',
         keyPoints: ['If no action within 7 working days', 'Registration deemed granted', 'Effective from date of application'],
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
@@ -1096,10 +1170,58 @@ Notwithstanding anything contained in sub-section (1) of section 22, the followi
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
       { id: 'sec-29', number: '29', title: 'Cancellation of registration', description: 'How registration can be cancelled',
         keyPoints: ['Voluntary: if no longer liable', 'Suo moto: by officer for non-compliance', 'Must pay ITC reversal on inputs in stock', 'Final return required'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 29. Cancellation or suspension of registration**
+
+(1) The proper officer may, either on his own motion or on an application filed by the registered person or by his legal heirs, in case of death of such person, cancel the registration, in such manner and within such period as may be prescribed, having regard to the circumstances where,—
+
+(a) the business has been discontinued, transferred fully for any reason including death of the proprietor, amalgamated with other legal entity, demerged or otherwise disposed of; or
+
+(b) there is any change in the constitution of the business; or
+
+(c) the taxable person is no longer liable to be registered under section 22 or section 24 or intends to opt out of the registration voluntarily made under sub-section (3) of section 25:
+
+Provided that during pendency of the proceedings relating to cancellation of registration filed by the registered person, the registration may be suspended for such period and in such manner as may be prescribed.
+
+(2) The proper officer may cancel the registration of a person from such date, including any retrospective date, as he may deem fit, where,—
+
+(a) a registered person has contravened such provisions of the Act or the rules made thereunder as may be prescribed; or
+
+(b) a person paying tax under section 10 has not furnished returns for three consecutive tax periods; or
+
+(c) any registered person, other than a person specified in clause (b), has not furnished returns for a continuous period of six months; or
+
+(d) any person who has taken voluntary registration under sub-section (3) of section 25 has not commenced business within six months from the date of registration; or
+
+(e) registration has been obtained by means of fraud, wilful misstatement or suppression of facts:
+
+Provided that the proper officer shall not cancel the registration without giving the person an opportunity of being heard.
+
+Provided further that during pendency of the proceedings relating to cancellation of registration, the proper officer may suspend the registration for such period and in such manner as may be prescribed.
+
+(3) The cancellation of registration under this section shall not affect the liability of the person to pay tax and other dues under this Act or to discharge any obligation under this Act or any other law for the time being in force for any period prior to the date of cancellation whether or not such tax and other dues are determined before or after the date of cancellation.
+
+(4) The cancellation of registration under the State Goods and Services Tax Act or the Union Territory Goods and Services Tax Act, as the case may be, shall be deemed to be a cancellation of registration under this Act.
+
+(5) Every registered person whose registration is cancelled shall pay an amount, by way of debit in the electronic credit ledger or electronic cash ledger, equivalent to the credit of input tax in respect of inputs held in stock and inputs contained in semi-finished or finished goods held in stock and on capital goods, reduced by such percentage points as may be prescribed, on the day immediately preceding the date of such cancellation or the tax on inputs held in stock and inputs contained in semi-finished or finished goods held in stock and on capital goods, whichever is higher, calculated in such manner as may be prescribed:
+
+Provided that in case of capital goods, the taxable person shall pay an amount equal to the input tax credit taken on the said capital goods reduced by such percentage points as may be prescribed or the tax on the transaction value of such capital goods under section 15, whichever is higher:
+
+Provided further that in case where the tax invoices related to such inputs or capital goods are not available with the registered person, the input tax credit on the same shall be calculated at such rate as may be prescribed.
+
+(6) The amount payable under sub-section (5) shall be calculated in such manner as may be prescribed.` },
       { id: 'sec-30', number: '30', title: 'Revocation of cancellation', description: 'Getting cancelled registration restored',
         keyPoints: ['Apply within 30 days of cancellation', 'Extendable by 30 days by Additional/Joint Commissioner', 'Further 30 days by Commissioner', 'All pending returns must be filed'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const }
+        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const,
+        fullText: `**Section 30. Revocation of cancellation of registration**
+
+(1) Subject to such conditions as may be prescribed, any registered person, whose registration is cancelled by the proper officer on his own motion, may apply to such officer for revocation of cancellation of the registration in the prescribed manner within thirty days from the date of service of the cancellation order.
+
+(2) The proper officer may, in such manner and within such period as may be prescribed, by order, either revoke cancellation of the registration or reject the application:
+
+Provided that the application for revocation of cancellation of registration shall not be rejected unless the applicant has been given an opportunity of being heard.
+
+(3) The revocation of cancellation of registration under the State Goods and Services Tax Act or the Union Territory Goods and Services Tax Act, as the case may be, shall be deemed to be a revocation of cancellation of registration under this Act.` }
     ]
   },
   {
@@ -1165,7 +1287,10 @@ Provided that the registered person may not issue a bill of supply if the value 
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
       { id: 'sec-33', number: '33', title: 'Amount of tax to be indicated', description: 'Tax details on invoice',
         keyPoints: ['Tax amount must be shown separately', 'Rate and amount for CGST, SGST/IGST'],
-        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'high' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'high' as const,
+        fullText: `**Section 33. Amount of tax to be indicated in tax invoice and other documents**
+
+Notwithstanding anything contained in this Act or any other law for the time being in force, where any supply is made for a consideration, every person who is liable to pay tax for such supply shall prominently indicate in all documents relating to assessment, tax invoice and other like documents, the amount of tax which shall form part of the price at which such supply is made.` },
       { id: 'sec-34', number: '34', title: 'Credit and debit notes', description: 'For value/tax adjustments post-supply',
         keyPoints: ['Credit note: when value/tax reduces', 'Debit note: when value/tax increases', 'Time limit: 30th November of next FY', 'Details to be declared in return'],
         difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
@@ -1196,7 +1321,12 @@ Provided that any registered person who issues a debit note in relation to a sup
         difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const },
       { id: 'sec-36', number: '36', title: 'Period of retention', description: 'How long to keep records',
         keyPoints: ['72 months (6 years) from due date of annual return', 'Longer if proceeding pending'],
-        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'high' as const }
+        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'high' as const,
+        fullText: `**Section 36. Period of retention of accounts**
+
+Every registered person required to keep and maintain books of account or other records under sub-section (1) of section 35 shall retain them until the expiry of seventy-two months from the due date of furnishing of annual return for the year pertaining to such accounts and records:
+
+Provided that a registered person, who is a party to an appeal or revision or any other proceeding before any Appellate Authority or Revisional Authority or Appellate Tribunal or court, whether filed by him or by the Commissioner, or is under investigation for an offence under Chapter XIX, shall retain the books of account and other records pertaining to the subject matter of such appeal or revision or proceeding or investigation for a period of one year after final disposal of such appeal or revision or proceeding or investigation, or for the period specified above, whichever is later.` }
     ]
   },
   {
@@ -1227,7 +1357,34 @@ Provided that no such rectification of any error or omission in respect of the d
 Provided that no such rectification of any error or omission in respect of the details furnished under sub-section (1) shall be allowed after the due date for furnishing of return for the month of September following the end of the financial year to which such details pertain, or furnishing of the relevant annual return, whichever is earlier.` },
       { id: 'sec-38', number: '38', title: 'Communication of details of inward supplies', description: 'GSTR-2B auto-generated statement',
         keyPoints: ['Auto-generated from suppliers GSTR-1', 'Available by 14th of next month', 'Used for ITC matching', 'Helps in ITC verification'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 38. Communication of details of inward supplies and input tax credit**
+
+(1) Every registered person, other than an Input Service Distributor or a non-resident taxable person or a person paying tax under the provisions of section 10 or section 51 or section 52, shall verify, validate, modify or delete the details relating to outward supplies and credit or debit notes communicated under sub-section (1) of section 37 to prepare the details of his inward supplies and credit or debit notes and may include therein, the details of inward supplies and credit or debit notes received by him in respect of such supplies that have not been declared by the supplier under sub-section (1) of section 37.
+
+(2) Every registered person shall verify, validate, modify or delete the details relating to outward supplies and credit or debit notes communicated under sub-section (1) of section 37 to prepare the details of his inward supplies and credit or debit notes and may include therein, the details of inward supplies and credit or debit notes received by him in respect of such supplies that have not been declared by the supplier under sub-section (1) of section 37.
+
+(3) The details of inward supplies added, corrected or deleted by the recipient under sub-section (2) shall be communicated to the supplier in such manner and within such time as may be prescribed.
+
+(4) The details of inward supplies furnished by the recipient under sub-section (2) shall be matched with the corresponding details of outward supplies furnished by the supplier registered under this Act, in such manner and within such time as may be prescribed.
+
+(5) Where the details of outward supplies furnished by the supplier under sub-section (1) of section 37 do not match with the corresponding details furnished by the recipient under sub-section (2), the discrepancy shall be communicated to both such persons in such manner and within such time as may be prescribed.
+
+(6) The duplication of claims of input tax credit in the details of inward supplies furnished by the recipient under sub-section (2) shall be communicated to the recipient in such manner and within such time as may be prescribed.
+
+(7) The amount in respect of which any discrepancy is communicated under sub-section (5) and which is not rectified by the supplier in his return for the month in which discrepancy is communicated shall be added to the output tax liability of the recipient, in such manner as may be prescribed, in his return for the month succeeding the month in which the discrepancy is communicated.
+
+(8) The amount in respect of which any duplication of claims of input tax credit is communicated under sub-section (6) shall be added to the output tax liability of the recipient, in such manner as may be prescribed, in his return for the month in which such duplication is communicated.
+
+(9) The recipient shall be eligible to reduce, from his output tax liability, the amount added under sub-section (7) if the supplier declares the details of the invoice or debit note in his return for the month in which the discrepancy is communicated.
+
+(10) A recipient in whose output tax liability any amount has been added under sub-section (7) or sub-section (8), shall be liable to pay interest at the rate specified under sub-section (1) of section 50 on the amount so added from the date of such addition till the date of payment of such amount.
+
+(11) Where any reduction in output tax liability is accepted under sub-section (9), the interest paid under sub-section (10) shall be refunded to the recipient by crediting the amount in the corresponding head of his electronic cash ledger in such manner as may be prescribed:
+
+Provided that the amount of interest to be credited in any case shall not exceed the amount of interest paid by the supplier.
+
+(12) The amount reduced from the output tax liability in contravention of the provisions of sub-section (9) shall be added to the output tax liability of the recipient in his return for the month in which such contravention takes place.` },
       { id: 'sec-39', number: '39', title: 'Furnishing of returns', description: 'GSTR-3B monthly return',
         keyPoints: ['Summary return with tax payment', 'Due: 20th of next month', 'QRMP: 22nd/24th of month after quarter', 'Self-assessed tax payment'],
         difficulty: 'intermediate' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const,
@@ -1261,10 +1418,48 @@ Provided that no such rectification of any omission or incorrect particulars sha
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
       { id: 'sec-41', number: '41', title: 'Claim of input tax credit', description: 'ITC claim in return',
         keyPoints: ['Self-assessed claim in GSTR-3B', 'Based on GSTR-2B for matching'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const,
+        fullText: `**Section 41. Claim of input tax credit and provisional acceptance thereof**
+
+(1) Every registered person shall, subject to such conditions and restrictions as may be prescribed, be entitled to take the credit of eligible input tax, as self-assessed, in his return and such amount shall be credited on a provisional basis to his electronic credit ledger.
+
+(2) The credit referred to in sub-section (1) shall be utilised only for payment of self-assessed output tax as per the return referred to in the said sub-section.
+
+(3) The amount self-assessed in the return furnished by a registered person under sub-section (1) of section 39 shall stand credited to his electronic credit ledger on a provisional basis and may be used in such manner and subject to such conditions and restrictions as may be prescribed.
+
+(4) The amount credited under sub-section (1) or sub-section (3) may be reduced on the basis of the matching, reversal or reclaim of the said amount in accordance with the provisions of section 42 or section 43 or section 50 or section 51.` },
       { id: 'sec-42', number: '42', title: 'Matching and reversal', description: 'ITC matching mechanism',
         keyPoints: ['Matching with supplier returns', 'Reversal if mismatch', 'Communication of discrepancies'],
-        difficulty: 'advanced' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
+        fullText: `**Section 42. Matching, reversal and reclaim of input tax credit**
+
+(1) The details of every inward supply furnished by a registered person (hereafter in this section referred to as the "recipient") for a tax period shall, in such manner and within such time as may be prescribed, be matched—
+
+(a) with the corresponding details of outward supply furnished by the corresponding registered person (hereafter in this section referred to as the "supplier") in his valid return for the same tax period or any preceding tax period;
+
+(b) with the integrated goods and services tax paid under section 3 of the Customs Tariff Act, 1975 in respect of goods imported by him; and
+
+(c) for duplication of claims of input tax credit.
+
+(2) The claim of input tax credit in respect of invoices or debit notes relating to inward supply that match with the details of corresponding outward supply or with the integrated goods and services tax paid under section 3 of the Customs Tariff Act, 1975 in respect of goods imported by him shall be finally accepted and such acceptance shall be communicated, in such manner as may be prescribed, to the recipient.
+
+(3) Where the input tax credit claimed by a recipient in respect of an inward supply is in excess of the tax declared by the supplier for the same supply or the outward supply is not declared by the supplier in his valid returns, the discrepancy shall be communicated to both such persons in such manner as may be prescribed.
+
+(4) The duplication of claims of input tax credit shall be communicated to the recipient in such manner as may be prescribed.
+
+(5) The amount in respect of which any discrepancy is communicated under sub-section (3) and which is not rectified by the supplier in his valid return for the month in which discrepancy is communicated shall be added to the output tax liability of the recipient, in such manner as may be prescribed, in his return for the month succeeding the month in which the discrepancy is communicated.
+
+(6) The amount in respect of any reduction in output tax liability that is found to be on account of duplication of claims shall be added to the output tax liability of the recipient in his return for the month in which such duplication is communicated.
+
+(7) The recipient shall be eligible to reduce, from his output tax liability, the amount added under sub-section (5) if the supplier declares the details of the invoice or debit note in his valid return within the time specified in sub-section (9) of section 39.
+
+(8) A recipient in whose output tax liability any amount has been added under sub-section (5) or sub-section (6), shall be liable to pay interest at the rate specified under sub-section (1) of section 50 on the amount so added from the date of such addition till the date of payment of such amount.
+
+(9) Where the reduction in output tax liability is accepted under sub-section (7), the interest paid under sub-section (8) shall be refunded to the recipient by crediting the amount in the corresponding head of his electronic cash ledger in such manner as may be prescribed:
+
+Provided that the amount of interest to be credited in any case shall not exceed the amount of interest paid by the supplier.
+
+(10) The amount reduced from the output tax liability in contravention of the provisions of sub-section (7) shall be added to the output tax liability of the recipient in his return for the month in which such contravention takes place.` },
       { id: 'sec-43', number: '43', title: 'Matching of claim of reduction', description: 'Credit note matching',
         keyPoints: ['Credit notes to match with recipients', 'Reversal of ITC if mismatch'],
         difficulty: 'advanced' as const, estimatedMinutes: 25, practicalRelevance: 'medium' as const },
@@ -1303,7 +1498,58 @@ Provided that no such rectification of any omission or incorrect particulars sha
     sections: [
       { id: 'sec-49', number: '49', title: 'Payment of tax, interest, penalty', description: 'Electronic ledgers system',
         keyPoints: ['Electronic Credit Ledger: ITC available', 'Electronic Cash Ledger: cash deposited', 'Electronic Liability Ledger: tax payable', 'ITC can pay output tax', 'Cash for interest, penalty, fees, other amounts'],
-        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const,
+        fullText: `**Section 49. Payment of tax, interest, penalty and other amounts**
+
+(1) Every deposit made towards tax, interest, penalty, fee or any other amount by a person by internet banking or by using credit or debit cards or National Electronic Fund Transfer or Real Time Gross Settlement or by such other mode and subject to such conditions and restrictions as may be prescribed, shall be credited to the electronic cash ledger of such person to be maintained in such manner as may be prescribed.
+
+(2) The input tax credit as self-assessed in the return of a registered person shall be credited to his electronic credit ledger, in accordance with section 41, to be maintained in such manner as may be prescribed.
+
+(3) The amount available in the electronic cash ledger may be used for making any payment towards tax, interest, penalty, fees or any other amount payable under the provisions of this Act or the rules made thereunder in such manner and subject to such conditions and within such time as may be prescribed.
+
+(4) The amount available in the electronic credit ledger may be used for making any payment towards output tax under this Act or under the Integrated Goods and Services Tax Act in such manner and subject to such conditions and within such time as may be prescribed.
+
+(5) The amount of input tax credit available in the electronic credit ledger of the registered person on account of—
+
+(a) integrated tax shall first be utilised towards payment of integrated tax and the amount remaining, if any, may be utilised towards the payment of central tax and State tax or Union territory tax, as the case may be, in any order;
+
+(b) the central tax shall first be utilised towards payment of central tax and the amount remaining, if any, may be utilised towards the payment of integrated tax;
+
+(c) the State tax or Union territory tax shall first be utilised towards payment of State tax or Union territory tax and the amount remaining, if any, may be utilised towards payment of integrated tax:
+
+Provided that the input tax credit on account of State tax or Union territory tax shall be utilised towards payment of integrated tax only where the balance of the input tax credit on account of central tax is available for payment of integrated tax.
+
+(6) The balance in the electronic cash ledger or electronic credit ledger after payment of tax, interest, penalty, fee or any other amount payable under this Act or the rules made thereunder may be refunded in accordance with the provisions of section 54.
+
+(7) All liabilities of a taxable person under this Act shall be recorded and maintained in an electronic liability register in such manner as may be prescribed.
+
+(8) Every taxable person shall discharge his tax and other dues under this Act or the rules made thereunder in the following order, namely:—
+
+(a) self-assessed tax, and other dues related to returns of previous tax periods;
+
+(b) self-assessed tax, and other dues related to the return of the current tax period;
+
+(c) any other amount payable under this Act or the rules made thereunder including the demand determined under section 73 or section 74.
+
+(9) Every person who has paid the tax on goods or services or both under this Act shall, unless the contrary is proved by him, be deemed to have passed on the full incidence of such tax to the recipient of such goods or services or both.
+
+Explanation.—For the purposes of this section, the expression,—
+
+(a) "output tax" in relation to a taxable person, means the tax chargeable under this Act on taxable supply of goods or services or both made by him or by his agent but excludes tax payable by him on reverse charge basis;
+
+(b) "input tax" in relation to a taxable person, means the central tax, State tax, integrated tax or Union territory tax charged on any supply of goods or services or both made to him and includes—
+
+(i) the integrated goods and services tax charged on import of goods;
+
+(ii) the tax payable under the provisions of sub-sections (3) and (4) of section 9;
+
+(iii) the tax payable under the provisions of sub-sections (3) and (4) of section 5 of the Integrated Goods and Services Tax Act;
+
+(iv) the tax payable under the provisions of sub-sections (3) and (4) of section 9 of the respective State Goods and Services Tax Act; or
+
+(v) the tax payable under the provisions of sub-sections (3) and (4) of section 7 of the Union Territory Goods and Services Tax Act,
+
+but does not include the tax paid under the composition levy.` },
       { id: 'sec-49a', number: '49A', title: 'ITC utilization order', description: 'Order of ITC set-off',
         keyPoints: ['IGST credit first for IGST', 'Then IGST for CGST or SGST', 'CGST only for CGST or IGST', 'SGST only for SGST or IGST'],
         difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const },
