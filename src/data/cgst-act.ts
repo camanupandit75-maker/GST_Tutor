@@ -38,7 +38,36 @@ export const CGST_ACT_CHAPTERS = [
     sections: [
       { id: 'sec-7', number: '7', title: 'Scope of supply', description: 'What constitutes supply under GST - the most fundamental provision',
         keyPoints: ['All forms of supply for consideration in course of business', 'Includes sale, transfer, barter, exchange, license, rental, lease', 'Import of services for consideration', 'Schedule I: Supply without consideration', 'Schedule II: Activities to be treated as supply', 'Schedule III: Neither goods nor services'],
-        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const,
+        fullText: `**Section 7. Scope of supply**
+
+(1) For the purposes of this Act, the expression "supply" includes—
+
+(a) all forms of supply of goods or services or both such as sale, transfer, barter, exchange, licence, rental, lease or disposal made or agreed to be made for a consideration by a person in the course or furtherance of business;
+
+(b) import of services for a consideration whether or not in the course or furtherance of business;
+
+(c) the activities specified in Schedule I, made or agreed to be made without a consideration; and
+
+(d) the activities to be treated as supply of goods or supply of services as referred to in Schedule II.
+
+(1A) Where certain activities or transactions constitute a supply in accordance with the provisions of sub-section (1), they shall be treated either as supply of goods or supply of services as referred to in Schedule II.
+
+(2) Notwithstanding anything contained in sub-section (1),—
+
+(a) activities or transactions specified in Schedule III; or
+
+(b) such activities or transactions undertaken by the Central Government, a State Government or any local authority in which they are engaged as public authorities, as may be notified by the Government on the recommendations of the Council,
+
+shall be treated neither as a supply of goods nor a supply of services.
+
+(3) Subject to the provisions of sub-sections (1), (1A) and (2), the Government may, on the recommendations of the Council, specify, by notification, the transactions that are to be treated as—
+
+(a) a supply of goods and not as a supply of services; or
+
+(b) a supply of services and not as a supply of goods; or
+
+(c) neither a supply of goods nor a supply of services.` },
       { id: 'sec-8', number: '8', title: 'Composite and mixed supplies', description: 'Treatment of bundled supplies',
         keyPoints: ['Composite supply: naturally bundled, principal supply determines rate', 'Mixed supply: not naturally bundled, highest rate applies', 'Example composite: hotel accommodation with breakfast', 'Example mixed: gift hamper with chocolates, dry fruits, sweets'],
         difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
@@ -101,7 +130,16 @@ Provided that where more than one registered persons are having the same Permane
 (5) If the proper officer has reasons to believe that a taxable person has paid tax under sub-section (1) despite not being eligible to pay tax under that sub-section, such person shall, in addition to any tax that may be payable by him under any other provisions of this Act, be liable to a penalty and the provisions of section 73 or section 74 shall, mutatis mutandis, apply for determination of tax and penalty.` },
       { id: 'sec-11', number: '11', title: 'Power to grant exemption', description: 'Exemption from GST',
         keyPoints: ['Government may exempt goods/services', 'By notification on GST Council recommendation', 'Absolute exemption or conditional exemption'],
-        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
+        difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const,
+        fullText: `**Section 11. Power to grant exemption from tax**
+
+(1) Where the Government is satisfied that it is necessary in the public interest so to do, it may, on the recommendations of the Council, by notification, exempt generally, either absolutely or subject to such conditions as may be specified in the notification, goods or services or both of any specified description from the whole or any part of the tax leviable thereon with effect from such date as may be specified in such notification.
+
+(2) Where the Government is satisfied that it is necessary in the public interest so to do, it may, on the recommendations of the Council, by special order in each case, exempt from payment of tax, any goods or services or both on which tax is leviable.
+
+(3) The Government may, if it considers necessary or expedient so to do for the purpose of clarifying the scope or applicability of any notification issued under sub-section (1) or order issued under sub-section (2), insert an explanation in such notification or order, as the case may be, by notification at any time within one year of issue of the notification under sub-section (1) or order under sub-section (2), and every such explanation shall have effect as if it had always been the part of the first such notification or order, as the case may be.
+
+(4) The Government may, on the recommendations of the Council, by notification, specify the conditions subject to which an exemption granted under sub-section (1) or sub-section (2) in respect of any goods or services or both may be withdrawn.` },
       { id: 'sec-11a', number: '11A', title: 'Non-levy in certain cases', description: 'Non-recovery for general practice',
         keyPoints: ['Where tax not levied due to general practice', 'Such practice prevalent across trade', 'No recovery of tax for that period'],
         difficulty: 'intermediate' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const,
@@ -217,7 +255,62 @@ Provided further that in case of supply by associated enterprises, where the sup
         difficulty: 'advanced' as const, estimatedMinutes: 30, practicalRelevance: 'medium' as const },
       { id: 'sec-15', number: '15', title: 'Value of taxable supply', description: 'How to determine taxable value',
         keyPoints: ['Transaction value when supplier and recipient not related', 'Includes all charges except GST', 'Includes packing, transport, insurance charged by supplier', 'Excludes discount if known at time of supply and shown in invoice', 'Post-supply discounts: credit note needed'],
-        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const }
+        difficulty: 'advanced' as const, estimatedMinutes: 45, practicalRelevance: 'high' as const,
+        fullText: `**Section 15. Value of taxable supply**
+
+(1) The value of a supply of goods or services or both shall be the transaction value, which is the price actually paid or payable for the said supply of goods or services or both where the supplier and the recipient of the supply are not related and the price is the sole consideration for the supply.
+
+(2) The value of supply shall include—
+
+(a) any taxes, duties, cesses, fees and charges levied under any law for the time being in force other than this Act, the State Goods and Services Tax Act, the Union Territory Goods and Services Tax Act and the Goods and Services Tax (Compensation to States) Act, if charged separately by the supplier;
+
+(b) any amount that the supplier is liable to pay in relation to such supply but which has been incurred by the recipient of the supply and not included in the price actually paid or payable for the goods or services or both;
+
+(c) incidental expenses, including commission and packing, charged by the supplier to the recipient of a supply and any amount charged for anything done by the supplier in respect of the supply of goods or services or both at the time of, or before delivery of goods or supply of services;
+
+(d) interest or late fee or penalty for delayed payment of any consideration for any supply; and
+
+(e) subsidies directly linked to the price excluding subsidies provided by the Central Government and State Governments.
+
+Explanation.—For the purposes of this sub-section, the amount of subsidy shall be included in the value of supply of the supplier who receives the subsidy.
+
+(3) The value of the supply shall not include any discount which is given—
+
+(a) before or at the time of the supply if such discount has been duly recorded in the invoice issued in respect of such supply; and
+
+(b) after the supply has been effected if—
+
+(i) such discount is established in terms of an agreement entered into at or before the time of such supply and specifically linked to relevant invoices; and
+
+(ii) input tax credit as is attributable to the discount on the basis of document issued by the supplier has been reversed by the recipient of the supply.
+
+(4) Where the value of the supply of goods or services or both cannot be determined under sub-section (1), the same shall be determined in such manner as may be prescribed.
+
+(5) Notwithstanding anything contained in sub-section (1) or sub-section (4), the value of such supplies as may be notified by the Government on the recommendations of the Council shall be determined in such manner as may be prescribed.
+
+Explanation.—For the purposes of this Act,—
+
+(a) persons shall be deemed to be "related persons" if—
+
+(i) such persons are officers or directors of one another's businesses;
+
+(ii) such persons are legally recognised partners in business;
+
+(iii) such persons are employer and employee;
+
+(iv) any person directly or indirectly owns, controls or holds twenty-five per cent. or more of the outstanding voting stock or shares of both of them;
+
+(v) one of them directly or indirectly controls the other;
+
+(vi) both of them are directly or indirectly controlled by a third person;
+
+(vii) together they directly or indirectly control a third person; or
+
+(viii) they are members of the same family;
+
+(b) the term "person" also includes legal persons;
+
+(c) persons who are associated in the business of one another in that one is the sole agent or sole distributor or sole concessionaire, howsoever described, of the other, shall be deemed to be related.` }
     ]
   },
   {
@@ -375,10 +468,44 @@ Explanation.—For the purposes of clauses (c) and (d), the expression "construc
         difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const },
       { id: 'sec-19', number: '19', title: 'ITC on inputs sent for job work', description: 'Job work ITC provisions',
         keyPoints: ['Inputs sent for job work: return within 1 year', 'Capital goods: return within 3 years', 'If not returned, deemed supply'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 25, practicalRelevance: 'high' as const,
+        fullText: `**Section 19. Taking input tax credit in respect of inputs and capital goods sent for job work**
+
+(1) The principal shall, subject to such conditions and restrictions as may be prescribed, be allowed input tax credit on inputs sent to a job worker for job work.
+
+(2) Notwithstanding anything contained in clause (b) of sub-section (2) of section 16, the principal shall be entitled to take credit of input tax on inputs even if the inputs are directly sent to a job worker for job work without being first brought to his place of business.
+
+(3) Where the inputs sent for job work are not received back by the principal after completion of job work or otherwise within one year of being sent out, it shall be deemed that such inputs had been supplied by the principal to the job worker on the day when the inputs were sent out:
+
+Provided that where the inputs are sent directly to a job worker, the period of one year shall be counted from the date of receipt of inputs by the job worker.
+
+(4) The principal shall, subject to such conditions and restrictions as may be prescribed, be allowed input tax credit on capital goods sent to a job worker for job work.
+
+(5) Notwithstanding anything contained in clause (b) of sub-section (2) of section 16, the principal shall be entitled to take credit of input tax on capital goods even if the capital goods are directly sent to a job worker for job work without being first brought to his place of business.
+
+(6) Where the capital goods sent for job work are not received back by the principal within a period of three years of being sent out, it shall be deemed that such capital goods had been supplied by the principal to the job worker on the day when the capital goods were sent out:
+
+Provided that where the capital goods are sent directly to a job worker, the period of three years shall be counted from the date of receipt of capital goods by the job worker.
+
+(7) Nothing contained in sub-section (3) or sub-section (6) shall apply to moulds and dies, jigs and fixtures, or tools sent out to a job worker for job work.` },
       { id: 'sec-20', number: '20', title: 'Input Service Distributor', description: 'Distribution of ITC by ISD',
         keyPoints: ['Office receiving common invoices', 'Distributes credit to branches', 'Pro-rata distribution based on turnover'],
-        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'medium' as const },
+        difficulty: 'advanced' as const, estimatedMinutes: 35, practicalRelevance: 'medium' as const,
+        fullText: `**Section 20. Manner of distribution of credit by Input Service Distributor**
+
+(1) The Input Service Distributor shall distribute the input tax credit in the manner and subject to such conditions and restrictions as may be prescribed.
+
+(2) The Input Service Distributor may distribute the credit subject to the following conditions, namely:—
+
+(a) the credit can be distributed to the recipients to whom the input service is attributable in accordance with the provisions of clause (d) or clause (e) of sub-section (2) of section 17; and
+
+(b) the credit of tax paid on input services used exclusively for the purposes of a business vertical shall be distributed only to that business vertical.
+
+(3) The Input Service Distributor shall distribute the input tax credit in such manner and subject to such conditions as may be prescribed.
+
+(4) The Input Service Distributor shall, in accordance with the provisions of clause (h) of sub-section (2) of section 16, be eligible to distribute input tax credit in respect of a supply of goods or services or both received by him, only to the extent to which credit is available in respect of such supply, and such distribution shall be subject to such conditions and restrictions as may be prescribed.
+
+(5) The Input Service Distributor shall distribute the input tax credit only to the recipients to whom the input service is attributable and such distribution shall be subject to such conditions and restrictions as may be prescribed.` },
       { id: 'sec-21', number: '21', title: 'Manner of recovery of excess credit', description: 'Recovery of wrongly taken ITC',
         keyPoints: ['Excess credit taken: add to output tax liability', 'Interest @ 24% applicable', 'Show cause notice procedure'],
         difficulty: 'intermediate' as const, estimatedMinutes: 20, practicalRelevance: 'high' as const }
@@ -465,7 +592,58 @@ Notwithstanding anything contained in sub-section (1) of section 22, the followi
     sections: [
       { id: 'sec-31', number: '31', title: 'Tax invoice', description: 'When and how to issue tax invoice',
         keyPoints: ['Registered person making taxable supply', 'Before or at time of removal/delivery of goods', 'Before or after provision of service (within 30 days)', 'Bill of supply for exempt supplies/composition'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 35, practicalRelevance: 'high' as const,
+        fullText: `**Section 31. Tax invoice**
+
+(1) A registered person supplying taxable goods shall, before or at the time of,—
+
+(a) removal of goods for supply to the recipient, where the supply involves movement of goods; or
+
+(b) delivery of goods or making available thereof to the recipient, in any other case,
+
+issue a tax invoice showing the description, quantity and value of goods, the tax charged thereon and such other particulars as may be prescribed:
+
+Provided that the Government may, on the recommendations of the Council, by notification, specify the categories of goods or supplies in respect of which a tax invoice shall be issued, within such time and in such manner as may be prescribed.
+
+(2) A registered person supplying taxable services shall, before or after the provision of service but within a prescribed period, issue a tax invoice, showing the description, quantity and value of services, the tax charged thereon and such other particulars as may be prescribed:
+
+Provided that the Government may, on the recommendations of the Council, by notification and subject to such conditions as may be specified therein, specify the categories of services in respect of which—
+
+(a) any other document issued in relation to the supply shall be deemed to be a tax invoice; or
+
+(b) no tax invoice shall be issued.
+
+(3) Notwithstanding anything contained in sub-sections (1) and (2)—
+
+(a) a registered person may, within one month from the date of issuance of certificate of registration and in such manner as may be prescribed, issue a revised invoice against the invoice already issued during the period beginning with the effective date of registration till the date of issuance of certificate of registration to him;
+
+(b) a registered person may not issue a tax invoice if the value of the goods or services or both supplied together with the tax payable thereon is less than two hundred rupees subject to such conditions and in such manner as may be prescribed;
+
+(c) a registered person supplying exempted goods or services or both or paying tax under the provisions of section 10 shall issue, instead of a tax invoice, a bill of supply containing such particulars and in such manner as may be prescribed:
+
+Provided that the registered person may not issue a bill of supply if the value of the goods or services or both supplied together with the tax payable thereon is less than two hundred rupees subject to such conditions and in such manner as may be prescribed;
+
+(d) a registered person shall, on receipt of advance payment with respect to any supply of goods or services or both, issue a receipt voucher or such other document, containing such particulars as may be prescribed;
+
+(e) where, on receipt of advance payment with respect to any supply of goods or services or both the registered person issues a receipt voucher, but subsequently no supply is made and no tax invoice is issued in pursuance thereof, the said registered person may issue to the person who had made the payment, a refund voucher against such payment;
+
+(f) a registered person who is liable to pay tax under sub-section (3) or sub-section (4) of section 9 shall issue an invoice in respect of goods or services or both received by him from the supplier whether registered or not, and such invoice shall be deemed to be an invoice issued under this section whether the said registered person is registered or not.
+
+(4) In case of continuous supply of goods, where successive statements of accounts or successive payments are involved, the invoice shall be issued before or at the time each such statement is issued or, as the case may be, each such payment is received.
+
+(5) Subject to the provisions of clause (d) and clause (e) of sub-section (3), in case of continuous supply of services,—
+
+(a) where the due date of payment is ascertainable from the contract, the invoice shall be issued on or before the due date of payment;
+
+(b) where the due date of payment is not ascertainable from the contract, the invoice shall be issued before or at the time when the supplier of service receives the payment;
+
+(c) where the payment is linked to the completion of an event, the invoice shall be issued on or before the date of completion of that event.
+
+(6) In a case where the supply of services ceases under a contract before the completion of the supply, the invoice shall be issued at the time when the supply ceases and such invoice shall be issued to the extent of the supply made before such cessation.
+
+(7) Where the goods being sent or taken on approval for sale or return are removed before the supply takes place, the invoice shall be issued before or at the time of supply or six months from the date of removal, whichever is earlier.
+
+(8) Notwithstanding anything contained in sub-section (1), where the goods being sent or taken on approval for sale or return are removed before the supply takes place, the invoice shall be issued before or at the time of supply or six months from the date of removal, whichever is earlier.` },
       { id: 'sec-32', number: '32', title: 'Prohibition of unauthorized collection', description: 'Who cannot collect tax',
         keyPoints: ['Unregistered persons cannot collect tax', 'Composition dealers cannot collect tax', 'Penalty for violation'],
         difficulty: 'basic' as const, estimatedMinutes: 15, practicalRelevance: 'medium' as const },
@@ -474,7 +652,20 @@ Notwithstanding anything contained in sub-section (1) of section 22, the followi
         difficulty: 'basic' as const, estimatedMinutes: 10, practicalRelevance: 'high' as const },
       { id: 'sec-34', number: '34', title: 'Credit and debit notes', description: 'For value/tax adjustments post-supply',
         keyPoints: ['Credit note: when value/tax reduces', 'Debit note: when value/tax increases', 'Time limit: 30th November of next FY', 'Details to be declared in return'],
-        difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const },
+        difficulty: 'intermediate' as const, estimatedMinutes: 30, practicalRelevance: 'high' as const,
+        fullText: `**Section 34. Credit and debit notes**
+
+(1) Where a tax invoice has been issued for supply of any goods or services or both and the taxable value or tax charged in that tax invoice is found to exceed the taxable value or tax payable in respect of such supply, or where the goods supplied are returned by the recipient, or where goods or services or both supplied are found to be deficient, the registered person, who has supplied such goods or services or both, may issue to the recipient a credit note containing such particulars as may be prescribed.
+
+(2) Any registered person who issues a credit note in relation to a supply of goods or services or both shall declare the details of such credit note in the return for the month during which such credit note has been issued but not later than September following the end of the financial year in which such supply was made, or the date of furnishing of the relevant annual return, whichever is earlier, and the tax liability shall be adjusted in such manner as may be prescribed:
+
+Provided that no reduction in output tax liability of the supplier shall be permitted, if the incidence of tax and interest on such supply has been passed on to any other person.
+
+(3) Where a tax invoice has been issued for supply of any goods or services or both and the taxable value or tax charged in that tax invoice is found to be less than the taxable value or tax payable in respect of such supply, the registered person, who has supplied such goods or services or both, shall issue to the recipient a debit note containing such particulars as may be prescribed.
+
+(4) Any registered person who issues a debit note in relation to a supply of goods or services or both shall declare the details of such debit note in the return for the month during which such debit note has been issued and the tax liability shall be adjusted in such manner as may be prescribed:
+
+Provided that any registered person who issues a debit note in relation to a supply of goods or services or both shall declare the details of such debit note in the return for the month during which such debit note has been issued but not later than September following the end of the financial year in which such supply was made, or the date of furnishing of the relevant annual return, whichever is earlier, and the tax liability shall be adjusted in such manner as may be prescribed.` },
       { id: 'sec-34a', number: '34A', title: 'Restriction on credit notes', description: 'Credit note limitations',
         keyPoints: ['Cannot reduce output below zero', 'Recipient must reverse ITC if already taken'],
         difficulty: 'intermediate' as const, estimatedMinutes: 15, practicalRelevance: 'high' as const }
