@@ -268,9 +268,11 @@ Under RCM, the recipient pays GST instead of supplier.
 - ₹10,000 or 10% of tax due, whichever is higher
 - Minimum ₹10,000
 
-**Penalty for Incorrect Return (Section 73):**
+**Penalty for Incorrect Return (As per Section 73):**
 - Show cause notice issued
-- Penalty up to 10% of tax or ₹10,000, whichever is higher`,
+- Penalty up to 10% of tax or ₹10,000, whichever is higher
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47), [Section 50](/modules/cgst-act/returns/sec-50) and [CGST Act - Chapter 15: Demand and Recovery](/modules/cgst-act/demand-recovery) - [Section 73](/modules/cgst-act/demand-recovery/sec-73)*`,
 
   'late fee': `**Late Fees for GST Returns:**
 
@@ -319,21 +321,26 @@ Under RCM, the recipient pays GST instead of supplier.
 - CA certification required`,
 
   // Late Fee Calculations
-  'late fee calculation': `**Late Fee Calculation:**
+  'late fee calculation': `**Late Fee Calculation (As per Section 47):**
 
-**GSTR-1:**
-- ₹200 per day = ₹100 CGST + ₹100 SGST/IGST
-- Maximum: ₹5,000 per return
-- Example: 10 days late = ₹2,000 (₹1,000 CGST + ₹1,000 SGST)
+**GSTR-1 Late Fee:**
+- **₹200 per day** = ₹100 CGST + ₹100 SGST/IGST
+- **Maximum:** ₹5,000 per return
+- **Example:** 10 days late = ₹2,000 (₹1,000 CGST + ₹1,000 SGST)
+- **NIL returns:** ₹20/day (₹10 CGST + ₹10 SGST/IGST), max ₹500
 
-**GSTR-3B:**
-- ₹50 per day = ₹25 CGST + ₹25 SGST/IGST
-- Maximum: ₹5,000
-- Example: 20 days late = ₹1,000 (₹500 CGST + ₹500 SGST)
+**GSTR-3B Late Fee:**
+- **₹50 per day** = ₹25 CGST + ₹25 SGST/IGST
+- **Maximum:** ₹5,000
+- **Example:** 20 days late = ₹1,000 (₹500 CGST + ₹500 SGST)
+- **NIL returns:** ₹20/day (₹10 CGST + ₹10 SGST/IGST), max ₹500
 
-**NIL Returns:**
-- GSTR-1: ₹20/day (₹10 + ₹10), max ₹500
-- GSTR-3B: ₹20/day, max ₹500`,
+**Calculation Formula:**
+- Late fee = Number of days × Daily rate
+- Subject to maximum limit
+- Separate calculation for CGST and SGST/IGST
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47)*`,
 
   // Interest Rates
   'interest rate': `**Interest Rates under GST:**
@@ -551,11 +558,66 @@ ITC is blocked on:
 - Must file return for each month of registration
 - Cannot opt for composition scheme`,
 
-  'gstr-6': `**GSTR-6 (Input Service Distributor):**
+  'gstr-6': `**GSTR-6 (Input Service Distributor Return):**
 - **Due:** 13th of the following month
 - For Input Service Distributors (ISD)
 - Distribution of ITC to branches/units
-- Must be registered as ISD`,
+- Must be registered as ISD
+
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 52](/modules/cgst-act/returns/sec-52)*`,
+
+  'input service distributor': `**Input Service Distributor (ISD) - Section 2(61):**
+
+**Definition:**
+- Office of supplier receiving invoices for common services
+- Distributes ITC to branches/units
+- Must be registered as ISD
+
+**Registration:**
+- Separate registration as ISD
+- Can be registered person or distinct person
+- Must have GSTIN
+
+**ITC Distribution:**
+- Receives invoices for common services
+- Distributes ITC to recipient units
+- Based on turnover ratio or equal distribution
+- Must issue ISD invoice (GSTIN-ISD)
+
+**Return Filing:**
+- **GSTR-6:** Due 13th of following month
+- Shows ITC received and distributed
+- Auto-populated from GSTR-1 of suppliers
+
+**Key Points:**
+- Only for common services (not goods)
+- ITC distributed, not transferred
+- Recipient units can claim ITC
+- Must maintain proper records
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 20](/modules/cgst-act/input-tax-credit/sec-20)*`,
+
+  'isd': `**ISD (Input Service Distributor):**
+
+**What is ISD?**
+- Office receiving invoices for common services
+- Distributes ITC to branches/units
+- Registered separately as ISD
+
+**Registration:**
+- Must register as ISD
+- Can be registered person or distinct person
+- Separate GSTIN for ISD
+
+**ITC Distribution:**
+- Receives invoices for common services
+- Distributes ITC based on turnover or equally
+- Issues ISD invoice to recipient units
+- Recipient units can claim ITC
+
+**Return:** GSTR-6 (due 13th of following month)
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 20](/modules/cgst-act/input-tax-credit/sec-20)*`,
 
   'gstr-7': `**GSTR-7 (TDS Return):**
 - **Due:** 10th of the following month
@@ -592,12 +654,82 @@ ITC is blocked on:
 - TCS return: GSTR-8 (due 10th of following month)
 - Supplier can claim TCS as credit`,
 
-  'refund': `**GST Refund:**
-- **Time limit:** 2 years from relevant date
-- **Types:** Export refund, ITC refund, excess payment refund
-- **Process:** File refund application (RFD-01)
-- **Interest:** 6% if refund delayed beyond 60 days
-- **Documents:** Invoice, shipping bill, bank statement`,
+  'refund': `**GST Refund (Section 54):**
+
+**Time Limit:**
+- **2 years** from relevant date (date of export, date of payment, etc.)
+- Cannot claim refund after 2 years
+
+**Types of Refunds:**
+1. **Export Refund:** Zero-rated supplies (exports, SEZ supplies)
+2. **ITC Refund:** Accumulated ITC on exports, inverted duty structure
+3. **Excess Payment Refund:** Tax paid in excess
+4. **Refund on Cancellation:** Registration cancelled, tax paid in advance
+5. **Refund to UN Bodies:** Special refund procedure
+
+**Process:**
+- File refund application **RFD-01** on GST portal
+- **Acknowledgment:** RFD-02 (within 15 days)
+- **Deficiency memo:** RFD-03 (if application incomplete)
+- **Payment order:** RFD-05 (within 60 days)
+- **Payment:** Within 60 days of order
+
+**Interest on Delayed Refund:**
+- **6% per annum** if refund delayed beyond 60 days
+- Calculated from date of application to date of payment
+
+**Documents Required:**
+- Invoice, shipping bill, bank statement
+- Export documents, LUT/bond
+- Statement of exports
+
+*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
+
+  'refund procedure': `**GST Refund Procedure:**
+
+**Step 1: Application (RFD-01)**
+- File refund application on GST portal
+- Select refund type (export, ITC, excess payment, etc.)
+- Upload required documents
+
+**Step 2: Acknowledgment (RFD-02)**
+- Issued within **15 days** of application
+- Application number generated
+
+**Step 3: Processing**
+- Officer processes application
+- May issue deficiency memo (RFD-03) if incomplete
+- Can issue show cause notice if required
+
+**Step 4: Payment Order (RFD-05)**
+- Issued within **60 days** of application
+- Refund sanctioned or rejected
+
+**Step 5: Payment**
+- Refund credited within **60 days** of order
+- Interest @ 6% if delayed beyond 60 days
+
+**Time Limit:** 2 years from relevant date
+
+*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
+
+  'refund timeline': `**GST Refund Timeline:**
+
+**Application to Acknowledgment:** 15 days
+**Acknowledgment to Payment Order:** 60 days
+**Payment Order to Payment:** 60 days
+**Total Maximum Time:** 135 days (excluding interest period)
+
+**Interest Calculation:**
+- If refund delayed beyond 60 days from application
+- Interest @ **6% per annum**
+- From date of application to date of payment
+
+**Time Limit to File:**
+- **2 years** from relevant date
+- Cannot claim after 2 years
+
+*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
 
   'audit': `**GST Audit (Section 35):**
 - **Required for:** Turnover > ₹5 crore
@@ -755,7 +887,137 @@ ITC is blocked on:
 - Offense compounded
 - No prosecution if compounded successfully
 
-*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 138](/modules/cgst-act/offences-penalties/sec-138)*`
+*Reference: [CGST Act - Chapter 19: Offences and Penalties](/modules/cgst-act/offences-penalties) - [Section 138](/modules/cgst-act/offences-penalties/sec-138)*`,
+
+  // Export and Zero-Rated Supplies
+  'export': `**Export under GST (Section 2(5) IGST Act):**
+
+**Definition:**
+- Taking goods out of India to a place outside India
+- Supply of goods/services to a place outside India
+- Zero-rated supply (0% GST)
+
+**Zero-Rated Supply:**
+- **Tax rate:** 0%
+- **ITC available:** Full ITC on inputs
+- Can pay tax and claim refund OR supply under LUT
+
+**Export Procedure:**
+1. **LUT/Bond:** File LUT (Letter of Undertaking) or execute bond
+2. **Export Invoice:** Issue export invoice without tax
+3. **Shipping Bill:** File shipping bill with customs
+4. **Export Declaration:** Declare export in GSTR-1
+5. **Refund:** Claim refund of ITC (if tax paid)
+
+**Documents:**
+- Export invoice
+- Shipping bill
+- Bill of lading/airway bill
+- Bank realization certificate
+
+**Time Limit:**
+- Refund application: 2 years from export date
+- Payment to supplier: 180 days (for ITC)
+
+*Reference: [IGST Act - Chapter 4: Zero Rated Supply](/modules/igst-act/igst-zero-rated) - [Section 16](/modules/igst-act/igst-zero-rated/sec-16)*`,
+
+  'zero rated supply': `**Zero-Rated Supply (Section 16 IGST Act):**
+
+**Definition:**
+- Supply of goods/services at **0% tax rate**
+- Includes exports and supplies to SEZ
+
+**Types:**
+1. **Export of Goods/Services:** Taking out of India
+2. **Supply to SEZ:** Supply to SEZ developer or unit
+
+**ITC Availability:**
+- **Full ITC available** on inputs used for zero-rated supplies
+- Can claim refund of accumulated ITC
+- No reversal required
+
+**Options:**
+1. **Pay tax and claim refund:** Pay IGST, claim refund
+2. **Supply under LUT:** File LUT, supply without payment
+
+**Key Difference from Exempt:**
+- Zero-rated: 0% tax, ITC available
+- Exempt: No tax, ITC NOT available
+
+*Reference: [IGST Act - Chapter 4: Zero Rated Supply](/modules/igst-act/igst-zero-rated) - [Section 16](/modules/igst-act/igst-zero-rated/sec-16)*`,
+
+  'sez supply': `**SEZ Supply (Zero-Rated):**
+
+**Definition:**
+- Supply to SEZ developer or SEZ unit
+- Zero-rated supply (0% GST)
+- Full ITC available
+
+**Procedure:**
+- Issue invoice without tax
+- File LUT or pay tax and claim refund
+- Declare in GSTR-1
+- Claim refund of ITC
+
+**Documents:**
+- Invoice
+- SEZ acknowledgment
+- Proof of receipt by SEZ
+
+*Reference: [IGST Act - Chapter 4: Zero Rated Supply](/modules/igst-act/igst-zero-rated) - [Section 16](/modules/igst-act/igst-zero-rated/sec-16)*`,
+
+  // Job Work
+  'job work': `**Job Work (Section 2(68)):**
+
+**Definition:**
+- Treatment or processing of goods belonging to another person
+- Principal sends goods to job worker
+- Job worker processes and returns
+
+**ITC on Job Work:**
+- Principal can claim ITC on goods sent for job work
+- Job worker not required to register if turnover < threshold
+- Principal responsible for tax on final product
+
+**Time Limit:**
+- Goods must be returned within **1 year** (or 3 years for capital goods)
+- If not returned, treated as supply by principal
+
+**Documentation:**
+- Delivery challan for sending goods
+- Delivery challan for receiving processed goods
+- Maintain records of goods sent/received
+
+**Key Points:**
+- Job worker can work from own premises or principal's premises
+- Principal can send inputs directly to job worker
+- No tax on intermediate movement
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 19](/modules/cgst-act/input-tax-credit/sec-19)*`,
+
+  'job work provisions': `**Job Work Provisions (Section 19):**
+
+**Principal's Responsibilities:**
+- Can claim ITC on goods sent for job work
+- Responsible for tax on final product
+- Must ensure goods returned within time limit
+
+**Job Worker's Status:**
+- Not required to register if turnover < threshold
+- Can work from own premises or principal's premises
+- Must maintain records
+
+**Time Limits:**
+- **Goods:** 1 year from date of sending
+- **Capital Goods:** 3 years from date of sending
+- If not returned, treated as supply
+
+**Documentation:**
+- Delivery challan (no tax invoice required)
+- Maintain records of movement
+- Track goods sent and received
+
+*Reference: [CGST Act - Chapter 5: Input Tax Credit](/modules/cgst-act/input-tax-credit) - [Section 19](/modules/cgst-act/input-tax-credit/sec-19)*`
 };
 
 
@@ -1056,6 +1318,18 @@ function getRelatedTopics(query: string): string[] {
   if (q.includes('prosecution') || q.includes('offense') || q.includes('criminal')) {
     topics.push('Prosecution', 'Section 132', 'Section 138 Compounding', 'Penalty Section 73', 'Penalty Section 74');
   }
+  if (q.includes('export') || q.includes('zero rated') || q.includes('sez')) {
+    topics.push('Export', 'Zero-rated supply', 'SEZ supply', 'LUT', 'Refund procedure');
+  }
+  if (q.includes('refund')) {
+    topics.push('Refund procedure', 'Refund timeline', 'Export', 'Zero-rated supply', 'ITC refund');
+  }
+  if (q.includes('job work') || q.includes('jobwork')) {
+    topics.push('Job work', 'Job work provisions', 'ITC eligibility', 'Section 19');
+  }
+  if (q.includes('isd') || q.includes('input service distributor')) {
+    topics.push('Input Service Distributor', 'ISD', 'GSTR-6', 'ITC distribution');
+  }
   
   return topics.slice(0, 5); // Return top 5 related topics
 }
@@ -1180,6 +1454,13 @@ function getAIResponse(question: string): string {
     { patterns: ['prosecution', 'when is prosecution', 'prosecution done', 'offense lead to prosecution', 'offence lead to prosecution', 'when does offense lead', 'when does offence lead', 'offense leads to', 'offence leads to'], key: 'when is prosecution done' },
     { patterns: ['section 132', 'prosecution offense', 'prosecution offence'], key: 'section 132' },
     { patterns: ['section 138', 'compounding', 'compounding offense', 'compounding offence'], key: 'section 138' },
+    { patterns: ['export', 'export procedure', 'export gst'], key: 'export' },
+    { patterns: ['zero rated', 'zero-rated', 'zero rated supply'], key: 'zero rated supply' },
+    { patterns: ['sez', 'sez supply', 'sez supplies'], key: 'sez supply' },
+    { patterns: ['job work', 'jobwork', 'job work provisions'], key: 'job work' },
+    { patterns: ['refund procedure', 'refund process', 'how to claim refund'], key: 'refund procedure' },
+    { patterns: ['refund timeline', 'refund time', 'refund duration'], key: 'refund timeline' },
+    { patterns: ['isd', 'input service distributor', 'isd registration'], key: 'input service distributor' },
   ];
   
   for (const pattern of keywordPatterns) {
@@ -1240,6 +1521,47 @@ LUT is a document that allows exporters to make zero-rated supplies (exports and
 - LUT cannot be used if there are pending refunds
 
 *Reference: [Section 16 of IGST Act - Zero rated supply](/modules/igst-act/igst-zero-rated)*`;
+  }
+  
+  // Export and Zero-Rated Supplies
+  if ((q.includes('export') || originalQ.includes('export')) && 
+      !q.includes('refund') && !q.includes('lut')) {
+    return GST_RESPONSES['export'];
+  }
+  
+  if (q.includes('zero rated') || q.includes('zero-rated') || 
+      (q.includes('zero') && q.includes('rated'))) {
+    return GST_RESPONSES['zero rated supply'];
+  }
+  
+  if (q.includes('sez') && (q.includes('supply') || q.includes('supplies'))) {
+    return GST_RESPONSES['sez supply'];
+  }
+  
+  // Job Work
+  if (q.includes('job work') || originalQ.includes('job work')) {
+    return GST_RESPONSES['job work'];
+  }
+  
+  if (q.includes('job work provisions') || q.includes('jobwork provisions')) {
+    return GST_RESPONSES['job work provisions'];
+  }
+  
+  // Refund
+  if ((q.includes('refund') && (q.includes('procedure') || q.includes('process'))) ||
+      originalQ.includes('refund procedure')) {
+    return GST_RESPONSES['refund procedure'];
+  }
+  
+  if (q.includes('refund timeline') || q.includes('refund time') || 
+      (q.includes('refund') && q.includes('time'))) {
+    return GST_RESPONSES['refund timeline'];
+  }
+  
+  // ISD
+  if ((q.includes('isd') || q.includes('input service distributor')) && 
+      !q.includes('gstr-6')) {
+    return GST_RESPONSES['input service distributor'];
   }
   
   // Handle "reversal formula" or "reverse formula" queries FIRST - common ITC reversal formula
@@ -1824,12 +2146,12 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
   let response = '';
   
   if (isUncertain || q.length < 5) {
-    response = `I'm not certain about the exact answer to "${question}". 
+    response = `I don't have specific info on this. Please check official CBIC portal or consult a professional.
 
-**Please check official sources:**
-- GST Portal: https://www.gst.gov.in
-- CBIC Website: https://www.cbic.gov.in
-- ICAI Publications for detailed provisions
+**Official Sources:**
+- **GST Portal:** https://www.gst.gov.in
+- **CBIC Website:** https://www.cbic.gov.in
+- **ICAI Publications** for detailed provisions
 
 **I can help with:**
 - Return due dates (GSTR-1, 3B, 9, 9C)
@@ -1837,7 +2159,10 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
 - ITC rules and time limits
 - Registration thresholds
 - E-way bill requirements
-- Composition scheme details`;
+- Composition scheme details
+- Export and zero-rated supplies
+- Refund procedures
+- Job work provisions`;
   } else {
     response = `I searched through ${totalChapters} chapters and ${totalSections} sections in the GST curriculum but couldn't find a specific match for "${question}".
 
