@@ -1085,8 +1085,20 @@ function getAIResponse(question: string): string {
     }
   }
   
+  // Check for prosecution queries FIRST (before penalty checks)
+  // This ensures prosecution queries don't get matched to penalty responses
+  if ((q.includes('prosecution') || originalQ.includes('prosecution')) &&
+      (q.includes('when') || q.includes('lead') || q.includes('offense') || q.includes('offence') || 
+       q.includes('done') || q.includes('initiate') || q.includes('start'))) {
+    return GST_RESPONSES['when is prosecution done'];
+  }
+  
+  if (q.includes('prosecution') || originalQ.includes('prosecution')) {
+    return GST_RESPONSES['prosecution'];
+  }
+  
   // Check for penalty/late fee queries IMMEDIATELY after abbreviation expansion
-  // This must be FIRST to avoid curriculum search matching wrong topics
+  // This must be AFTER prosecution checks to avoid matching wrong topics
   if (q.includes('penalty') || originalQ.includes('penalty')) {
     // If query mentions penalty with filing/return/gstr/gst 3b, return penalty response
     if (q.includes('filing') || q.includes('return') || q.includes('gstr') || q.includes('gst return') ||
@@ -1157,9 +1169,9 @@ function getAIResponse(question: string): string {
     { patterns: ['qrmp', 'quarterly return'], key: 'qrmp' },
     { patterns: ['tds', 'tax deducted'], key: 'tds gst' },
     { patterns: ['tcs', 'tax collected'], key: 'tcs gst' },
-    { patterns: ['prosecution', 'when is prosecution', 'prosecution done'], key: 'when is prosecution done' },
-    { patterns: ['section 132', 'prosecution offense'], key: 'section 132' },
-    { patterns: ['section 138', 'compounding'], key: 'section 138' },
+    { patterns: ['prosecution', 'when is prosecution', 'prosecution done', 'offense lead to prosecution', 'offence lead to prosecution', 'when does offense lead', 'when does offence lead', 'offense leads to', 'offence leads to'], key: 'when is prosecution done' },
+    { patterns: ['section 132', 'prosecution offense', 'prosecution offence'], key: 'section 132' },
+    { patterns: ['section 138', 'compounding', 'compounding offense', 'compounding offence'], key: 'section 138' },
   ];
   
   for (const pattern of keywordPatterns) {
