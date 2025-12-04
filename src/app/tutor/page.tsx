@@ -186,6 +186,68 @@ Under RCM, the recipient pays GST instead of supplier.
 - For turnover > ₹5 crore
 - CA certification required`,
 
+  'all return due dates': `**All GST Return Due Dates:**
+
+**Monthly Returns:**
+
+**GSTR-1 (Outward Supplies):**
+- Due: 11th of the following month
+- Details of all outward supplies made during the month
+
+**GSTR-3B (Summary Return):**
+- Due: 20th of the following month
+- For QRMP (Quarterly Return Monthly Payment) taxpayers: 22nd/24th of month following the quarter
+- Summary of outward/inward supplies, ITC claimed, tax payable
+
+**GSTR-2A/2B (Auto-populated Inward Supplies):**
+- Auto-populated from supplier's GSTR-1
+- No separate filing required
+
+**Quarterly Returns (QRMP Scheme):**
+- GSTR-1: Due by 13th of month following the quarter
+- GSTR-3B: Due by 22nd/24th of month following the quarter
+
+**Annual Returns:**
+
+**GSTR-9 (Annual Return):**
+- Due: 31st December of the following financial year
+- Consolidation of all monthly/quarterly returns filed during the year
+- Must be filed by all regular taxpayers
+
+**GSTR-9C (Reconciliation Statement):**
+- Due: 31st December of the following financial year
+- Required for taxpayers with turnover > ₹5 crore
+- Self-certified reconciliation statement
+- CA certification required
+
+**Other Returns:**
+
+**GSTR-4 (Composition Scheme):**
+- Due: 18th of month following the quarter
+- For composition taxpayers
+
+**GSTR-5 (Non-Resident Taxable Person):**
+- Due: 20th of the following month
+- For non-resident taxable persons
+
+**GSTR-6 (Input Service Distributor):**
+- Due: 13th of the following month
+- For Input Service Distributors
+
+**GSTR-7 (TDS Return):**
+- Due: 10th of the following month
+- For persons deducting TDS
+
+**GSTR-8 (TCS Return):**
+- Due: 10th of the following month
+- For e-commerce operators collecting TCS
+
+**Important Notes:**
+- Due dates may be extended by government notifications
+- Late fees apply for delayed filing
+- Interest applies on late payment of tax
+- NIL returns have reduced late fees`,
+
   'penalty': `**Penalties and Late Fees:**
 
 **Late Fee for Returns (Section 47):**
@@ -340,6 +402,129 @@ function searchCurriculum(query: string): { section: any; chapter: any; module: 
   return results.sort((a, b) => b.score - a.score).slice(0, 8);
 }
 
+function formatMessageContent(content: string): string {
+  let html = content;
+  
+  // Split content into sections for better parsing
+  const sections: string[] = [];
+  let currentSection = '';
+  let inKeyPoints = false;
+  let inRelatedTopics = false;
+  
+  const lines = html.split('\n');
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Detect Key Points section
+    if (line.trim().startsWith('**Key Points:**')) {
+      if (currentSection) sections.push(currentSection);
+      currentSection = '<h4 class="text-sm font-semibold mt-4 mb-2 text-white">Key Points:</h4><ul class="list-disc space-y-1 mb-4 ml-4">';
+      inKeyPoints = true;
+      continue;
+    }
+    
+    // Detect Related Topics section
+    if (line.trim().startsWith('**Related Topics:**')) {
+      if (currentSection) sections.push(currentSection);
+      currentSection = '<div class="mt-4 pt-4 border-t border-gray-600"><h4 class="text-xs font-semibold mb-2 text-gray-400">Related Topics:</h4><ul class="list-disc space-y-1 ml-4">';
+      inRelatedTopics = true;
+      inKeyPoints = false;
+      continue;
+    }
+    
+    // Detect Reference section (starts with *Reference:)
+    if (line.trim().startsWith('*Reference:')) {
+      if (currentSection) sections.push(currentSection);
+      // Extract reference link
+      const refMatch = line.match(/\*Reference:\s*\[([^\]]+)\]\(([^)]+)\)/);
+      if (refMatch) {
+        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2"><strong>Reference:</strong> <a href="${refMatch[2]}" class="text-blue-400 hover:text-blue-300 underline">${refMatch[1]}</a></p></div>`;
+      } else {
+        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${line.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
+      }
+      inKeyPoints = false;
+      inRelatedTopics = false;
+      continue;
+    }
+    
+    // Handle bullet points in Key Points or Related Topics
+    if ((inKeyPoints || inRelatedTopics) && line.trim().startsWith('-')) {
+      const bulletContent = line.trim().substring(1).trim();
+      // Check if it's a link
+      const linkMatch = bulletContent.match(/\[([^\]]+)\]\(([^)]+)\)/);
+      if (linkMatch) {
+        currentSection += `<li class="text-xs mb-1"><a href="${linkMatch[2]}" class="text-blue-400 hover:text-blue-300 underline">${linkMatch[1]}</a></li>`;
+      } else {
+        // Format any bold text in bullet
+        const formattedBullet = bulletContent.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-white">$1</strong>');
+        currentSection += `<li class="text-sm text-gray-200 mb-1">${formattedBullet}</li>`;
+      }
+      continue;
+    }
+    
+    // End of Key Points or Related Topics section
+    if ((inKeyPoints || inRelatedTopics) && line.trim() === '' && i < lines.length - 1 && !lines[i + 1].trim().startsWith('-')) {
+      if (inKeyPoints) {
+        currentSection += '</ul>';
+        inKeyPoints = false;
+      } else if (inRelatedTopics) {
+        currentSection += '</ul></div>';
+        inRelatedTopics = false;
+      }
+      if (currentSection) sections.push(currentSection);
+      currentSection = '';
+      continue;
+    }
+    
+    // Regular content line
+    if (!inKeyPoints && !inRelatedTopics) {
+      if (line.trim() === '') {
+        if (currentSection.trim()) {
+          currentSection += '</p><p class="text-sm text-gray-200 mb-2">';
+        }
+      } else {
+        // Format title (first **text** on its own line)
+        if (line.match(/^\*\*[^*]+\*\*$/)) {
+          if (currentSection) sections.push(currentSection);
+          const title = line.replace(/\*\*/g, '');
+          currentSection = `<h3 class="text-lg font-bold mb-2 text-white">${title}</h3>`;
+        } else {
+          // Format subtitle or regular text
+          if (!currentSection || currentSection.endsWith('</h3>')) {
+            currentSection += '<p class="text-sm text-gray-300 mb-4">';
+          }
+          // Format bold text
+          let formattedLine = line.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-white">$1</strong>');
+          // Format links
+          formattedLine = formattedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline">$1</a>');
+          currentSection += formattedLine + ' ';
+        }
+      }
+    }
+  }
+  
+  // Close any open sections
+  if (inKeyPoints) {
+    currentSection += '</ul>';
+  } else if (inRelatedTopics) {
+    currentSection += '</ul></div>';
+  }
+  if (currentSection) {
+    if (!currentSection.includes('</p>') && !currentSection.includes('</h3>') && !currentSection.includes('</div>')) {
+      currentSection += '</p>';
+    }
+    sections.push(currentSection);
+  }
+  
+  html = sections.join('');
+  
+  // Final cleanup - ensure all links are formatted
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline" target="_self">$1</a>');
+  
+  return html || '<p class="text-sm text-gray-200">' + content.replace(/\n/g, '<br/>') + '</p>';
+}
+
 function getAIResponse(question: string): string {
   let q = question.toLowerCase().trim();
   const originalQ = q; // Keep original for checking abbreviations
@@ -373,7 +558,42 @@ function getAIResponse(question: string): string {
     }
   }
   
-  // Handle LUT/Letter of Undertaking queries FIRST (before curriculum search)
+  // Check for penalty/late fee queries IMMEDIATELY after abbreviation expansion
+  // This must be FIRST to avoid curriculum search matching wrong topics
+  if (q.includes('penalty') || originalQ.includes('penalty')) {
+    // If query mentions penalty with filing/return/gstr/gst 3b, return penalty response
+    if (q.includes('filing') || q.includes('return') || q.includes('gstr') || q.includes('gst return') ||
+        originalQ.includes('filing') || originalQ.includes('return') || originalQ.includes('gstr') ||
+        originalQ.includes('gst') || originalQ.includes('3b') ||
+        q.includes('non') || originalQ.includes('non')) {
+      return GST_RESPONSES['penalty'];
+    }
+    // Any penalty query should return penalty response
+    return GST_RESPONSES['penalty'];
+  }
+  
+  // Check for late fee queries
+  if (q.includes('late fee') || (q.includes('late') && q.includes('fee')) ||
+      originalQ.includes('late fee') || (originalQ.includes('late') && originalQ.includes('fee'))) {
+    return GST_RESPONSES['late fee'];
+  }
+  
+  // Check for GSTR-3B late fee/penalty specifically
+  if ((q.includes('gstr-3b') || q.includes('gstr 3b') || q.includes('gst return 3b') ||
+       originalQ.includes('gstr-3b') || originalQ.includes('gstr 3b') || originalQ.includes('3b')) && 
+      (q.includes('late') || q.includes('penalty') || q.includes('fee') ||
+       originalQ.includes('late') || originalQ.includes('penalty') || originalQ.includes('fee'))) {
+    return GST_RESPONSES['late fee'];
+  }
+  
+  // Check for "all return due dates" query
+  if ((q.includes('all return') && (q.includes('due date') || q.includes('due dates'))) ||
+      (q.includes('return due date') && (q.includes('all') || q.includes('list'))) ||
+      (originalQ.includes('all return') && (originalQ.includes('due date') || originalQ.includes('due dates')))) {
+    return GST_RESPONSES['all return due dates'];
+  }
+  
+  // Handle LUT/Letter of Undertaking queries (after penalty checks)
   // Check both original query (for "lut") and expanded query (for "letter of undertaking")
   if (originalQ.includes('lut') || q.includes('letter of undertaking') || 
       (q.includes('undertaking') && (q.includes('export') || q.includes('zero') || q.includes('supply')))) {
@@ -1097,12 +1317,9 @@ export default function TutorPage() {
                     {msg.role === 'user' ? <User className="w-4 h-4 text-white" /> : <Bot className="w-4 h-4 text-gray-600 dark:text-gray-400" />}
                   </div>
                   <div className={cn("chat-bubble", msg.role === 'user' ? "chat-bubble-user" : "chat-bubble-assistant")}>
-                    <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap" 
+                    <div className="prose prose-sm dark:prose-invert max-w-none" 
                       dangerouslySetInnerHTML={{ 
-                        __html: msg.content
-                          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary-600 hover:text-primary-700 underline" target="_self">$1</a>')
-                          .replace(/\n/g, '<br/>') 
+                        __html: formatMessageContent(msg.content)
                       }} />
                   </div>
                 </div>
