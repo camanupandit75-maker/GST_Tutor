@@ -1328,12 +1328,33 @@ function formatMessageContent(content: string): string {
     // Detect Reference section (starts with *Reference:)
     if (line.trim().startsWith('*Reference:')) {
       if (currentSection) sections.push(currentSection);
-      // Extract reference link
-      const refMatch = line.match(/\*Reference:\s*\[([^\]]+)\]\(([^)]+)\)/);
-      if (refMatch) {
-        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2"><strong>Reference:</strong> <a href="${refMatch[2]}" class="text-blue-400 hover:text-blue-300 underline">${refMatch[1]}</a></p></div>`;
+      // Extract all reference links (can have multiple links)
+      const refLine = line.trim();
+      // Match all markdown links: [text](url)
+      const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+      const links: Array<{text: string, url: string}> = [];
+      let match;
+      while ((match = linkPattern.exec(refLine)) !== null) {
+        links.push({ text: match[1], url: match[2] });
+      }
+      
+      if (links.length > 0) {
+        // Build HTML with all links, preserving the original text structure
+        let refHtml = '<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2"><strong>Reference:</strong> ';
+        
+        // Replace markdown links with HTML links while preserving separators
+        let processedLine = refLine.replace(/^\*Reference:\s*/, '');
+        processedLine = processedLine.replace(/\*$/, ''); // Remove trailing *
+        
+        // Replace each markdown link with HTML link
+        processedLine = processedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+          return `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline">${text}</a>`;
+        });
+        
+        refHtml += processedLine + '</p></div>';
+        currentSection = refHtml;
       } else {
-        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${line.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
+        currentSection = `<div class="mt-4 pt-4 border-t border-gray-600"><p class="text-xs text-gray-400 mb-2">${refLine.replace(/^\*/, '').replace(/\*/g, '')}</p></div>`;
       }
       inKeyPoints = false;
       inRelatedTopics = false;
