@@ -305,7 +305,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Show cause notice issued
 - Penalty up to 10% of tax or ₹10,000, whichever is higher
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47), [Section 50](/modules/cgst-act/returns/sec-50) and [CGST Act - Chapter 15: Demand and Recovery](/modules/cgst-act/demand-recovery) - [Section 73](/modules/cgst-act/demand-recovery/sec-73)*`,
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47), [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 50](/modules/cgst-act/payment-tax/sec-50) and [CGST Act - Chapter 15: Demands and Recovery](/modules/cgst-act/demands-recovery) - [Section 73](/modules/cgst-act/demands-recovery/sec-73)*`,
 
   'late fee': `**Late Fees for GST Returns:**
 
@@ -327,7 +327,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Late fee may be waived for first-time defaulters
 - Subject to conditions and approval
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47) and [Section 50](/modules/cgst-act/returns/sec-50)*`,
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 47](/modules/cgst-act/returns/sec-47) and [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 50](/modules/cgst-act/payment-tax/sec-50)*`,
 
   // Return Due Dates - Individual
   'gstr-1 due date': `**GSTR-1 Due Date:**
@@ -361,7 +361,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Self-certified reconciliation statement
 - CA certification required
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 44](/modules/cgst-act/returns/sec-44) and [CGST Act - Chapter 11: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
+*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 44](/modules/cgst-act/returns/sec-44) and [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit) - [Section 35](/modules/cgst-act/audit/sec-35)*`,
 
   // Late Fee Calculations
   'late fee calculation': `**Late Fee Calculation (As per Section 47):**
@@ -403,7 +403,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Calculated on daily basis
 - Formula: (Tax × Rate × Days) / 365
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50](/modules/cgst-act/returns/sec-50)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 50](/modules/cgst-act/payment-tax/sec-50)*`,
 
   'interest 18 percent': `**18% Interest Rate (As per Section 50):**
 - Applies on late payment of tax
@@ -411,7 +411,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Simple interest basis
 - Example: ₹1,00,000 tax paid 30 days late = ₹1,00,000 × 18% × 30/365 = ₹1,479
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50](/modules/cgst-act/returns/sec-50)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 50](/modules/cgst-act/payment-tax/sec-50)*`,
 
   'interest 24 percent': `**24% Interest Rate (As per Section 50(3)):**
 - Applies on excess ITC claimed
@@ -419,7 +419,7 @@ Under RCM, the **recipient pays GST** instead of supplier.
 - Higher rate to discourage incorrect ITC claims
 - Example: ₹50,000 excess ITC utilized for 60 days = ₹50,000 × 24% × 60/365 = ₹1,973
 
-*Reference: [CGST Act - Chapter 9: Returns](/modules/cgst-act/returns) - [Section 50(3)](/modules/cgst-act/returns/sec-50)*`,
+*Reference: [CGST Act - Chapter 10: Payment of Tax](/modules/cgst-act/payment-tax) - [Section 50(3)](/modules/cgst-act/payment-tax/sec-50)*`,
 
   // Registration Thresholds
   'registration threshold': `**GST Registration Thresholds:**
@@ -790,7 +790,7 @@ ITC is blocked on:
 - Export documents, LUT/bond
 - Statement of exports
 
-*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
+*Reference: [CGST Act - Chapter 11: Refund](/modules/cgst-act/refund) - [Section 54](/modules/cgst-act/refund/sec-54)*`,
 
   'refund procedure': `**GST Refund Procedure:**
 
@@ -818,7 +818,7 @@ ITC is blocked on:
 
 **Time Limit:** 2 years from relevant date
 
-*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
+*Reference: [CGST Act - Chapter 11: Refund](/modules/cgst-act/refund) - [Section 54](/modules/cgst-act/refund/sec-54)*`,
 
   'refund timeline': `**GST Refund Timeline:**
 
@@ -836,7 +836,7 @@ ITC is blocked on:
 - **2 years** from relevant date
 - Cannot claim after 2 years
 
-*Reference: [CGST Act - Chapter 11: Refunds](/modules/cgst-act/refunds) - [Section 54](/modules/cgst-act/refunds/sec-54)*`,
+*Reference: [CGST Act - Chapter 11: Refund](/modules/cgst-act/refund) - [Section 54](/modules/cgst-act/refund/sec-54)*`,
 
   'audit': `**GST Audit (As per Section 35):**
 - **Required for:** Turnover > ₹5 crore
@@ -1185,6 +1185,56 @@ ITC is blocked on:
 *Reference: [CGST Act - Chapter 13: Audit](/modules/cgst-act/audit)*`
 };
 
+
+// Helper function to find section by number across all modules
+function findSectionByNumber(sectionNumber: string, moduleId?: string): { section: any; chapter: any; module: any } | null {
+  // Clean section number - normalize variations
+  // Handle: "11a", "11A", "11-a", "11-A", "17(5)", "17-5", "17.5", etc.
+  let cleanNum = sectionNumber.replace(/[()\s.\-]/g, '').toUpperCase();
+  
+  // Don't match if query is too short (less than 2 chars) to avoid false matches
+  if (cleanNum.length < 1) {
+    return null;
+  }
+  
+  for (const module of GST_MODULES) {
+    // If moduleId specified, only search in that module
+    if (moduleId && module.id !== moduleId) continue;
+    
+    for (const chapter of module.chapters) {
+      for (const section of chapter.sections) {
+        // Normalize section number the same way
+        const sectionNum = section.number.replace(/[()\s.\-]/g, '').toUpperCase();
+        
+        // Exact match (most important) - this is the primary matching method
+        if (sectionNum === cleanNum) {
+          return { section, chapter, module };
+        }
+        
+        // For prefix matching, be more strict:
+        // Only allow if both are numeric and one is a prefix of the other
+        // OR if the query has a letter and matches the start of section number
+        // This prevents "1" from matching "11A" or "10"
+        const queryIsNumeric = /^\d+$/.test(cleanNum);
+        const sectionIsNumeric = /^\d+$/.test(sectionNum);
+        
+        if (queryIsNumeric && sectionIsNumeric) {
+          // Both are numeric - only match if they're the same length or query is longer
+          // This prevents "1" matching "11" or "10"
+          if (cleanNum.length === sectionNum.length && sectionNum.startsWith(cleanNum)) {
+            return { section, chapter, module };
+          }
+        } else if (cleanNum.length >= 2 && sectionNum.startsWith(cleanNum)) {
+          // Query has letters or is longer - match if section starts with query
+          // e.g., "11A" matches "11A" or "11" matches "11A" if query is "11"
+          // But "1" won't match "11A" because "11A".startsWith("1") but we check length >= 2
+          return { section, chapter, module };
+        }
+      }
+    }
+  }
+  return null;
+}
 
 function searchCurriculum(query: string): { section: any; chapter: any; module: any; score: number }[] {
   const q = query.toLowerCase().trim();
@@ -1541,6 +1591,62 @@ function getAIResponse(question: string): string {
   let q = question.toLowerCase().trim();
   const originalQ = q; // Keep original for checking abbreviations
   
+  // Check for section number queries FIRST (before ANY processing)
+  // This ensures section number queries are matched correctly
+  // Match patterns like: "section 11a", "sec 11A", "s.11a", "section 17(5)", "section 9-3", "11a", etc.
+  // Try multiple patterns to catch different formats
+  const sectionPatterns = [
+    /(?:section|sec|s\.?)\s*(\d+[a-z]*)(?:[()\-.\s]*(\d+[a-z]*)?)?/i,  // "section 11a" or "section 17(5)" - [a-z]* matches one or more letters
+    /^(\d+[a-z]*)(?:[()\-.\s]*(\d+[a-z]*)?)?$/i,  // Just "11a" or "17(5)"
+  ];
+  
+  let sectionMatch = null;
+  for (const pattern of sectionPatterns) {
+    sectionMatch = question.match(pattern);
+    if (sectionMatch && sectionMatch[1]) {
+      // Only proceed if we got a valid match with a number
+      break;
+    }
+  }
+  
+  if (sectionMatch && sectionMatch[1]) {
+    // Extract section number - handle main number and sub-section
+    let sectionNum = sectionMatch[1].toUpperCase();
+    if (sectionMatch[2]) {
+      // Has sub-section like "17(5)" or "9-3"
+      sectionNum += sectionMatch[2].toUpperCase();
+    }
+    
+    // Try to find the section - try with full number first, then just the base number
+    let found = findSectionByNumber(sectionNum);
+    if (!found && sectionMatch[1]) {
+      found = findSectionByNumber(sectionMatch[1].toUpperCase());
+    }
+    
+    if (found) {
+      const { section, chapter, module } = found;
+      let response = `**${section.title}**\n\n`;
+      if (section.description) {
+        response += `${section.description}\n\n`;
+      }
+      
+      if (section.keyPoints && section.keyPoints.length > 0) {
+        response += `**Key Points:**\n`;
+        section.keyPoints.forEach(point => {
+          response += `- ${point}\n`;
+        });
+        response += `\n`;
+      }
+      
+      const moduleUrl = `/modules/${module.id}`;
+      const chapterUrl = `/modules/${module.id}/${chapter.slug}`;
+      const sectionUrl = `/modules/${module.id}/${chapter.slug}/${section.id}`;
+      response += `*Reference: [${module.name}](${moduleUrl}) - [${chapter.title}](${chapterUrl}) - [Section ${section.number}](${sectionUrl})*`;
+      
+      return response;
+    }
+  }
+  
   // Check for CA certificate queries VERY FIRST (before ANY processing)
   // This ensures CA certificate queries are matched correctly, even with typos
   const hasCa = q.includes('ca') || originalQ.includes('ca');
@@ -1653,6 +1759,72 @@ function getAIResponse(question: string): string {
   const originalFuzzyResult = fuzzyMatch(originalQ, responseKeys);
   if (originalFuzzyResult.matched && originalFuzzyResult.score >= 60) {
     return GST_RESPONSES[originalFuzzyResult.keyword];
+  }
+  
+  // Check for GSTR-2A and GSTR-2B queries BEFORE other GSTR queries
+  // These are auto-generated statements, not returns that need filing
+  if ((q.includes('gstr-2a') || q.includes('gstr 2a') || q.includes('gstr2a') || originalQ.includes('gstr-2a') || originalQ.includes('gstr 2a')) &&
+      !q.includes('gstr-2b') && !originalQ.includes('gstr-2b')) {
+    const found = findSectionByNumber('38', 'cgst-act');
+    if (found) {
+      const { section, chapter, module } = found;
+      return `**GSTR-2A (Auto-populated Inward Supplies):**
+
+**What is GSTR-2A:**
+- Auto-populated statement of inward supplies
+- Generated from suppliers' GSTR-1
+- Shows details of supplies received from registered suppliers
+
+**Key Features:**
+- **Auto-generated:** No filing required by recipient
+- **Available by:** 14th of the following month
+- **Purpose:** Helps verify ITC eligibility
+- **Based on:** Suppliers' GSTR-1 filings
+
+**Important Notes:**
+- GSTR-2A is a **read-only** statement
+- Used for ITC matching and verification
+- Discrepancies can be communicated to supplier
+- Helps in preparing GSTR-3B
+
+*Reference: [${module.name}](${`/modules/${module.id}`}) - [${chapter.title}](${`/modules/${module.id}/${chapter.slug}`}) - [Section ${section.number}](${`/modules/${module.id}/${chapter.slug}/${section.id}`})*`;
+    }
+  }
+  
+  if ((q.includes('gstr-2b') || q.includes('gstr 2b') || q.includes('gstr2b') || originalQ.includes('gstr-2b') || originalQ.includes('gstr 2b')) &&
+      !q.includes('gstr-2a') && !originalQ.includes('gstr-2a')) {
+    const found = findSectionByNumber('38', 'cgst-act');
+    if (found) {
+      const { section, chapter, module } = found;
+      return `**GSTR-2B (Auto-generated Inward Supplies Statement):**
+
+**What is GSTR-2B:**
+- Auto-generated statement of inward supplies
+- Generated from suppliers' GSTR-1
+- Shows **eligible ITC** available for claiming
+- More refined than GSTR-2A
+
+**Key Features:**
+- **Auto-generated:** No filing required by recipient
+- **Available by:** 14th of the following month
+- **Purpose:** Shows eligible ITC for claiming
+- **Based on:** Suppliers' GSTR-1 filings
+- **Static:** Does not change after generation
+
+**Important Notes:**
+- GSTR-2B is a **read-only** statement
+- Used for ITC matching and verification (Section 42)
+- Rule 36(4): ITC can be claimed up to 105% of eligible ITC in GSTR-2B
+- Helps in preparing GSTR-3B
+- Discrepancies can be communicated to supplier
+
+**Difference from GSTR-2A:**
+- GSTR-2B is more refined and shows only eligible ITC
+- GSTR-2A shows all inward supplies (may include ineligible ITC)
+- GSTR-2B is static (doesn't change), GSTR-2A can be updated
+
+*Reference: [${module.name}](${`/modules/${module.id}`}) - [${chapter.title}](${`/modules/${module.id}/${chapter.slug}`}) - [Section ${section.number}](${`/modules/${module.id}/${chapter.slug}/${section.id}`})*`;
+    }
   }
   
   // Check specific keyword patterns with fuzzy matching
@@ -2203,9 +2375,18 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
     }
   }
   
+  // Check if query looks like a section number query but wasn't matched
+  // If so, don't fall through to curriculum search which might match incorrectly
+  const looksLikeSectionQuery = /(?:^|\s)(?:section|sec|s\.?)\s*\d+/i.test(question) || /^\d+[a-z]*/i.test(question.trim());
+  
   // Check if query asks to "explain each" or "explain all" - return multiple related sections
   const isExplainEach = q.includes('explain each') || q.includes('explain all') || q.includes('explain every') || 
                         q.includes('all types') || q.includes('each type') || q.includes('different types');
+  
+  // If it looks like a section query but we didn't find it, return a helpful message
+  if (looksLikeSectionQuery) {
+    return `I couldn't find that section number in the GST Act. Please check the section number and try again, or ask about a specific topic.`;
+  }
   
   // ALWAYS search curriculum first - it's the comprehensive knowledge base
   // Use expanded query (q) which has abbreviations replaced
@@ -2296,7 +2477,11 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
         
         const moduleUrl = `/modules/${result.module.id}`;
         const chapterUrl = `/modules/${result.module.id}/${result.chapter.slug}`;
-        response += `\n*Reference: [${result.module.name}](${moduleUrl}) - [${result.chapter.title}](${chapterUrl}) (Section ${result.section.number})*\n\n`;
+        const sectionUrl = `/modules/${result.module.id}/${result.chapter.slug}/${result.section.id}`;
+        // Handle Rules vs Sections
+        const isRule = result.section.number.toLowerCase().startsWith('rule') || result.module.id === 'cgst-rules';
+        const sectionLabel = isRule ? result.section.number : `Section ${result.section.number}`;
+        response += `\n*Reference: [${result.module.name}](${moduleUrl}) - [${result.chapter.title}](${chapterUrl}) - [${sectionLabel}](${sectionUrl})*\n\n`;
         if (index < sectionsToShow.length - 1) {
           response += `---\n\n`;
         }
@@ -2321,7 +2506,11 @@ Reversal Amount = (Exempt Turnover / Total Turnover) × Common Credit
     
     const moduleUrl = `/modules/${best.module.id}`;
     const chapterUrl = `/modules/${best.module.id}/${best.chapter.slug}`;
-    response += `\n*Reference: [${best.module.name}](${moduleUrl}) - [Chapter ${best.chapter.id}: ${best.chapter.title}](${chapterUrl}) (Section ${best.section.number})*`;
+    const sectionUrl = `/modules/${best.module.id}/${best.chapter.slug}/${best.section.id}`;
+    // Handle Rules vs Sections - Rules should say "Rule X", Sections should say "Section X"
+    const isRule = best.section.number.toLowerCase().startsWith('rule') || best.module.id === 'cgst-rules';
+    const sectionLabel = isRule ? best.section.number : `Section ${best.section.number}`;
+    response += `\n*Reference: [${best.module.name}](${moduleUrl}) - [${best.chapter.title}](${chapterUrl}) - [${sectionLabel}](${sectionUrl})*`;
     
     // Add related sections if highly relevant
     const relatedSections: string[] = [];
