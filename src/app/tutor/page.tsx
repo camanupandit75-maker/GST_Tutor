@@ -1632,7 +1632,7 @@ function getAIResponse(question: string): string {
       
       if (section.keyPoints && section.keyPoints.length > 0) {
         response += `**Key Points:**\n`;
-        section.keyPoints.forEach(point => {
+        section.keyPoints.forEach((point: string) => {
           response += `- ${point}\n`;
         });
         response += `\n`;
